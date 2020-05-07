@@ -33,13 +33,15 @@ collections:
       - {label: "Rating10", name: "rating10", widget: "number", default: 0, valueType: "int", min: 1, max: 5}
       - {label: "Rating11", name: "rating11", widget: "number", default: 0, valueType: "int", min: 1, max: 5}
       - {label: "Rating12", name: "rating12", widget: "number", default: 0, valueType: "int", min: 1, max: 5}
-      - label: "Photo"
-          name: "photo"
-          widget: "file"
-          default: "/logo.svg"
-          media_library:
+      - {label: "Photo",
+          name: "photo",
+          widget: "file",
+          default: "/logo.svg",
+          media_library: {
             config:
-              multiple: false
+              {multiple: false}
+          }
+        }
       - {label: "Bio", name: "bio", widget: "markdown"}
   - name: "wtf" # Used in routes, e.g., /admin/collections/blog
     label: "WTF" # Used in the UI
