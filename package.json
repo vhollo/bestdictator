@@ -1,6 +1,6 @@
 {
-  "name": "TODO",
-  "description": "TODO",
+  "name": "Best Dictator",
+  "description": "Rate Your Dictator",
   "version": "0.0.1",
   "scripts": {
     "dev": "sapper dev",
