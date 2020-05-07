@@ -1,0 +1,80 @@
+backend:
+  name: git-gateway
+  branch: master # Branch to update (optional; defaults to master)
+# publish_mode: editorial_workflow # Allows you to save drafts before publishing them
+media_folder: static/uploads # Media files will be stored in the repo under static/uploads
+public_folder: /uploads # The src attribute for uploaded media will begin with /uploads
+locale: 'en'
+
+collections:
+  - name: "dictators" # Used in routes, e.g., /admin/collections/blog
+    label: "Dictators" # Used in the UI
+    folder: "static/_dictators" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{slug}}" # Filename template, e.g., title.md
+    fields: # The fields for each document, usually in front matter
+      - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
+      - {label: "Title", name: "title", widget: "select", options: ["Mr.", "Ms.", "Mrs.", "Dr.", "Sr.", "Jr."]}
+      - {label: "Full name", name: "fullname", widget: "string"}
+      - {label: "First name", name: "firstname", widget: "string"}
+      - {label: "Last name", name: "lastname", widget: "string"}
+      - {label: "Birth date", name: "birthdate", widget: "datetime", dateFormat: "YYYY-MM-DD"}
+      - {label: "Death date", name: "deathdate", widget: "datetime", dateFormat: "YYYY-MM-DD"}
+      - {label: "Country", name: "country", widget: "string"}
+      - {label: "Rating1", name: "rating1", widget: "number", default: 0, valueType: "int", min: 1, max: 5}
+      - {label: "Rating2", name: "rating2", widget: "number", default: 0, valueType: "int", min: 1, max: 5}
+      - {label: "Rating3", name: "rating3", widget: "number", default: 0, valueType: "int", min: 1, max: 5}
+      - {label: "Rating4", name: "rating4", widget: "number", default: 0, valueType: "int", min: 1, max: 5}
+      - {label: "Rating5", name: "rating5", widget: "number", default: 0, valueType: "int", min: 1, max: 5}
+      - {label: "Rating6", name: "rating6", widget: "number", default: 0, valueType: "int", min: 1, max: 5}
+      - {label: "Rating7", name: "rating7", widget: "number", default: 0, valueType: "int", min: 1, max: 5}
+      - {label: "Rating8", name: "rating8", widget: "number", default: 0, valueType: "int", min: 1, max: 5}
+      - {label: "Rating9", name: "rating9", widget: "number", default: 0, valueType: "int", min: 1, max: 5}
+      - {label: "Rating10", name: "rating10", widget: "number", default: 0, valueType: "int", min: 1, max: 5}
+      - {label: "Rating11", name: "rating11", widget: "number", default: 0, valueType: "int", min: 1, max: 5}
+      - {label: "Rating12", name: "rating12", widget: "number", default: 0, valueType: "int", min: 1, max: 5}
+      - label: "Photo"
+          name: "photo"
+          widget: "file"
+          default: "/logo.svg"
+          media_library:
+            config:
+              multiple: false
+      - {label: "Bio", name: "bio", widget: "markdown"}
+  - name: "wtf" # Used in routes, e.g., /admin/collections/blog
+    label: "WTF" # Used in the UI
+    folder: "static/_wtf" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{slug}}" # Filename template, e.g., title.md
+    fields: # The fields for each document, usually in front matter
+      - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Body", name: "body", widget: "markdown"}
+  - name: "psyche" # Used in routes, e.g., /admin/collections/blog
+    label: "Psyche" # Used in the UI
+    folder: "static/_psyche" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{slug}}" # Filename template, e.g., title.md
+    fields: # The fields for each document, usually in front matter
+      - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Body", name: "body", widget: "markdown"}
+  - name: "living_dics" # Used in routes, e.g., /admin/collections/blog
+    label: "Living Dictators" # Used in the UI
+    folder: "static/_dictators" # The path to the folder where the documents are stored
+    filter:
+      field: deathdate
+      value: !null
+    fields:
+      - {label: "Living", name: "living"}
+  - name: "dead_dics" # Used in routes, e.g., /admin/collections/blog
+    label: "Mausoleum" # Used in the UI
+    folder: "static/_dictators" # The path to the folder where the documents are stored
+    filter:
+      field: deathdate
+      value: null
+    fields:
+      - {label: "Dead", name: "dead"}
+
