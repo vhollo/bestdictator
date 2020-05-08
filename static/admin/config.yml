@@ -15,7 +15,7 @@ collections:
     fields: # The fields for each document, usually in front matter
       - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
       - {label: "Prefix", name: "prefix", widget: "select", options: ["Mr.", "Ms.", "Mrs.", "Dr.", "Sr.", "Jr."], required: false}
-      - {label: "Full name", name: "title", widget: "string"}
+      - {label: "Known name", name: "title", widget: "string"}
       - {label: "First name", name: "firstname", widget: "string", required: false}
       - {label: "Middle name", name: "middlename", widget: "string", required: false}
       - {label: "Last name", name: "lastname", widget: "string"}
@@ -34,7 +34,7 @@ collections:
       - {label: "Rating10", name: "rating10", widget: "number", default: 0, valueType: "int", min: 1, max: 5, required: false}
       - {label: "Rating11", name: "rating11", widget: "number", default: 0, valueType: "int", min: 1, max: 5, required: false}
       - {label: "Rating12", name: "rating12", widget: "number", default: 0, valueType: "int", min: 1, max: 5, required: false}
-      - {label: "Photo", name: "photo", widget: "file", default: "/logo.svg", media_library: {config: {multiple: false}}}
+      - {label: "Photo", name: "photo", widget: "file", default: "/DiC-Logo-B.svg", media_library: {config: {multiple: false}}}
       - {label: "Bio", name: "bio", widget: "markdown", required: false}
   - name: "wtf" # Used in routes, e.g., /admin/collections/blog
     label: "WTF" # Used in the UI

@@ -2,7 +2,7 @@
 	export async function preload({ params, query }) {
 		// the `slug` parameter is available because
 		// this file is called [slug].svelte
-		const res = await this.fetch(`_wtf/${params.slug}.md`);
+		const res = await this.fetch(`_dictators/${params.slug}.md`);
 
 		if (res.status === 200) {
 			return { postMd: await res.text() };
@@ -68,7 +68,11 @@
 </svelte:head>
 
 <h1>{post.title}</h1>
-
+<h2>Birth date: {post.birthdate}</h2>
+<figure>
+	<img src="{post.photo}" alt="{post.title}">
+	<figcaption>{post.bio}</figcaption>
+</figure>
 <div class='content'>
 	{@html post.html}
 </div>
