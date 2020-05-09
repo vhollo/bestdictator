@@ -75,7 +75,11 @@
 	aside {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(30%, 1fr) );
-    grid-gap: 2rem;
+    grid-gap: 0 2rem;
+	}
+	label {
+    display: flex;
+		justify-content: space-between
 	}
 </style>
 
@@ -91,18 +95,18 @@
 </figure>
 
 <aside>
-<label>psychosis<input type=range min="1" max="5" disabled value={post.profile.psychosis}></label>
-<label>power_hunger<input type=range min="1" max="5" disabled value={post.profile.power_hunger}></label>
-<label>agression<input type=range min="1" max="5" disabled value={post.profile.agression}></label>
-<label>cynicism<input type=range min="1" max="5" disabled value={post.profile.cynicism}></label>
-<label>autocracy<input type=range min="1" max="5" disabled value={post.profile.autocracy}></label>
-<label>telling_lies<input type=range min="1" max="5" disabled value={post.profile.telling_lies}></label>
-<label>bullshit_factor<input type=range min="1" max="5" disabled value={post.profile.bullshit_factor}></label>
-<label>corruption<input type=range min="1" max="5" disabled value={post.profile.corruption}></label>
-<label>megalomania<input type=range min="1" max="5" disabled value={post.profile.megalomania}></label>
-<label>manipulation<input type=range min="1" max="5" disabled value={post.profile.manipulation}></label>
-<label>militancy<input type=range min="1" max="5" disabled value={post.profile.militancy}></label>
-<label>narcissism<input type=range min="1" max="5" disabled value={post.profile.narcissism}></label>
+<label><span>Psychosis</span><input type=range min="1" max="5" disabled value={post.profile.psychosis}></label>
+<label><span>Power_hunger</span><input type=range min="1" max="5" disabled value={post.profile.power_hunger}></label>
+<label><span>Agression</span><input type=range min="1" max="5" disabled value={post.profile.agression}></label>
+<label><span>Cynicism</span><input type=range min="1" max="5" disabled value={post.profile.cynicism}></label>
+<label><span>Autocracy</span><input type=range min="1" max="5" disabled value={post.profile.autocracy}></label>
+<label><span>Telling_lies</span><input type=range min="1" max="5" disabled value={post.profile.telling_lies}></label>
+<label><span>Bullshit_factor</span><input type=range min="1" max="5" disabled value={post.profile.bullshit_factor}></label>
+<label><span>Corruption</span><input type=range min="1" max="5" disabled value={post.profile.corruption}></label>
+<label><span>Megalomania</span><input type=range min="1" max="5" disabled value={post.profile.megalomania}></label>
+<label><span>Manipulation</span><input type=range min="1" max="5" disabled value={post.profile.manipulation}></label>
+<label><span>Militancy</span><input type=range min="1" max="5" disabled value={post.profile.militancy}></label>
+<label><span>Narcissism</span><input type=range min="1" max="5" disabled value={post.profile.narcissism}></label>
 </aside>
 <div class='content'>
 	{@html post.html}
