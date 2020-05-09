@@ -73,6 +73,20 @@
 	<img src="{post.photo}" alt="{post.title}">
 	<figcaption>{post.bio}</figcaption>
 </figure>
+
+<label>Rating<input type=range min="1" max="5" disabled value={post.rating1}></label>
+<label>Rating<input type=range min="1" max="5" disabled value={post.rating2}></label>
+<label>Rating<input type=range min="1" max="5" disabled value={post.rating3}></label>
+<label>Rating<input type=range min="1" max="5" disabled value={post.rating4}></label>
+<label>Rating<input type=range min="1" max="5" disabled value={post.rating5}></label>
+<label>Rating<input type=range min="1" max="5" disabled value={post.rating6}></label>
+<label>Rating<input type=range min="1" max="5" disabled value={post.rating7}></label>
+<label>Rating<input type=range min="1" max="5" disabled value={post.rating8}></label>
+<label>Rating<input type=range min="1" max="5" disabled value={post.rating9}></label>
+<label>Rating<input type=range min="1" max="5" disabled value={post.rating10}></label>
+<label>Rating<input type=range min="1" max="5" disabled value={post.rating11}></label>
+<label>Rating<input type=range min="1" max="5" disabled value={post.rating12}></label>
+
 <div class='content'>
 	{@html post.html}
 </div>

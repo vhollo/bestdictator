@@ -26,21 +26,29 @@ collections:
       - {label: "First name", name: "firstname", widget: "string", required: false}
       - {label: "Middle name", name: "middlename", widget: "string", required: false}
       - {label: "Last name", name: "lastname", widget: "string"}
-      - {label: "Birth date", name: "birthdate", widget: "datetime", dateFormat: "YYYY-MM-DD", required: false, timeFormat: false}
-      - {label: "Death date", name: "deathdate", widget: "datetime", dateFormat: "YYYY-MM-DD", required: false, timeFormat: false, default: false}
+      - {label: "Birth date", name: "birthdate", widget: "datetime", format: "YYYY-MM-DD", required: false, timeFormat: false}
+      - {label: "Death date", name: "deathdate", widget: "datetime", format: "YYYY-MM-DD", required: false, timeFormat: false, default: false}
       - {label: "Country", name: "country", widget: "string", required: false}
-      - {label: "Corruption", name: "rating1", widget: "number", default: 0, valueType: "int", min: 1, max: 5, required: false}
-      - {label: "Power hunger", name: "rating2", widget: "number", default: 0, valueType: "int", min: 1, max: 5, required: false}
-      - {label: "Agression", name: "rating3", widget: "number", default: 0, valueType: "int", min: 1, max: 5, required: false}
-      - {label: "Autocracy", name: "rating4", widget: "number", default: 0, valueType: "int", min: 1, max: 5, required: false}
-      - {label: "Telling lies", name: "rating5", widget: "number", default: 0, valueType: "int", min: 1, max: 5, required: false}
-      - {label: "Manipulation", name: "rating6", widget: "number", default: 0, valueType: "int", min: 1, max: 5, required: false}
-      - {label: "Narcissism", name: "rating7", widget: "number", default: 0, valueType: "int", min: 1, max: 5, required: false}
-      - {label: "Megalomania", name: "rating8", widget: "number", default: 0, valueType: "int", min: 1, max: 5, required: false}
-      - {label: "Psychosis", name: "rating9", widget: "number", default: 0, valueType: "int", min: 1, max: 5, required: false}
-      - {label: "Militancy", name: "rating10", widget: "number", default: 0, valueType: "int", min: 1, max: 5, required: false}
-      - {label: "Cynicism", name: "rating11", widget: "number", default: 0, valueType: "int", min: 1, max: 5, required: false}
-      - {label: "Bullshit", name: "rating12", widget: "number", default: 0, valueType: "int", min: 1, max: 5, required: false}
+
+      - name: "profile"
+        label: "Profile"
+        widget: "object"
+        collapsed: true
+        fields: 
+          - {label: "Corruption", name: "corruption", widget: "number", valueType: "int", min: 1, max: 5, required: false}
+          - {label: "Power hunger", name: "power_hunger", widget: "number", valueType: "int", min: 1, max: 5, required: false}
+          - {label: "Agression", name: "agression", widget: "number", valueType: "int", min: 1, max: 5, required: false}
+          - {label: "Autocracy", name: "autocracy", widget: "number", valueType: "int", min: 1, max: 5, required: false}
+          - {label: "Telling lies", name: "telling_lies", widget: "number", valueType: "int", min: 1, max: 5, required: false}
+          - {label: "Manipulation", name: "manipulation", widget: "number", valueType: "int", min: 1, max: 5, required: false}
+          - {label: "Narcissism", name: "narcissism", widget: "number", valueType: "int", min: 1, max: 5, required: false}
+          - {label: "Megalomania", name: "megalomania", widget: "number", valueType: "int", min: 1, max: 5, required: false}
+          - {label: "Psychosis", name: "psychosis", widget: "number", valueType: "int", min: 1, max: 5, required: false}
+          - {label: "Militancy", name: "militancy", widget: "number", valueType: "int", min: 1, max: 5, required: false}
+          - {label: "Cynicism", name: "cynicism", widget: "number", valueType: "int", min: 1, max: 5, required: false}
+          - {label: "Bullshit factor", name: "bullshit_factor", widget: "number", valueType: "int", min: 1, max: 5, required: false}
+
+  
       - {label: "Photo", name: "photo", widget: "file", default: "/DiC-Logo-B.svg", media_library: {config: {multiple: false}}}
       - {label: "Bio", name: "bio", widget: "markdown", minimal: true, required: false}
       - {label: "Description", name: "body", widget: "markdown"}
