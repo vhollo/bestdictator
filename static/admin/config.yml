@@ -26,8 +26,8 @@ collections:
       - {label: "First name", name: "firstname", widget: "string", required: false}
       - {label: "Middle name", name: "middlename", widget: "string", required: false}
       - {label: "Last name", name: "lastname", widget: "string"}
-      - {label: "Birth date", name: "birthdate", widget: "string", format: "YYYY-MM-DD", required: false, timeFormat: false}
-      - {label: "Death date", name: "deathdate", widget: "datetime", format: "YYYY-MM-DD", required: false, timeFormat: false, default: false}
+      - {label: "Birth date", name: "birthdate", widget: "string", required: false, default: false}
+      - {label: "Death date", name: "deathdate", widget: "string", required: false, default: false}
       - {label: "Country", name: "country", widget: "string", required: false}
 
       - name: "profile"
