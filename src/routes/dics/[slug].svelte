@@ -61,6 +61,22 @@
 	.content :global(li) {
 		margin: 0 0 0.5em 0;
 	}
+
+
+	figure {
+		text-align: center;
+	}
+	img {
+		max-width: 100%;
+	}
+	figcaption {
+	}
+
+	aside {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(30%, 1fr) );
+    grid-gap: 2rem;
+	}
 </style>
 
 <svelte:head>
@@ -68,25 +84,26 @@
 </svelte:head>
 
 <h1>{post.title}</h1>
-<h2>Birth date: {post.birthdate}</h2>
+<p>Birth date: {post.birthdate}</p>
 <figure>
 	<img src="{post.photo}" alt="{post.title}">
 	<figcaption>{post.bio}</figcaption>
 </figure>
 
-<label>Rating<input type=range min="1" max="5" disabled value={post.rating1}></label>
-<label>Rating<input type=range min="1" max="5" disabled value={post.rating2}></label>
-<label>Rating<input type=range min="1" max="5" disabled value={post.rating3}></label>
-<label>Rating<input type=range min="1" max="5" disabled value={post.rating4}></label>
-<label>Rating<input type=range min="1" max="5" disabled value={post.rating5}></label>
-<label>Rating<input type=range min="1" max="5" disabled value={post.rating6}></label>
-<label>Rating<input type=range min="1" max="5" disabled value={post.rating7}></label>
-<label>Rating<input type=range min="1" max="5" disabled value={post.rating8}></label>
-<label>Rating<input type=range min="1" max="5" disabled value={post.rating9}></label>
-<label>Rating<input type=range min="1" max="5" disabled value={post.rating10}></label>
-<label>Rating<input type=range min="1" max="5" disabled value={post.rating11}></label>
-<label>Rating<input type=range min="1" max="5" disabled value={post.rating12}></label>
-
+<aside>
+<label>psychosis<input type=range min="1" max="5" disabled value={post.profile.psychosis}></label>
+<label>power_hunger<input type=range min="1" max="5" disabled value={post.profile.power_hunger}></label>
+<label>agression<input type=range min="1" max="5" disabled value={post.profile.agression}></label>
+<label>cynicism<input type=range min="1" max="5" disabled value={post.profile.cynicism}></label>
+<label>autocracy<input type=range min="1" max="5" disabled value={post.profile.autocracy}></label>
+<label>telling_lies<input type=range min="1" max="5" disabled value={post.profile.telling_lies}></label>
+<label>bullshit_factor<input type=range min="1" max="5" disabled value={post.profile.bullshit_factor}></label>
+<label>corruption<input type=range min="1" max="5" disabled value={post.profile.corruption}></label>
+<label>megalomania<input type=range min="1" max="5" disabled value={post.profile.megalomania}></label>
+<label>manipulation<input type=range min="1" max="5" disabled value={post.profile.manipulation}></label>
+<label>militancy<input type=range min="1" max="5" disabled value={post.profile.militancy}></label>
+<label>narcissism<input type=range min="1" max="5" disabled value={post.profile.narcissism}></label>
+</aside>
 <div class='content'>
 	{@html post.html}
 </div>
