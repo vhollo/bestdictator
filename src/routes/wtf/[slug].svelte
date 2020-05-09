@@ -18,7 +18,7 @@
 
 	export let postMd;
 
-	const md = new MarkdownIt();
+	const md = new MarkdownIt({breaks: true, linkify: true});
 
 	$: frontMatter = fm(postMd);
 	$: post = {
