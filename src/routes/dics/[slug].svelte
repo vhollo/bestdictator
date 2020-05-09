@@ -88,12 +88,15 @@
 </svelte:head>
 
 <h1>{post.title}</h1>
-<p>Birth date: {post.birthdate}</p>
+<p>Birth date: <pre>{post.birthdate}</pre></p>
+<h2>Bio</h2>
+<p>{post.bio}</p>
 <figure>
 	<img src="{post.photo}" alt="{post.title}">
-	<figcaption>{post.bio}</figcaption>
+	<figcaption>{post.firstname} {post.middlename} {post.lastname}</figcaption>
 </figure>
 
+<h2>Profile</h2>
 <aside>
 <label><span>Psychosis</span><input type=range min="1" max="5" disabled value={post.profile.psychosis}></label>
 <label><span>Power_hunger</span><input type=range min="1" max="5" disabled value={post.profile.power_hunger}></label>
@@ -108,6 +111,8 @@
 <label><span>Militancy</span><input type=range min="1" max="5" disabled value={post.profile.militancy}></label>
 <label><span>Narcissism</span><input type=range min="1" max="5" disabled value={post.profile.narcissism}></label>
 </aside>
+
+<h2>Knowledge</h2>
 <div class='content'>
 	{@html post.html}
 </div>
