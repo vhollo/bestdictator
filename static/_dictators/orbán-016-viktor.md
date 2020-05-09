@@ -1,6 +1,6 @@
 ---
 layout: blog
-title: Orbán 016 Viktor
+title: "016"
 firstname: Viktor
 middlename: Mihály
 lastname: Orbán
