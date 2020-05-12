@@ -29,7 +29,7 @@ collections:
       - {label: "Last name", name: "lastname", widget: "string"}
       - {label: "Birth date", name: "birthdate", widget: "date", format: "YYYY-MM-DD", dateFormat: "YYYY-MM-DD", required: false}
       - {label: "Death date", name: "deathdate", widget: "date", format: "YYYY-MM-DD", dateFormat: "YYYY-MM-DD", required: false}
-      - {label: "Dead", name: "dead", widget: "boolean", required: false}
+      - {label: "Is dead", name: "isdead", widget: "boolean", required: false}
       - {label: "Country", name: "country", widget: "string", required: false}
 
       - name: "profile"
@@ -92,7 +92,7 @@ collections:
     label: "Mausoleum" # Used in the UI
     folder: "static/_dics" # The path to the folder where the documents are stored
     filter:
-      field: dead
+      field: isdead
       value: true
     fields:
       - {label: "Name", name: title}

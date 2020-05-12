@@ -1,7 +1,6 @@
 ---
 lastname: Zedong
 deathdate: 1976-09-09T00:00:00.000Z
-dead: true
 layout: blog
 title: Mao
 firstname: Mao
