@@ -51,7 +51,6 @@ collections:
           - {label: "Cynicism", name: "cynicism", widget: "number", valueType: "int", min: 1, max: 5, required: false}
           - {label: "Bullshit factor", name: "bullshit", widget: "number", valueType: "int", min: 1, max: 5, required: false}
 
-
       - name: "power"
         label: "Power indicators"
         widget: "object"
