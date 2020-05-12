@@ -75,11 +75,11 @@ collections:
       - {label: "Content", name: "body", widget: "markdown"}
 
   - name: "living_dics" # Used in routes, e.g., /admin/collections/blog
-    label: "Living Dictators" # Used in the UI
+    label: "Living Dictators?" # Used in the UI
     folder: "static/_dics" # The path to the folder where the documents are stored
     filter:
       field: deathdate
-      value: false
+      value: 0
     fields:
       - {label: "Name", name: title}
       - {label: "Lost/hiding", name: "lost", widget: "boolean", default: false}
@@ -89,7 +89,7 @@ collections:
     folder: "static/_dics" # The path to the folder where the documents are stored
     filter:
       field: deathdate
-      value: true
+      value: !0
     fields:
       - {label: "Name", name: title}
       - {label: "Cause of death", name: "cause", widget: "markdown", minimal: true, required: false}
