@@ -3,8 +3,9 @@ layout: blog
 title: Mao
 firstname: Mao
 lastname: Zedong
-birthdate: 1893-12-26
-deathdate: 1976-09-09
+birthdate: 1893-12-26T00:00:00.000Z
+deathdate: 1976-09-09T00:00:00.000Z
+dead: true
 country: China
 photo: /uploads/mao.jpg
 ---
