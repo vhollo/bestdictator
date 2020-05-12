@@ -29,7 +29,7 @@
 </svelte:head>
 
 <h1>{post.title}</h1>
-<p>Birth date: <code>{post.birthdate}</code></p>
+<p>Birth date: <code>{post.date}</code></p>
 <h2>Bio</h2>
 <p>{post.bio}</p>
 <figure>

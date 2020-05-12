@@ -3,7 +3,7 @@
 </script>
 
 <svelte:head>
-  <title>Josh's Weblog</title>
+  <title>Recent DiCs</title>
 </svelte:head>
 
 <h1>Recent DiCs</h1>
