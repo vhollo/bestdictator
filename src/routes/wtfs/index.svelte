@@ -1,18 +1,18 @@
 <script>
-  import {posts} from '../dics'
+  import {posts} from '../wtfs'
 </script>
 
 <svelte:head>
   <title>Josh's Weblog</title>
 </svelte:head>
 
-<h1>Recent DiCs</h1>
+<h1>Recent WTFs</h1>
 
 {#each posts as post}
   <article>
-    <a href={`/dics/${post._id}`}>
+    <a href={`/wtfs/${post._id}`}>
       <h2>{post.title}</h2>
-      <p>{post.bio}</p>
+      <p>{post.summary}</p>
     </a>
   </article>
 {/each}
