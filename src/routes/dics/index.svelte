@@ -12,7 +12,6 @@
   <article>
     <a href={`/dics/${post._id}`}>
       <h2>{post.title}</h2>
-      <p>{post.bio}</p>
     </a>
   </article>
 {/each}

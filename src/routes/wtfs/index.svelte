@@ -12,7 +12,6 @@
   <article>
     <a href={`/wtfs/${post._id}`}>
       <h2>{post.title}</h2>
-      <p>{post.summary}</p>
     </a>
   </article>
 {/each}
