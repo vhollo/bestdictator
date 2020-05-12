@@ -49,7 +49,26 @@ collections:
           - {label: "Psychosis", name: "psychosis", widget: "number", valueType: "int", min: 1, max: 5, required: false}
           - {label: "Militancy", name: "militancy", widget: "number", valueType: "int", min: 1, max: 5, required: false}
           - {label: "Cynicism", name: "cynicism", widget: "number", valueType: "int", min: 1, max: 5, required: false}
-          - {label: "Bullshit factor", name: "bullshit_factor", widget: "number", valueType: "int", min: 1, max: 5, required: false}
+          - {label: "Bullshit factor", name: "bullshit", widget: "number", valueType: "int", min: 1, max: 5, required: false}
+
+
+      - name: "power"
+        label: "Power indicators"
+        widget: "object"
+        collapsed: true
+        fields: 
+          - {label: "Parliament", name: "parliament", widget: "number", valueType: "int", min: 1, max: 5, required: false}
+          - {label: "Print Media", name: "print", widget: "number", valueType: "int", min: 1, max: 5, required: false}
+          - {label: "Online Media", name: "online", widget: "number", valueType: "int", min: 1, max: 5, required: false}
+          - {label: "Television", name: "tv", widget: "number", valueType: "int", min: 1, max: 5, required: false}
+          - {label: "Justice Depts", name: "justice", widget: "number", valueType: "int", min: 1, max: 5, required: false}
+          - {label: "Economy", name: "economy", widget: "number", valueType: "int", min: 1, max: 5, required: false}
+          - {label: "Education", name: "education", widget: "number", valueType: "int", min: 1, max: 5, required: false}
+          - {label: "Culture", name: "culture", widget: "number", valueType: "int", min: 1, max: 5, required: false}
+          - {label: "Religions", name: "religion", widget: "number", valueType: "int", min: 1, max: 5, required: false}
+          - {label: "State control", name: "state", widget: "number", valueType: "int", min: 1, max: 5, required: false}
+          - {label: "Constitution", name: "constitution", widget: "number", valueType: "int", min: 1, max: 5, required: false}
+          - {label: "Bullshit factor", name: "bullshit", widget: "number", valueType: "int", min: 1, max: 5, required: false}
 
       - {label: "Photo", name: "photo", widget: "file", default: "/DiC-Logo-B.svg", media_library: {config: {multiple: false}}}
       - {label: "Bio", name: "bio", widget: "markdown", minimal: true, required: false}

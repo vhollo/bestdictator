@@ -8,7 +8,8 @@
 
 <script>
 	export let post
-	const fieldnames = {
+
+	const profile_names = {
 		corruption: "Corruption",
 		power_hunger: "Power hunger",
 		agression: "Agression",
@@ -20,7 +21,22 @@
 		psychosis: "Psychosis",
 		militancy: "Militancy",
 		cynicism: "Cynicism",
-		bullshit_factor: "Bullshit factor",
+		bullshit: "Bullshit factor",
+	}
+
+	const power_names = {
+		parliament: "Parliament",
+		print: "Print Media",
+		online: "Online Media",
+		tv: "Television",
+		justice: "Justice Depts",
+		economy: "Economy",
+		education: "Education",
+		culture: "Culture",
+		religion: "Religions",
+		state: "State control",
+		constitution: "Constitution",
+		bullshit: "Bullshit factor",
 	}
 </script>
 
@@ -49,7 +65,16 @@
 <h2>Profile</h2>
 <aside>
 {#each Object.entries(post.profile) as [key, value]}
-	<label><span>{fieldnames[key]}</span> <input type=range min="1" max="5" disabled value={value}></label>
+	<label><span>{profile_names[key]}</span> <input type=range min="1" max="5" disabled value={value}></label>
+{/each}
+</aside>
+{/if}
+
+{#if post.power}
+<h2>Power Indicators</h2>
+<aside>
+{#each Object.entries(post.ppower) as [key, value]}
+	<label><span>{power_names[key]}</span> <input type=range min="1" max="5" disabled value={value}></label>
 {/each}
 </aside>
 {/if}
