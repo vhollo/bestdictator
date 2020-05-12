@@ -5,20 +5,20 @@ backend:
 media_folder: static/uploads # Media files will be stored in the repo under static/uploads
 public_folder: /uploads # The src attribute for uploaded media will begin with /uploads
 locale: 'en'
-site_url: https://bestdictator.netlify.app
-display_url: https://bestdictator.netlify.app
+site_url: https://dev.bestdictator.com
+display_url: https://dev.bestdictator.com
 logo_url: /DiC-Logo-B.svg
-_id:
+slug:
   encoding: "ascii"
   clean_accents: true
   sanitize_replacement: "-"
 
 collections:
-  - name: "dictators" # Used in routes, e.g., /admin/collections/blog
+  - name: "dics" # Used in routes, e.g., /admin/collections/blog
     label: "Dictator" # Used in the UI
     folder: "static/_dics" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
-    _id: "{{slug}}" # Filename template, e.g., title.md
+    slug: "{{slug}}" # Filename template, e.g., title.md
     fields: # The fields for each document, usually in front matter
       - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
       - {label: "Short name", name: "title", widget: "string"}
@@ -26,8 +26,8 @@ collections:
       - {label: "First name", name: "firstname", widget: "string", required: false}
       - {label: "Middle name", name: "middlename", widget: "string", required: false}
       - {label: "Last name", name: "lastname", widget: "string"}
-      - {label: "Birth date", name: "birthdate", widget: "string", required: false, default: false}
-      - {label: "Death date", name: "deathdate", widget: "string", required: false, default: false}
+      - {label: "Birth date", name: "birthdate", widget: "date", format: "YYYY-MM-DD", dateFormat: "YYYY-MM-DD", required: false, default: false}
+      - {label: "Death date", name: "deathdate", widget: "date", format: "YYYY-MM-DD", dateFormat: "YYYY-MM-DD", required: false, default: false}
       - {label: "Country", name: "country", widget: "string", required: false}
 
       - name: "profile"
@@ -47,31 +47,32 @@ collections:
           - {label: "Militancy", name: "militancy", widget: "number", valueType: "int", min: 1, max: 5, required: false}
           - {label: "Cynicism", name: "cynicism", widget: "number", valueType: "int", min: 1, max: 5, required: false}
           - {label: "Bullshit factor", name: "bullshit_factor", widget: "number", valueType: "int", min: 1, max: 5, required: false}
-
-  
       - {label: "Photo", name: "photo", widget: "file", default: "/DiC-Logo-B.svg", media_library: {config: {multiple: false}}}
       - {label: "Bio", name: "bio", widget: "markdown", minimal: true, required: false}
       - {label: "Description", name: "body", widget: "markdown"}
-  - name: "wtf" # Used in routes, e.g., /admin/collections/blog
+
+  - name: "wtfs" # Used in routes, e.g., /admin/collections/blog
     label: "WTF" # Used in the UI
     folder: "static/_wtfs" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
-    _id: "{{slug}}" # Filename template, e.g., title.md
+    slug: "{{slug}}" # Filename template, e.g., title.md
     fields: # The fields for each document, usually in front matter
       - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime", required: false}
       - {label: "Content", name: "body", widget: "markdown"}
+
   - name: "psyche" # Used in routes, e.g., /admin/collections/blog
     label: "Psyche" # Used in the UI
     folder: "static/_psyche" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
-    _id: "{{slug}}" # Filename template, e.g., title.md
+    slug: "{{slug}}" # Filename template, e.g., title.md
     fields: # The fields for each document, usually in front matter
       - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime", required: false}
       - {label: "Content", name: "body", widget: "markdown"}
+
   - name: "living_dics" # Used in routes, e.g., /admin/collections/blog
     label: "Living Dictators" # Used in the UI
     folder: "static/_dics" # The path to the folder where the documents are stored
@@ -79,7 +80,9 @@ collections:
       field: deathdate
       value: false
     fields:
+      - {label: "Name", name: title}
       - {label: "Lost/hiding", name: "lost", widget: "boolean", default: false}
+
   - name: "dead_dics" # Used in routes, e.g., /admin/collections/blog
     label: "Mausoleum" # Used in the UI
     folder: "static/_dics" # The path to the folder where the documents are stored
@@ -87,4 +90,5 @@ collections:
       field: deathdate
       value: true
     fields:
+      - {label: "Name", name: title}
       - {label: "Cause of death", name: "cause", widget: "markdown", minimal: true, required: false}
