@@ -23,8 +23,13 @@
 	<figcaption>{post.firstname} {post.middlename} {post.lastname}</figcaption>
 </figure>
 
+{#if post.profile}
 <h2>Profile</h2>
 <aside>
+{#each Object.entries(post.profile) as [key, value]}
+	<label><span>{key}</span><input type=range min="1" max="5" disabled value={value}></label>
+{/each}
+<!-- 
 	<label><span>Psychosis</span><input type=range min="1" max="5" disabled value={post.profile.psychosis}></label>
 	<label><span>Power_hunger</span><input type=range min="1" max="5" disabled value={post.profile.power_hunger}></label>
 	<label><span>Agression</span><input type=range min="1" max="5" disabled value={post.profile.agression}></label>
@@ -37,8 +42,9 @@
 	<label><span>Megalomania</span><input type=range min="1" max="5" disabled value={post.profile.megalomania}></label>
 	<label><span>Manipulation</span><input type=range min="1" max="5" disabled value={post.profile.manipulation}></label>
 	<label><span>Militancy</span><input type=range min="1" max="5" disabled value={post.profile.militancy}></label>
-	<label><span>Narcissism</span><input type=range min="1" max="5" disabled value={post.profile.narcissism}></label>
+	<label><span>Narcissism</span><input type=range min="1" max="5" disabled value={post.profile.narcissism}></label> -->
 </aside>
+{/if}
 
 <h2>Knowledge</h2>
 <div class='content'>
