@@ -13,7 +13,6 @@ export function findPost(_id) {
 function transform({filename, metadata, html}) {
   const _id = filename.replace(/.md$/, '')
 	const date = new Date(metadata.birthdate).toDateString().substring(4)
-console.log(date)
 
   return {...metadata, filename, _id, html, date}
 }
