@@ -26,8 +26,8 @@ collections:
       - {label: "First name", name: "firstname", widget: "string", required: false}
       - {label: "Middle name", name: "middlename", widget: "string", required: false}
       - {label: "Last name", name: "lastname", widget: "string"}
-      - {label: "Birth date", name: "birthdate", widget: "date", format: "YYYY-MM-DD", dateFormat: "YYYY-MM-DD", required: false, default: 0}
-      - {label: "Death date", name: "deathdate", widget: "date", format: "YYYY-MM-DD", dateFormat: "YYYY-MM-DD", required: true, default: 0}
+      - {label: "Birth date", name: "birthdate", widget: "date", format: "YYYY-MM-DD", dateFormat: "YYYY-MM-DD", required: false, default: 0000-00-00}
+      - {label: "Death date", name: "deathdate", widget: "date", format: "YYYY-MM-DD", dateFormat: "YYYY-MM-DD", required: true, default: 0000-00-00}
       - {label: "Country", name: "country", widget: "string", required: false}
 
       - name: "profile"
@@ -75,21 +75,21 @@ collections:
       - {label: "Content", name: "body", widget: "markdown"}
 
   - name: "living_dics" # Used in routes, e.g., /admin/collections/blog
-    label: "Living Dictators?" # Used in the UI
+    label: "Living Dictators" # Used in the UI
     folder: "static/_dics" # The path to the folder where the documents are stored
     filter:
       field: deathdate
-      value: 0
+      value: !0
     fields:
       - {label: "Name", name: title}
       - {label: "Lost/hiding", name: "lost", widget: "boolean", default: false}
 
   - name: "dead_dics" # Used in routes, e.g., /admin/collections/blog
-    label: "Mausoleum" # Used in the UI
+    label: "Mausoleum!" # Used in the UI
     folder: "static/_dics" # The path to the folder where the documents are stored
     filter:
       field: deathdate
-      value: !0
+      value: !!0
     fields:
       - {label: "Name", name: title}
       - {label: "Cause of death", name: "cause", widget: "markdown", minimal: true, required: false}
