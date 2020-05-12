@@ -29,7 +29,11 @@
 </svelte:head>
 
 <h1>{post.title}</h1>
-<p>Birth date: <code>{post.date}</code></p>
+<p>Date of Birth: <code>{post.birthdate || '?'}</code></p>
+{#if post.isdead}
+<p>Date of Death: <code>{post.deathdate || '?'}</code></p>
+{/if}
+
 <h2>Bio</h2>
 <p>{post.bio}</p>
 <figure>
