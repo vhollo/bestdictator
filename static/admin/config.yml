@@ -30,24 +30,7 @@ collections:
       - {label: "Death date", name: "deathdate", widget: "date", format: "YYYY-MM-DD", dateFormat: "YYYY-MM-DD", required: false, default: false}
       - {label: "Country", name: "country", widget: "string", required: false}
 
-      - name: "profile_fields"
-        label: "Profile fields"
-        widget: "hidden"
-        fields: 
-          - {label: "Corruption", default: "Corruption", name: "corruption", widget: "hidden"}
-          - {label: "Power hunger", default: "Power hunger", name: "power_hunger", widget: "hidden"}
-          - {label: "Agression", default: "Agression", name: "agression", widget: "hidden"}
-          - {label: "Autocracy", default: "Autocracy", name: "autocracy", widget: "hidden"}
-          - {label: "Telling lies", default: "Telling lies", name: "telling_lies", widget: "hidden"}
-          - {label: "Manipulation", default: "Manipulation", name: "manipulation", widget: "hidden"}
-          - {label: "Narcissism", default: "Narcissism", name: "narcissism", widget: "hidden"}
-          - {label: "Megalomania", default: "Megalomania", name: "megalomania", widget: "hidden"}
-          - {label: "Psychosis", default: "Psychosis", name: "psychosis", widget: "hidden"}
-          - {label: "Militancy", default: "Militancy", name: "militancy", widget: "hidden"}
-          - {label: "Cynicism", default: "Cynicism", name: "cynicism", widget: "hidden"}
-          - {label: "Bullshit factor", default: "Bullshit factor", name: "bullshit_factor", widget: "hidden"}
-
-            - name: "profile"
+      - name: "profile"
         label: "Profile"
         widget: "object"
         collapsed: true

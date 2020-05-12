@@ -7,7 +7,21 @@
 </script>
 
 <script>
-  export let post
+	export let post
+	const fieldname = {
+		corruption: "Corruption",
+		power_hunger: "Power hunger",
+		agression: "Agression",
+		autocracy: "Autocracy",
+		telling_lies: "Telling lies",
+		manipulation: "Manipulation",
+		narcissism: "Narcissism",
+		megalomania: "Megalomania",
+		psychosis: "Psychosis",
+		militancy: "Militancy",
+		cynicism: "Cynicism",
+		bullshit_factor: "Bullshit factor",
+	}
 </script>
 
 <svelte:head>
@@ -27,7 +41,7 @@
 <h2>Profile</h2>
 <aside>
 {#each Object.entries(post.profile) as [key, value]}
-	<label><span>{key}</span><input type=range min="1" max="5" disabled value={value}></label>
+	<label><span>{fieldname[key]}</span> <input type=range min="1" max="5" disabled value={value}></label>
 {/each}
 <!-- 
 	<label><span>Psychosis</span><input type=range min="1" max="5" disabled value={post.profile.psychosis}></label>
