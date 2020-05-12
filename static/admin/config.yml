@@ -27,7 +27,7 @@ collections:
       - {label: "Middle name", name: "middlename", widget: "string", required: false}
       - {label: "Last name", name: "lastname", widget: "string"}
       - {label: "Birth date", name: "birthdate", widget: "date", format: "YYYY-MM-DD", dateFormat: "YYYY-MM-DD", required: false}
-      - {label: "Death date", name: "deathdate", widget: "date", dateFormat: "YYYY-MM-DD", default: 0}
+      - {label: "Death date", name: "deathdate", widget: "date", dateFormat: "YYYY-MM-DD", default: ""}
       - {label: "Country", name: "country", widget: "string", required: false}
 
       - name: "profile"
@@ -79,7 +79,7 @@ collections:
     folder: "static/_dics" # The path to the folder where the documents are stored
     filter:
       field: deathdate
-      value: 0
+      value: !!0
     fields:
       - {label: "Name", name: title}
       - {label: "Lost/hiding", name: "lost", widget: "boolean", default: false}
