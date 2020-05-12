@@ -15,7 +15,8 @@ slug:
 
 collections:
   - name: "dics" # Used in routes, e.g., /admin/collections/blog
-    label: "Dictator" # Used in the UI
+    label: "Dictators" # Used in the UI
+    label_singular: "Dictator"
     folder: "static/_dics" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{slug}}" # Filename template, e.g., title.md
@@ -27,7 +28,8 @@ collections:
       - {label: "Middle name", name: "middlename", widget: "string", required: false}
       - {label: "Last name", name: "lastname", widget: "string"}
       - {label: "Birth date", name: "birthdate", widget: "date", format: "YYYY-MM-DD", dateFormat: "YYYY-MM-DD", required: false}
-      - {label: "Death date", name: "deathdate", widget: "date", dateFormat: "YYYY-MM-DD", default: "", required: false}
+      - {label: "Death date", name: "deathdate", widget: "date", format: "YYYY-MM-DD", dateFormat: "YYYY-MM-DD", required: false}
+      - {label: "Dead", name: "dead", widget: "boolean", required: false}
       - {label: "Country", name: "country", widget: "string", required: false}
 
       - name: "profile"
@@ -53,7 +55,8 @@ collections:
       - {label: "Description", name: "body", widget: "markdown"}
 
   - name: "wtfs" # Used in routes, e.g., /admin/collections/blog
-    label: "WTF" # Used in the UI
+    label: "WTFs" # Used in the UI
+    label_singular: "WTF"
     folder: "static/_wtfs" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{slug}}" # Filename template, e.g., title.md
@@ -64,7 +67,8 @@ collections:
       - {label: "Content", name: "body", widget: "markdown"}
 
   - name: "psyche" # Used in routes, e.g., /admin/collections/blog
-    label: "Psyche" # Used in the UI
+    label: "Psyche Articles" # Used in the UI
+    label_singular: "Psyche Article"
     folder: "static/_psyche" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{slug}}" # Filename template, e.g., title.md
@@ -79,7 +83,7 @@ collections:
     folder: "static/_dics" # The path to the folder where the documents are stored
     filter:
       field: deathdate
-      value: !!0
+      value: ''
     fields:
       - {label: "Name", name: title}
       - {label: "Lost/hiding", name: "lost", widget: "boolean", default: false}
@@ -88,8 +92,8 @@ collections:
     label: "Mausoleum" # Used in the UI
     folder: "static/_dics" # The path to the folder where the documents are stored
     filter:
-      field: deathdate
-      value: !0
+      field: dead
+      value: true
     fields:
       - {label: "Name", name: title}
       - {label: "Cause of death", name: "cause", widget: "markdown", minimal: true, required: false}
