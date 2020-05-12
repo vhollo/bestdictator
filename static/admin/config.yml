@@ -79,7 +79,7 @@ collections:
     folder: "static/_dics" # The path to the folder where the documents are stored
     filter:
       field: deathdate
-      value: !0
+      value: !1
     fields:
       - {label: "Name", name: title}
       - {label: "Lost/hiding", name: "lost", widget: "boolean", default: false}
@@ -89,7 +89,7 @@ collections:
     folder: "static/_dics" # The path to the folder where the documents are stored
     filter:
       field: deathdate
-      value: !!0
+      value: !0
     fields:
       - {label: "Name", name: title}
       - {label: "Cause of death", name: "cause", widget: "markdown", minimal: true, required: false}
