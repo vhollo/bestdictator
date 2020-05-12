@@ -32,6 +32,12 @@
 	}
 </style>
 
+<script>
+	import Tailwindcss from '../components/Tailwindcss.svelte';
+</script>
+
+<Tailwindcss />
+
 <svelte:head>
 	<title>Sapper project template</title>
 </svelte:head>

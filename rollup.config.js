@@ -11,6 +11,7 @@ import autoPreprocess from 'svelte-preprocess'
 import config from 'sapper/config/rollup.js'
 import path from 'path'
 import pkg from './package.json'
+import sveltePreprocess from 'svelte-preprocess'
 
 const mode = process.env.NODE_ENV
 const dev = mode === 'development'
@@ -35,7 +36,8 @@ export default {
       }),
       svelte({
         dev,
-        preprocess: autoPreprocess(),
+				preprocess: autoPreprocess(),
+				preprocess: sveltePreprocess({ postcss: true }),
         hydratable: true,
         emitCss: true
       }),
@@ -82,7 +84,8 @@ export default {
         'process.env.NODE_ENV': JSON.stringify(mode)
       }),
       svelte({
-        generate: 'ssr',
+				generate: 'ssr',
+				preprocess: sveltePreprocess({ postcss: true }),
         dev
       }),
       resolve({
