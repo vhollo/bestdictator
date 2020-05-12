@@ -5,6 +5,7 @@ firstname: Mao
 lastname: Zedong
 birthdate: 1893-12-26
 deathdate: 1976-09-09
+dead: true
 country: China
 photo: /uploads/mao.jpg
 ---
