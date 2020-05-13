@@ -5,7 +5,8 @@ export let segment;
 <style>
 nav {
 	background-color: rgba(255,255,255,.9);
-	border-bottom: 1px solid rgba(255,62,0,0.1);
+	border-bottom: 1px;
+	border-color: theme('colors.main');
 	font-weight: 300;
 	padding: 0 1em;
 	position: sticky;

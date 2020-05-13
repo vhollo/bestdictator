@@ -1,6 +1,20 @@
 <svelte:head>
-	<title>Sapper project template</title>
+	<title>Rate Your Dictator</title>
 </svelte:head>
+
+<header>
+	<figure>
+		<img src="DiC-Logo-W.svg" alt="logo">
+		<figcaption>Rate Your Dictator</figcaption>
+	</figure>
+	<nav>
+		<a href="/liar">Who's the biggest liar?</a>
+		<a href="/corrupt">Who's the most corrupt?</a>
+		<a href="/cruel">Who's the cruelest?</a>
+		<a href="/idiot">Who's the largest idiot?</a>
+		<a href="/why">Why people vote a DiC?</a>
+	</nav>
+</header>
 
 <h1>Great success!</h1>
 
@@ -11,6 +25,19 @@
 
 <p><strong>Try editing this file (src/routes/index.svelte) to test live reloading.</strong></p>
 
+<style>
+	header {
+		background-color: theme('colors.main');
+
+	}
+	header figure {
+		display: flex;
+	}
+	header nav {
+		display: flex;
+    text-align: center;
+	}
+</style>
 <!-- <style>
 	h1, figure, p {
 		text-align: center;
