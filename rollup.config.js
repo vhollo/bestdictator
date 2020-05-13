@@ -7,10 +7,10 @@ import commonjs from '@rollup/plugin-commonjs'
 import svelte from 'rollup-plugin-svelte'
 import babel from 'rollup-plugin-babel'
 import { terser } from 'rollup-plugin-terser'
-import autoPreprocess from 'svelte-preprocess'
 import config from 'sapper/config/rollup.js'
 import path from 'path'
 import pkg from './package.json'
+/* import autoPreprocess from 'svelte-preprocess' */
 import sveltePreprocess from 'svelte-preprocess'
 
 const mode = process.env.NODE_ENV
@@ -36,7 +36,7 @@ export default {
       }),
       svelte({
         dev,
-				preprocess: autoPreprocess(),
+				/* preprocess: autoPreprocess(), */
 				preprocess: sveltePreprocess({ postcss: true }),
         hydratable: true,
         emitCss: true

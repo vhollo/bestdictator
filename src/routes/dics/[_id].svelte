@@ -1,43 +1,43 @@
 <script context="module">
-  import {findPost} from '../dics'
+import {findPost} from '../dics'
 
-  export function preload(page) {
-    return { post: findPost(page.params._id) }
-  }
+export function preload(page) {
+	return { post: findPost(page.params._id) }
+}
 </script>
 
 <script>
-	export let post
+export let post
 
-	const profile_names = {
-		corruption: "Corruption",
-		power_hunger: "Power hunger",
-		agression: "Agression",
-		autocracy: "Autocracy",
-		telling_lies: "Telling lies",
-		manipulation: "Manipulation",
-		narcissism: "Narcissism",
-		megalomania: "Megalomania",
-		psychosis: "Psychosis",
-		militancy: "Militancy",
-		cynicism: "Cynicism",
-		bullshit: "Bullshit factor",
-	}
+const profile_names = {
+	corruption: "Corruption",
+	power_hunger: "Power hunger",
+	agression: "Agression",
+	autocracy: "Autocracy",
+	telling_lies: "Telling lies",
+	manipulation: "Manipulation",
+	narcissism: "Narcissism",
+	megalomania: "Megalomania",
+	psychosis: "Psychosis",
+	militancy: "Militancy",
+	cynicism: "Cynicism",
+	bullshit: "Bullshit factor",
+}
 
-	const power_names = {
-		parliament: "Parliament",
-		print: "Print Media",
-		online: "Online Media",
-		tv: "Television",
-		justice: "Justice Depts",
-		economy: "Economy",
-		education: "Education",
-		culture: "Culture",
-		religion: "Religions",
-		state: "State control",
-		constitution: "Constitution",
-		bullshit: "Bullshit factor",
-	}
+const power_names = {
+	parliament: "Parliament",
+	print: "Print Media",
+	online: "Online Media",
+	tv: "Television",
+	justice: "Justice Depts",
+	economy: "Economy",
+	education: "Education",
+	culture: "Culture",
+	religion: "Religions",
+	state: "State control",
+	constitution: "Constitution",
+	bullshit: "Bullshit factor",
+}
 </script>
 
 <svelte:head>
@@ -83,3 +83,17 @@
 <div class='content'>
 	{@html post.html}
 </div>
+
+<style>
+aside {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+	grid-gap: 0 2rem;
+	@apply shadow-md;
+}
+aside > label {
+	display: flex;
+	justify-content: space-between;
+}
+
+</style>
