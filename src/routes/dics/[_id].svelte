@@ -7,6 +7,7 @@ export function preload(page) {
 </script>
 
 <script>
+import Header_dic from '../../components/headers/DiC.svelte';
 export let post
 
 const profile_names = {
@@ -44,22 +45,7 @@ const power_names = {
   <title>{post.title}</title>
 </svelte:head>
 
-<h1>{post.title}</h1>
-{#if post.desc}
-<h2>{post.desc}</h2>
-{/if}
-
-<p>Date of Birth: <code>{post.birthdate || '?'}</code></p>
-{#if post.isdead}
-<p>Date of Death: <code>{post.deathdate || '?'}</code></p>
-{/if}
-
-<h3>Bio</h3>
-<p>{@html post.bio}</p>
-<figure>
-	<img src="{post.photo}" alt="{post.title}">
-	<figcaption>{post.firstname || ''} {post.middlename || ''} {post.lastname || ''}</figcaption>
-</figure>
+<Header_dic post="{post}" />
 
 {#if post.profile}
 <h2>Profile</h2>
@@ -68,6 +54,13 @@ const power_names = {
 	<label><span>{profile_names[key]}</span> <input type=range min="1" max="5" disabled value={value}></label>
 {/each}
 </aside>
+{/if}
+
+<h3>{post.firstname || ''} {post.middlename || ''} {post.lastname || ''}</h3>
+<p>{@html post.bio}</p>
+<p>Date of Birth: <code>{post.birthdate || '?'}</code></p>
+{#if post.isdead}
+<p>Date of Death: <code>{post.deathdate || '?'}</code></p>
 {/if}
 
 {#if post.power}
