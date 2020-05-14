@@ -2,11 +2,24 @@
 export let segment;
 </script>
 
+<nav>
+	<ul>
+		<li><a aria-current='{segment === undefined ? "page" : undefined}' href='.'>home</a></li>
+		<li><a aria-current='{segment === "about" ? "page" : undefined}' href='about'>about</a></li>
+
+		<!-- for the blog link, we're using rel=prefetch so that Sapper prefetches
+		     the blog data when we hover over the link or tap it on a touchscreen -->
+		<!-- <li><a rel=prefetch aria-current='{segment === "blog" ? "page" : undefined}' href='blog'>blog</a></li> -->
+		<li><a rel=prefetch aria-current='{segment === "wtfs" ? "page" : undefined}' href='wtfs'>wtfs</a></li>
+		<li><a rel=prefetch aria-current='{segment === "dics" ? "page" : undefined}' href='dics'>dics</a></li>
+	</ul>
+</nav>
+
 <style>
 nav {
-	background-color: rgba(255,255,255,.9);
+	background-color: var(--bgcolor);
 	border-bottom: 1px;
-	border-color: theme('colors.main');
+	border-color: var(--maincolor);
 	font-weight: 300;
 	padding: 0 1em;
 	position: sticky;
@@ -41,7 +54,7 @@ li {
 	content: '';
 	width: calc(100% - 1em);
 	height: 2px;
-	background-color: rgb(255,62,0);
+	background-color: var(--maincolor);
 	display: block;
 	bottom: -1px;
 }
@@ -52,16 +65,3 @@ a {
 	display: block;
 }
 </style>
-
-<nav>
-	<ul>
-		<li><a aria-current='{segment === undefined ? "page" : undefined}' href='.'>home</a></li>
-		<li><a aria-current='{segment === "about" ? "page" : undefined}' href='about'>about</a></li>
-
-		<!-- for the blog link, we're using rel=prefetch so that Sapper prefetches
-		     the blog data when we hover over the link or tap it on a touchscreen -->
-		<!-- <li><a rel=prefetch aria-current='{segment === "blog" ? "page" : undefined}' href='blog'>blog</a></li> -->
-		<li><a rel=prefetch aria-current='{segment === "wtfs" ? "page" : undefined}' href='wtfs'>wtfs</a></li>
-		<li><a rel=prefetch aria-current='{segment === "dics" ? "page" : undefined}' href='dics'>dics</a></li>
-	</ul>
-</nav>
