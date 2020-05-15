@@ -1,5 +1,6 @@
 <script>
 	import LogoDic from '../svg/dic-logo.svelte';
+	import IconDic from '../svg/dic-icon.svelte';
 	export let post
 	export let rank_overall = 21
 </script>
@@ -7,14 +8,15 @@
 <header>
 	<aside>
 		<LogoDic />
-		<big>{rank_overall}</big>
+		<big><b>{rank_overall}</b></big>
 	</aside>
 	<figure>
 		<img src="{post.photo}" alt="{post.title}">
 		<figcaption><big>{post.title}</big><small>{post.desc}</small></figcaption>
 	</figure>
 	<aside>
-		<LogoDic />
+		<big>Dictator LEVEL</big>
+		<IconDic />
 	</aside>
 </header>
 
@@ -23,6 +25,7 @@
 		background-color: var(--maincolor);
 		color: var(--txtcolor);
 		display: flex;
+		align-items: center;
 	}
 	aside {
 		text-align: center;
