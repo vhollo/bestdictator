@@ -7,7 +7,7 @@ export function preload(page) {
 </script>
 
 <script>
-import Header_dic from '../../components/headers/DiC.svelte';
+import Header_dic from '../../components/headers/Header_dic.svelte';
 export let post
 
 const profile_names = {
@@ -51,12 +51,12 @@ const power_names = {
 <h2>Profile</h2>
 <aside>
 {#each Object.entries(post.profile) as [key, value]}
-	<label><span>{profile_names[key]}</span> <input type=range min="1" max="5" disabled value={value}></label>
+	<label><code>{profile_names[key]}</code> <input type=range min="1" max="5" disabled value={value}></label>
 {/each}
 </aside>
 {/if}
 
-<h3>{post.firstname || ''} {post.middlename || ''} {post.lastname || ''}</h3>
+<h1>{post.firstname || ''} {post.middlename || ''} {post.lastname || ''}</h1>
 <p>{@html post.bio}</p>
 <p>Date of Birth: <code>{post.birthdate || '?'}</code></p>
 {#if post.isdead}
@@ -67,7 +67,7 @@ const power_names = {
 <h2>Power Indicators</h2>
 <aside>
 {#each Object.entries(post.power) as [key, value]}
-	<label><span>{power_names[key]}</span> <input type=range min="1" max="5" disabled value={value}></label>
+	<label><code>{power_names[key]}</code> <input type=range min="1" max="5" disabled value={value}></label>
 {/each}
 </aside>
 {/if}
@@ -87,6 +87,7 @@ aside {
 aside > label {
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
 }
 
 </style>

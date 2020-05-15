@@ -5,25 +5,30 @@ body {
 	background-color: var(--bgcolor);
 	color: var(--txtcolor);
 }
-/* html.darktheme {
-	--maincolor: theme('colors.darkmain');
-}
-html.lighttheme {
-	--maincolor: theme('colors.lightmain');
-}
- */
 h1 {
-@apply text-2xl;
+@apply text-3xl;
+color: salmon;
 }
 h2 {
-@apply text-xl;
+@apply text-2xl;
+color: lightgreen;
 }
 h3 {
+@apply text-xl;
+color: lightskyblue;
+}
+h4 {
 @apply text-lg;
 }
-/* a {
-	@apply text-blue-600 underline;
-} */
+
+svg {
+	fill: var(--txtcolor);
+	margin: 0 auto;
+}
+figcaption {
+	margin-right: auto;
+	margin-left: auto;
+}
 
 @tailwind components;
 @tailwind utilities;
@@ -39,14 +44,9 @@ h3 {
 	--txtcolor: theme('colors.dark');
 	--maincolor: theme('colors.light_main');
 }
-.darktheme .darkinv {
+.darktheme .darkinv, .lighttheme .lightinv {
 	filter: invert(100%);
 }
-.lighttheme .lightinv {
-	filter: invert(100%);
-}
-
-
 
 
 </style>
