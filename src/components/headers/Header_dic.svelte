@@ -16,7 +16,7 @@
 	</figure>
 	<aside>
 		<big>Dictator LEVEL</big>
-		<IconDic />
+		<div class="pie"></div>
 	</aside>
 </header>
 
@@ -50,6 +50,12 @@
 	figcaption big {
 		display: block;
 	}
+
+.pie{
+  width: 100px; height: 100px;
+  border-radius: 50%;
+  background: conic-gradient(#655 40%, yellowgreen 0);
+}
 
 /* 	header :global(svg) {
 		margin: 0 auto;
