@@ -36,7 +36,7 @@ function setpower(key, value) {
 <h2>Profile</h2>
 <aside>
 {#each Object.entries(profile) as [key, value]}
-	<label><mark>{profile_names[key]}</mark> <input type=range min="1" max="5" bind:value={profile[key]} on:change={setprofile(key, value)}></label>
+<label><mark>{profile_names[key]}</mark> <input type=range min="1" max="5" bind:value={profile[key]} on:change={setprofile(key, value)} data-level="{value}" style="--level:{value*20}%"></label>
 {/each}
 </aside>
 {/if}
@@ -74,12 +74,20 @@ aside > label {
 	justify-content: space-between;
 	align-items: center;
 }
-
-input {
-	outline:white 2px solid;
+input{ 
+	position: relative;
 }
-input:hover {
-	outline:0;
+input:after {
+	content: '';
+	position: absolute;
+	top:0;
+	bottom: 0;
+	left: 0;
+	width: var(--level);
+	background: white;
+}
+input:hover:after {
+	display: none;
 }
 
 </style>
