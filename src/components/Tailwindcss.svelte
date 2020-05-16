@@ -7,7 +7,7 @@ body {
 }
 h1 {
 @apply text-3xl;
-color: salmon;
+color: var(--maincolor);
 }
 h2 {
 @apply text-2xl;
@@ -15,7 +15,6 @@ color: var(--extcolor);
 }
 h3 {
 @apply text-xl;
-color: lightskyblue;
 }
 h4 {
 @apply text-lg;
