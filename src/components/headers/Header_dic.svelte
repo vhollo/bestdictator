@@ -53,11 +53,4 @@
 		display: block;
 	}
 
-
-/* 	header :global(svg) {
-		margin: 0 auto;
-		fill: white;
-	}
- */
-
 </style>

@@ -47,10 +47,4 @@
 	nav a {
 		padding: 1rem;
 	}
-
-/* 	nav a :global(svg) {
-		margin: 0 auto;
-		fill: white;
-	}
- */	
 </style>
