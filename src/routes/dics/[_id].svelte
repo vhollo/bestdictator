@@ -1,5 +1,6 @@
 <script context="module">
 import {findPost} from '../dics'
+import {profile_names, power_names} from '../txt'
 
 export function preload(page) {
 	return { post: findPost(page.params._id) }
@@ -7,67 +8,53 @@ export function preload(page) {
 </script>
 
 <script>
-import Header_dic from '../../components/headers/Header_dic.svelte';
+import Header_dic from '../../components/headers/header_dic.svelte'
 export let post
+let profile = post.profile
+let power = post.power
 
-const profile_names = {
-	corruption: "Corruption",
-	power_hunger: "Power hunger",
-	agression: "Agression",
-	autocracy: "Autocracy",
-	telling_lies: "Telling lies",
-	manipulation: "Manipulation",
-	narcissism: "Narcissism",
-	megalomania: "Megalomania",
-	psychosis: "Psychosis",
-	militancy: "Militancy",
-	cynicism: "Cynicism",
-	bullshit: "Bullshit factor",
+$: sum_profile = Object.values(profile).reduce((t, n) => t + n, 0)
+$: sum_power = Object.values(power).reduce((t, n) => t + n, 0)
+$: level_overall = ((sum_profile + sum_power) / 12)
+
+function setprofile(key, value) {
+	profile[key] = value
+	console.log(profile)
+}
+function setpower(key, value) {
+	power[key] = value
+	console.log(key, value)
 }
 
-const power_names = {
-	parliament: "Parliament",
-	print: "Print Media",
-	online: "Online Media",
-	tv: "Television",
-	justice: "Justice Depts",
-	economy: "Economy",
-	education: "Education",
-	culture: "Culture",
-	religion: "Religions",
-	state: "State control",
-	constitution: "Constitution",
-	bullshit: "Bullshit factor",
-}
 </script>
 
 <svelte:head>
   <title>{post.title}</title>
 </svelte:head>
 
-<Header_dic post="{post}" />
+<Header_dic post="{post}" level_overall="{level_overall}" />
 
-{#if post.profile}
+{#if profile}
 <h2>Profile</h2>
 <aside>
 {#each Object.entries(post.profile) as [key, value]}
-	<label><code>{profile_names[key]}</code> <input type=range min="1" max="5" disabled value={value}></label>
+	<label><mark>{profile_names[key]}</mark> <input type=range min="1" max="5" bind:value on:change={setprofile(key, value)}></label>
 {/each}
 </aside>
 {/if}
 
 <h1>{post.firstname || ''} {post.middlename || ''} {post.lastname || ''}</h1>
 <p>{@html post.bio}</p>
-<p>Date of Birth: <code>{post.birthdate || '?'}</code></p>
+<p>Date of Birth: <time>{post.birthdate || '?'}</time></p>
 {#if post.isdead}
-<p>Date of Death: <code>{post.deathdate || '?'}</code></p>
+<p>Date of Death: <time>{post.deathdate || '?'}</time></p>
 {/if}
 
-{#if post.power}
+{#if power}
 <h2>Power Indicators</h2>
 <aside>
 {#each Object.entries(post.power) as [key, value]}
-	<label><code>{power_names[key]}</code> <input type=range min="1" max="5" disabled value={value}></label>
+	<label><mark>{power_names[key]}</mark> <input type=range min="1" max="5" bind:value={power[key]} on:change={setpower(key, value)}></label>
 {/each}
 </aside>
 {/if}
@@ -88,6 +75,13 @@ aside > label {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+}
+
+input {
+	outline:white 2px solid;
+}
+input:hover {
+	outline:0;
 }
 
 </style>

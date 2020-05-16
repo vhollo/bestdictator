@@ -1,8 +1,10 @@
 <script>
 	import LogoDic from '../svg/dic-logo.svelte';
 	import IconDic from '../svg/dic-icon.svelte';
+	import Pie from '../css/pie.svelte';
 	export let post
 	export let rank_overall = 21
+	export let level_overall = 0
 </script>
 
 <header>
@@ -16,7 +18,7 @@
 	</figure>
 	<aside>
 		<big>Dictator LEVEL</big>
-		<div class="pie"></div>
+		<Pie level="{level_overall}" />
 	</aside>
 </header>
 
@@ -51,11 +53,6 @@
 		display: block;
 	}
 
-.pie{
-  width: 100px; height: 100px;
-  border-radius: 50%;
-  background: conic-gradient(#655 40%, yellowgreen 0);
-}
 
 /* 	header :global(svg) {
 		margin: 0 auto;

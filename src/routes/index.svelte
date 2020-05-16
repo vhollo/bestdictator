@@ -1,5 +1,5 @@
 <script>
-import Header_rate from '../components/headers/Header_rate.svelte';
+import Header_rate from '../components/headers/header_rate.svelte';
 </script>
 
 <svelte:head>
