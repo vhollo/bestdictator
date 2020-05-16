@@ -10,7 +10,7 @@
 <header>
 	<aside>
 		<LogoDic />
-		<big><b>{rank_overall}</b></big>
+		<big><big><big><b>{rank_overall}</b></big></big></big>
 	</aside>
 	<figure>
 		<img src="{post.photo}" alt="{post.title}">
