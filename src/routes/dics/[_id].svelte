@@ -1,6 +1,6 @@
 <script context="module">
 import {findPost} from '../dics'
-import {profile_names, power_names} from '../txt'
+import { profile_names, power_names } from '../../components/txt'
 
 export function preload(page) {
 	return { post: findPost(page.params._id) }
@@ -8,7 +8,9 @@ export function preload(page) {
 </script>
 
 <script>
+
 import Header_dic from '../../components/headers/header_dic.svelte'
+import Profile from '../../components/profile.svelte'
 export let post
 let profile = post.profile
 let power = post.power
@@ -17,9 +19,6 @@ $: sum_profile = Object.values(profile).reduce((t, n) => t + n, 0)
 $: sum_power = Object.values(power).reduce((t, n) => t + n, 0)
 $: level_overall = ((sum_profile + sum_power) / 12)
 
-function setprofile(key, value) {
-	profile[key] = value
-}
 function setpower(key, value) {
 	power[key] = value
 }
@@ -35,12 +34,11 @@ function setpower(key, value) {
 {#if profile}
 <h2>Profile</h2>
 <aside>
-{#each Object.entries(profile) as [key, value]}
-<label><code>{profile_names[key]}</code> <input type=range min="1" max="5" bind:value={profile[key]} on:change={setprofile(key, value)} style="--level:{value*20}%"></label>
-{/each}
+	<Profile bind:data="{profile}" names="{profile_names}" />
 </aside>
 {/if}
 
+<h2>Bio</h2>
 <h1>{post.firstname || ''} {post.middlename || ''} {post.lastname || ''}</h1>
 <p>{@html post.bio}</p>
 <p>Date of Birth: <time>{post.birthdate || '?'}</time></p>
@@ -51,9 +49,7 @@ function setpower(key, value) {
 {#if power}
 <h2>Power Indicators</h2>
 <aside>
-{#each Object.entries(power) as [key, value]}
-	<label><code>{power_names[key]}</code> <input type=range min="1" max="5" bind:value={power[key]} on:change={setpower(key, value)} style="--level:{value*20}%"></label>
-{/each}
+	<Profile bind:data="{power}" names="{power_names}" />
 </aside>
 {/if}
 
@@ -65,29 +61,9 @@ function setpower(key, value) {
 <style>
 aside {
 	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
-	grid-gap: 0 2rem;
+	grid-template-columns: repeat(auto-fill, minmax(16em, 1fr));
+	grid-gap: 0 1rem;
 	@apply shadow-md;
-}
-aside > label {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-}
-input{ 
-	position: relative;
-}
-input:after {
-	content: '';
-	position: absolute;
-	top:0;
-	bottom: 0;
-	left: 0;
-	width: var(--level);
-	background: white;
-}
-input:hover:after {
-	display: none;
 }
 
 </style>
