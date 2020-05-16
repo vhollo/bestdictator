@@ -18,6 +18,7 @@ label {
 	justify-content: flex-end;
 	align-items: center;
 	white-space: nowrap;
+	margin-right: 2em;
 }
 input{ 
 	position: relative;

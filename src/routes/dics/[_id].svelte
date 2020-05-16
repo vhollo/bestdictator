@@ -61,8 +61,8 @@ function setpower(key, value) {
 <style>
 aside {
 	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(16em, 1fr));
-	grid-gap: 0 1rem;
+	grid-template-columns: repeat(auto-fill, minmax(18em, 1fr));
+	grid-gap: 0 2rem;
 	@apply shadow-md;
 }
 
