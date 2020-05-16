@@ -4,7 +4,7 @@ export let level = 0
 </script>
 
 
-<div style="--pie_mask:{(10-level) * 10}%;" data-level="{level.toFixed(1)}"></div>
+<div style="--mask:{(10-level) * 10}%;" data-level="{level.toFixed(1)}"></div>
 
 <style>
 div {
@@ -23,7 +23,7 @@ div:before {
 	bottom: 0;
 	right: 0;
   border-radius: 50%;
-	background: conic-gradient(var(--maincolor) var(--pie_mask), transparent 0);
+	background: conic-gradient(var(--maincolor) var(--mask), transparent 0);
 	opacity: .75;
 }
 div:after {
