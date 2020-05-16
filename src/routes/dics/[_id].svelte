@@ -36,7 +36,7 @@ function setpower(key, value) {
 <h2>Profile</h2>
 <aside>
 {#each Object.entries(profile) as [key, value]}
-<label><mark>{profile_names[key]}</mark> <input type=range min="1" max="5" bind:value={profile[key]} on:change={setprofile(key, value)} data-level="{value}" style="--level:{value*20}%"></label>
+<label><code>{profile_names[key]}</code> <input type=range min="1" max="5" bind:value={profile[key]} on:change={setprofile(key, value)} style="--level:{value*20}%"></label>
 {/each}
 </aside>
 {/if}
@@ -52,7 +52,7 @@ function setpower(key, value) {
 <h2>Power Indicators</h2>
 <aside>
 {#each Object.entries(power) as [key, value]}
-	<label><mark>{power_names[key]}</mark> <input type=range min="1" max="5" bind:value={power[key]} on:change={setpower(key, value)}></label>
+	<label><code>{power_names[key]}</code> <input type=range min="1" max="5" bind:value={power[key]} on:change={setpower(key, value)} style="--level:{value*20}%"></label>
 {/each}
 </aside>
 {/if}
