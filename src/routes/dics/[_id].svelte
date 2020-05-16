@@ -19,11 +19,9 @@ $: level_overall = ((sum_profile + sum_power) / 12)
 
 function setprofile(key, value) {
 	profile[key] = value
-	console.log(profile)
 }
 function setpower(key, value) {
 	power[key] = value
-	console.log(key, value)
 }
 
 </script>
@@ -37,8 +35,8 @@ function setpower(key, value) {
 {#if profile}
 <h2>Profile</h2>
 <aside>
-{#each Object.entries(post.profile) as [key, value]}
-	<label><mark>{profile_names[key]}</mark> <input type=range min="1" max="5" bind:value on:change={setprofile(key, value)}></label>
+{#each Object.entries(profile) as [key, value]}
+	<label><mark>{profile_names[key]}</mark> <input type=range min="1" max="5" bind:value={profile[key]} on:change={setprofile(key, value)}></label>
 {/each}
 </aside>
 {/if}
@@ -53,7 +51,7 @@ function setpower(key, value) {
 {#if power}
 <h2>Power Indicators</h2>
 <aside>
-{#each Object.entries(post.power) as [key, value]}
+{#each Object.entries(power) as [key, value]}
 	<label><mark>{power_names[key]}</mark> <input type=range min="1" max="5" bind:value={power[key]} on:change={setpower(key, value)}></label>
 {/each}
 </aside>
