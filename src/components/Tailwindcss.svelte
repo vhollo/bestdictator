@@ -27,6 +27,7 @@ svg {
 figcaption {
 	margin-right: auto;
 	margin-left: auto;
+	padding: 1rem 0;
 }
 
 @tailwind components;

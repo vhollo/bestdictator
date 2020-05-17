@@ -11,8 +11,7 @@ div {
 	position: relative;
   width: 80px; height: 80px;
   border-radius: 50%;
-	/* border-width: var(--pie-width);
-	border-style: dashed; */
+	margin: 0 auto;
 	background: transparent repeating-conic-gradient(transparent 0 10deg, white 0 20deg);
 }
 div:before {

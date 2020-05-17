@@ -28,6 +28,7 @@
 		color: var(--txtcolor);
 		display: flex;
 		align-items: center;
+		padding: 0 2rem;
 	}
 	aside {
 		text-align: center;
@@ -39,7 +40,7 @@
 	}
 
 	figure img {
-		max-width: 25%;
+		max-width: 30%;
     min-width: 80px;
 	}
 
@@ -52,5 +53,4 @@
 	figcaption big {
 		display: block;
 	}
-
 </style>
