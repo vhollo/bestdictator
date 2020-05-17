@@ -25,6 +25,17 @@ input{
 input:hover {
 	visibility: visible;
 }
+input:before {
+	visibility: visible;
+	content: '';
+	position: absolute;
+	top:0;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	/* background: dimgrey; */
+	background: darkslategray;
+}
 input:after {
 	visibility: visible;
 	content: '';
@@ -33,10 +44,10 @@ input:after {
 	bottom: 0;
 	left: 0;
 	width: var(--level);
-	background: white;
+	background: var(--maincolor);
 }
-input:hover:after {
-	display: none;
+input:hover:before, input:hover:after {
+	visibility: hidden;
 }
 
 </style>
