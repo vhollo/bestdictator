@@ -30,6 +30,7 @@ figcaption {
 	padding: 1rem 0;
 }
 
+
 @tailwind components;
 @tailwind utilities;
 
@@ -54,5 +55,9 @@ html {
 .darktheme .darkinv, .lighttheme .lightinv {
 	filter: invert(100%);
 }
+mark {
+	background-color: var(--extcolor);
+}
+
 
 </style>

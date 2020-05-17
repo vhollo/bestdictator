@@ -31,7 +31,7 @@ $: level_overall = ((sum_profile + sum_power) / 9.6)
 {#if post.profile}
 <h2>Profile</h2>
 <aside>
-	<Profile bind:data="{profile}" names="{profile_names}" />
+	<Profile bind:data="{profile}" average="{profile}" names="{profile_names}" />
 </aside>
 {/if}
 
@@ -48,7 +48,7 @@ $: level_overall = ((sum_profile + sum_power) / 9.6)
 {#if post.power}
 <h2>Power Indicators</h2>
 <aside>
-	<Profile bind:data="{power}" names="{power_names}" />
+	<Profile bind:data="{power}" average="{power}" names="{power_names}" />
 </aside>
 {/if}
 
