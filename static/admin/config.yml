@@ -38,36 +38,36 @@ collections:
         widget: "object"
         collapsed: true
         fields: 
-          - {label: "Corruption", name: "corruption", widget: "number", valueType: "int", min: 1, max: 5, required: false}
-          - {label: "Power hunger", name: "power_hunger", widget: "number", valueType: "int", min: 1, max: 5, required: false}
-          - {label: "Agression", name: "agression", widget: "number", valueType: "int", min: 1, max: 5, required: false}
-          - {label: "Autocracy", name: "autocracy", widget: "number", valueType: "int", min: 1, max: 5, required: false}
-          - {label: "Telling lies", name: "telling_lies", widget: "number", valueType: "int", min: 1, max: 5, required: false}
-          - {label: "Manipulation", name: "manipulation", widget: "number", valueType: "int", min: 1, max: 5, required: false}
-          - {label: "Narcissism", name: "narcissism", widget: "number", valueType: "int", min: 1, max: 5, required: false}
-          - {label: "Megalomania", name: "megalomania", widget: "number", valueType: "int", min: 1, max: 5, required: false}
-          - {label: "Psychosis", name: "psychosis", widget: "number", valueType: "int", min: 1, max: 5, required: false}
-          - {label: "Militancy", name: "militancy", widget: "number", valueType: "int", min: 1, max: 5, required: false}
-          - {label: "Cynicism", name: "cynicism", widget: "number", valueType: "int", min: 1, max: 5, required: false}
-          - {label: "Bullshit factor", name: "bullshit", widget: "number", valueType: "int", min: 1, max: 5, required: false}
+          - {label: "Corruption", name: "corruption", widget: "number", valueType: "int", min: 1, max: 5, default: 1}
+          - {label: "Power hunger", name: "power_hunger", widget: "number", valueType: "int", min: 1, max: 5, default: 1}
+          - {label: "Agression", name: "agression", widget: "number", valueType: "int", min: 1, max: 5, default: 1}
+          - {label: "Autocracy", name: "autocracy", widget: "number", valueType: "int", min: 1, max: 5, default: 1}
+          - {label: "Telling lies", name: "telling_lies", widget: "number", valueType: "int", min: 1, max: 5, default: 1}
+          - {label: "Manipulation", name: "manipulation", widget: "number", valueType: "int", min: 1, max: 5, default: 1}
+          - {label: "Narcissism", name: "narcissism", widget: "number", valueType: "int", min: 1, max: 5, default: 1}
+          - {label: "Megalomania", name: "megalomania", widget: "number", valueType: "int", min: 1, max: 5, default: 1}
+          - {label: "Psychosis", name: "psychosis", widget: "number", valueType: "int", min: 1, max: 5, default: 1}
+          - {label: "Militancy", name: "militancy", widget: "number", valueType: "int", min: 1, max: 5, default: 1}
+          - {label: "Cynicism", name: "cynicism", widget: "number", valueType: "int", min: 1, max: 5, default: 1}
+          - {label: "Bullshit factor", name: "bullshit", widget: "number", valueType: "int", min: 1, max: 5, default: 1}
 
       - name: "power"
         label: "Power indicators"
         widget: "object"
         collapsed: true
         fields: 
-          - {label: "Parliament", name: "parliament", widget: "number", valueType: "int", min: 1, max: 5, required: false}
-          - {label: "Print Media", name: "print", widget: "number", valueType: "int", min: 1, max: 5, required: false}
-          - {label: "Online Media", name: "online", widget: "number", valueType: "int", min: 1, max: 5, required: false}
-          - {label: "Television", name: "tv", widget: "number", valueType: "int", min: 1, max: 5, required: false}
-          - {label: "Justice Depts", name: "justice", widget: "number", valueType: "int", min: 1, max: 5, required: false}
-          - {label: "Economy", name: "economy", widget: "number", valueType: "int", min: 1, max: 5, required: false}
-          - {label: "Education", name: "education", widget: "number", valueType: "int", min: 1, max: 5, required: false}
-          - {label: "Culture", name: "culture", widget: "number", valueType: "int", min: 1, max: 5, required: false}
-          - {label: "Religions", name: "religion", widget: "number", valueType: "int", min: 1, max: 5, required: false}
-          - {label: "State control", name: "state", widget: "number", valueType: "int", min: 1, max: 5, required: false}
-          - {label: "Constitution", name: "constitution", widget: "number", valueType: "int", min: 1, max: 5, required: false}
-          - {label: "Bullshit factor", name: "bullshit", widget: "number", valueType: "int", min: 1, max: 5, required: false}
+          - {label: "Parliament", name: "parliament", widget: "number", valueType: "int", min: 1, max: 5, default: 1}
+          - {label: "Print Media", name: "print", widget: "number", valueType: "int", min: 1, max: 5, default: 1}
+          - {label: "Online Media", name: "online", widget: "number", valueType: "int", min: 1, max: 5, default: 1}
+          - {label: "Television", name: "tv", widget: "number", valueType: "int", min: 1, max: 5, default: 1}
+          - {label: "Justice Depts", name: "justice", widget: "number", valueType: "int", min: 1, max: 5, default: 1}
+          - {label: "Economy", name: "economy", widget: "number", valueType: "int", min: 1, max: 5, default: 1}
+          - {label: "Education", name: "education", widget: "number", valueType: "int", min: 1, max: 5, default: 1}
+          - {label: "Culture", name: "culture", widget: "number", valueType: "int", min: 1, max: 5, default: 1}
+          - {label: "Religions", name: "religion", widget: "number", valueType: "int", min: 1, max: 5, default: 1}
+          - {label: "State control", name: "state", widget: "number", valueType: "int", min: 1, max: 5, default: 1}
+          - {label: "Constitution", name: "constitution", widget: "number", valueType: "int", min: 1, max: 5, default: 1}
+          - {label: "Bullshit factor", name: "bullshit", widget: "number", valueType: "int", min: 1, max: 5, default: 1}
 
       - {label: "Photo", name: "photo", widget: "file", default: "/DiC-Logo-B.svg", media_library: {config: {multiple: false}}}
       - {label: "Bio", name: "bio", widget: "markdown", minimal: true, required: false}
