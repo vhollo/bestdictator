@@ -7,7 +7,7 @@ public_folder: /uploads # The src attribute for uploaded media will begin with /
 locale: 'en'
 site_url: https://dev.bestdictator.com
 display_url: https://dev.bestdictator.com
-logo_url: /DiC-Logo-B.svg
+logo_url: /DiC-Icon.png
 slug:
   encoding: "ascii"
   clean_accents: true
@@ -69,7 +69,7 @@ collections:
           - {label: "Constitution", name: "constitution", widget: "number", valueType: "int", min: 1, max: 5, default: 1}
           - {label: "Bullshit factor", name: "bullshit2", widget: "number", valueType: "int", min: 1, max: 5, default: 1}
 
-      - {label: "Photo", name: "photo", widget: "file", default: "/DiC-Logo-B.svg", media_library: {config: {multiple: false}}}
+      - {label: "Photo", name: "photo", widget: "file", default: "/DiC-Logo.svg", media_library: {config: {multiple: false}}}
       - {label: "Bio", name: "bio", widget: "markdown", minimal: true, required: false}
       - {label: "Description", name: "body", widget: "markdown"}
 
