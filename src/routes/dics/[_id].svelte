@@ -1,23 +1,50 @@
 <script context="module">
-import {findPost} from '../dics'
+import {posts, findPost} from '../dics'
 import { profile_names, power_names } from '../../components/txt'
 
 export function preload(page) {
-	return { post: findPost(page.params._id) }
+	return { 
+		post: findPost(page.params._id)
+	}
 }
+export function calcaverage(_id, profile, power) {
+	let a = {},
+		av = {},
+		i = 0
+	for (let p of posts) {
+		if (p._id === _id) {
+			p.profile = profile
+			p.power = power
+		}
+		for (let [key, value] of Object.entries(p.profile)) {
+			//for (let [key, value] in p.profile) {
+			a[key] = (a[key] || 0) + value
+		}
+		for (let [key, value] of Object.entries(p.power)) {
+			//for (let [key, value] in p.power) {
+			a[key] = (a[key] || 0) + value
+		}
+		i++
+	}
+	for (let [key, value] of Object.entries(a)) {
+		av[key] = value / i
+	}
+	return av
+}
+
 </script>
 
 <script>
-
 import Header_dic from '../../components/headers/header_dic.svelte'
 import Profile from '../../components/profile.svelte'
 export let post
+$: average = calcaverage(post._id, profile, power)
 let profile = post.profile
 let power = post.power
 let level_overall
 
-$: sum_profile = Object.values(profile).reduce((t, n) => t + (n - 1), 0) || 0
-$: sum_power = Object.values(power).reduce((t, n) => t + (n - 1), 0) || 0
+$: sum_profile = Object.values(profile).reduce((t, n) => t + (n - 1), 0)
+$: sum_power = Object.values(power).reduce((t, n) => t + (n - 1), 0)
 $: level_overall = ((sum_profile + sum_power) / 9.6)
 
 </script>
@@ -31,7 +58,7 @@ $: level_overall = ((sum_profile + sum_power) / 9.6)
 {#if post.profile}
 <h2>Profile</h2>
 <aside>
-	<Profile bind:data="{profile}" average="{profile}" names="{profile_names}" />
+	<Profile bind:data="{profile}" average="{average}" names="{profile_names}" />
 </aside>
 {/if}
 
@@ -48,7 +75,7 @@ $: level_overall = ((sum_profile + sum_power) / 9.6)
 {#if post.power}
 <h2>Power Indicators</h2>
 <aside>
-	<Profile bind:data="{power}" average="{power}" names="{power_names}" />
+	<Profile bind:data="{power}" average="{average}" names="{power_names}" />
 </aside>
 {/if}
 

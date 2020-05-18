@@ -10,7 +10,7 @@ export const profile_names = {
 	psychosis: "Psychosis",
 	militancy: "Militancy",
 	cynicism: "Cynicism",
-	bullshit: "Bullshit factor",
+	bullshit1: "Bullshit factor",
 }
 
 export const power_names = {
@@ -25,5 +25,5 @@ export const power_names = {
 	religion: "Religions",
 	state: "State control",
 	constitution: "Constitution",
-	bullshit: "Bullshit factor",
+	bullshit2: "Bullshit factor",
 }

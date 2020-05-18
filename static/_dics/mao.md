@@ -13,7 +13,7 @@ profile:
   power_hunger: 1
   agression: 1
   cynicism: 1
-  bullshit: 1
+  bullshit1: 1
   autocracy: 1
   telling_lies: 1
   corruption: 1
@@ -29,7 +29,7 @@ power:
   culture: 1
   state: 1
   religion: 1
-  bullshit: 1
+  bullshit2: 1
   online: 1
   constitution: 1
   economy: 1

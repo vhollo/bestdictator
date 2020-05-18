@@ -49,7 +49,7 @@ collections:
           - {label: "Psychosis", name: "psychosis", widget: "number", valueType: "int", min: 1, max: 5, default: 1}
           - {label: "Militancy", name: "militancy", widget: "number", valueType: "int", min: 1, max: 5, default: 1}
           - {label: "Cynicism", name: "cynicism", widget: "number", valueType: "int", min: 1, max: 5, default: 1}
-          - {label: "Bullshit factor", name: "bullshit", widget: "number", valueType: "int", min: 1, max: 5, default: 1}
+          - {label: "Bullshit factor", name: "bullshit1", widget: "number", valueType: "int", min: 1, max: 5, default: 1}
 
       - name: "power"
         label: "Power indicators"
@@ -67,7 +67,7 @@ collections:
           - {label: "Religions", name: "religion", widget: "number", valueType: "int", min: 1, max: 5, default: 1}
           - {label: "State control", name: "state", widget: "number", valueType: "int", min: 1, max: 5, default: 1}
           - {label: "Constitution", name: "constitution", widget: "number", valueType: "int", min: 1, max: 5, default: 1}
-          - {label: "Bullshit factor", name: "bullshit", widget: "number", valueType: "int", min: 1, max: 5, default: 1}
+          - {label: "Bullshit factor", name: "bullshit2", widget: "number", valueType: "int", min: 1, max: 5, default: 1}
 
       - {label: "Photo", name: "photo", widget: "file", default: "/DiC-Logo-B.svg", media_library: {config: {multiple: false}}}
       - {label: "Bio", name: "bio", widget: "markdown", minimal: true, required: false}
