@@ -3,21 +3,21 @@
 	import IconDic from '../svg/dic-icon.svelte';
 	import Pie from '../css/pie.svelte';
 	export let post
-	export let rank_overall = 21
+	export let rank = '?'
 	export let level_overall = 0
 </script>
 
 <header>
 	<aside>
 		<LogoDic />
-		<big><big><big><b>{rank_overall}</b></big></big></big>
+		<span>{rank}</span>
 	</aside>
 	<figure>
 		<img src="{post.photo}" alt="{post.title}">
-		<figcaption><big>{post.title}</big><small>{post.desc}</small></figcaption>
+		<figcaption><b>{post.title}</b>{post.desc}</figcaption>
 	</figure>
 	<aside>
-		<big>Dictator LEVEL</big>
+		<label>Dictator LEVEL</label>
 		<Pie level="{level_overall}" />
 	</aside>
 </header>
@@ -28,11 +28,19 @@
 		color: var(--txtcolor);
 		display: flex;
 		align-items: center;
-		padding: 0 2rem;
+		padding: 0 2%;
 	}
 	aside {
+		width: min-content;
 		text-align: center;
 		padding: .5rem;
+	}
+	aside :global(svg) {
+		width: 80px;
+	}
+	aside span {
+		font-size: xx-large;
+		font-weight: bold;
 	}
 	figure {
 		@apply flex flex-wrap items-center;
@@ -45,12 +53,13 @@
 	}
 
 	figcaption {
-		font-size: 2rem;
+		font-size: x-large;
 		line-height: 1;
 		text-align: center;
 	}
-
-	figcaption big {
+	figcaption b {
+		font-size: xx-large;
 		display: block;
 	}
+
 </style>

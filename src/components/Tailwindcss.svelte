@@ -8,16 +8,20 @@ body {
 h1 {
 @apply text-3xl;
 color: var(--maincolor);
+@apply mt-8 mb-4;
 }
 h2 {
 @apply text-2xl;
-color: var(--extcolor);
+text-transform: uppercase;
+@apply mt-8 mb-4;
 }
 h3 {
 @apply text-xl;
+@apply mt-6 mb-3;
 }
 h4 {
 @apply text-lg;
+@apply mt-6 mb-3;
 }
 
 svg {
