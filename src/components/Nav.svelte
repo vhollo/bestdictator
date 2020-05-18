@@ -30,26 +30,29 @@ nav {
 ul {
 	margin: 0;
 	padding: 0;
+	display: flex;
+	justify-content: flex-end;
 }
 
 /* clearfix */
-ul::after {
+/* ul::after {
 	content: '';
 	display: block;
 	clear: both;
-}
+} */
 
 li {
-	display: block;
-	float: left;
+		/* display: block;
+		float: left; */
 }
 
 [aria-current] {
 	position: relative;
 	display: inline-block;
+	background: var(--maincolor);
 }
 
-[aria-current]::after {
+/* [aria-current]::after {
 	position: absolute;
 	content: '';
 	width: calc(100% - 1em);
@@ -57,11 +60,12 @@ li {
 	background-color: var(--maincolor);
 	display: block;
 	bottom: -1px;
-}
+} */
 
 a {
 	text-decoration: none;
 	padding: 1em 0.5em;
 	display: block;
+	text-transform: uppercase;
 }
 </style>
