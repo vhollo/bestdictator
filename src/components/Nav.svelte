@@ -18,8 +18,9 @@ export let segment;
 <style>
 nav {
 	background-color: var(--bgcolor);
-	border-bottom: 1px;
-	border-color: var(--maincolor);
+	border-bottom: 4px;
+	border-color: var(--txtcolor);
+	border-style: solid;
 	font-weight: 300;
 	padding: 0 1em;
 	position: sticky;

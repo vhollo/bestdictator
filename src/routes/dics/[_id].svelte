@@ -21,7 +21,6 @@ export function calcrank(_id, level) {
 	//lev = _.chain(lev).orderBy('level', 'desc')
 	let i = 1
 	for (let [key, value] of Object.entries(lev)) {
-		console.log(lev[key].id, _id)
 		if (lev[key].id == _id) return i
 		i++
 	}

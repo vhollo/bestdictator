@@ -74,7 +74,8 @@ export default {
 
   server: {
     input: config.server.input(),
-    output: config.server.output(),
+		output: config.server.output(),
+		preserveEntrySignatures: 'false',
     plugins: [
       glob(),
       markdown(),
