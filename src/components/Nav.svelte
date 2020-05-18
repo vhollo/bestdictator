@@ -20,7 +20,7 @@ export let segment;
 nav {
 	background-color: var(--bgcolor);
 	border-bottom: 4px;
-	border-color: var(--txtcolor);
+	border-color: var(--toolbg);
 	border-style: solid;
 	font-weight: 300;
 	padding: 0 1em;

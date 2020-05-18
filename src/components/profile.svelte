@@ -40,7 +40,7 @@ input:before {
 	left: 0;
 	width: 100%;
 	/* background: dimgrey; */
-	background: darkslategray;
+	background: var(--toolbg);
 }
 input:after {
 	visibility: visible;

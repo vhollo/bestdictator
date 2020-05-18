@@ -8,6 +8,7 @@ body {
 h1 {
 @apply text-3xl;
 color: var(--maincolor);
+text-shadow: var(--textshadow);
 @apply mt-8 mb-4;
 }
 h2 {
@@ -49,12 +50,16 @@ html {
 	--txtcolor: theme('colors.light');
 	--maincolor: theme('colors.dark_main');
 	--extcolor: theme('colors.light_main');
+	--toolbg: theme('colors.darkgray');
+	--textshadow: none;
 }
 .lighttheme {
 	--bgcolor: theme('colors.light');
 	--txtcolor: theme('colors.dark');
 	--maincolor: theme('colors.light_main');
 	--extcolor: theme('colors.dark_main');
+	--toolbg: theme('colors.lightgray');
+	--textshadow: 1px 1px black;
 }
 .darktheme .darkinv, .lighttheme .lightinv {
 	filter: invert(100%);
