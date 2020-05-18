@@ -27,13 +27,16 @@
 		background-color: var(--maincolor);
 		color: var(--txtcolor);
 		display: flex;
-		align-items: center;
-		padding: 0 2%;
+		/* align-items: center; */
+		/* padding: 0 2%; */
 	}
 	aside {
 		width: min-content;
 		text-align: center;
-		padding: .5rem;
+		padding: 2%;
+    display: flex;
+    flex-direction: column;
+		justify-content: space-evenly;
 	}
 	aside :global(svg) {
 		width: 80px;
