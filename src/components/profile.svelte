@@ -58,15 +58,15 @@ input:hover:before, input:hover:after {
 
 div{ 
 	position: relative;
+	display: flex;
 	margin-left: 1em;
 }
 mark {
 	position: absolute;
-	top: 0;
 	left: var(--mark);
-	bottom: 0;
+	top: -15%;
+	bottom: -15%;
 	width: 2px;
-	height: 80%;
 }
 
 </style>
