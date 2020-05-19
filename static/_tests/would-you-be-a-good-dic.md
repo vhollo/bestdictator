@@ -13,5 +13,15 @@ questions:
       - a: My mother always told me I'm gonna go to Hell
         value: 3
     q: Do you Love Yourself?
+  - q: Do you hate the other people?
+    answers:
+      - value: 0
+        a: No, we are one
+      - value: 1
+        a: I only hate some
+      - value: 2
+        a: People are rude
+      - value: 3
+        a: I only hate the working class
 ---
 This is a small test to challange your authoriter values 
