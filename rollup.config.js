@@ -13,6 +13,10 @@ import pkg from './package.json'
 /* import autoPreprocess from 'svelte-preprocess' */
 import sveltePreprocess from 'svelte-preprocess'
 
+const preprocess = sveltePreprocess({
+	postcss: true
+});
+
 const mode = process.env.NODE_ENV
 const dev = mode === 'development'
 const legacy = !!process.env.SAPPER_LEGACY_BUILD
@@ -21,6 +25,7 @@ const aliases = {
 }
 
 const onwarn = (warning, onwarn) => (warning.code === 'CIRCULAR_DEPENDENCY' && /[/\\]@sapper[/\\]/.test(warning.message)) || onwarn(warning)
+const dedupe = importee => importee === 'svelte' || importee.startsWith('svelte/');
 
 export default {
   client: {
@@ -37,14 +42,14 @@ export default {
       }),
       svelte({
         dev,
-				/* preprocess: autoPreprocess(), */
-				preprocess: sveltePreprocess({ postcss: true }),
+				preprocess,
+				/* preprocess: sveltePreprocess({ postcss: true }), */
         hydratable: true,
-        emitCss: true
+        emitCss: false
       }),
       resolve({
         browser: true,
-        dedupe: ['svelte']
+        dedupe
       }),
       commonjs(),
 
@@ -86,11 +91,12 @@ export default {
       }),
       svelte({
 				generate: 'ssr',
-				preprocess: sveltePreprocess({ postcss: true }),
+				/* preprocess: sveltePreprocess({ postcss: true }), */
+				preprocess,
         dev
       }),
       resolve({
-        dedupe: ['svelte']
+        dedupe
       }),
       commonjs()
     ],

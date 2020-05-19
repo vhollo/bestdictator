@@ -11,3 +11,11 @@ export let segment;
 <main>
 	<slot></slot>
 </main>
+
+<style global>
+#sapper {
+	max-width: 64em;
+	margin: 0 auto;
+	padding: 0 1em;
+}
+</style>

@@ -7,7 +7,7 @@ const purgecss = require('@fullhuman/postcss-purgecss')({
 	whitelistPatterns: [/svelte-/],
 	/* whitelist: ['mode-dark'], */
 
-	defaultExtractor: content => content.match(/[A-Za-z0-9-_:/]+/g) || []
+	defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || []
 });
 console.log('postcss')
 const production = !process.env.ROLLUP_WATCH
