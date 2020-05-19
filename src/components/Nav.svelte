@@ -18,10 +18,10 @@ export let segment;
 <style>
 nav {
 	background-color: var(--bgcolor);
-	border-bottom: 4px;
+/* 	border-bottom: 4px;
 	border-color: var(--toolbg);
 	border-style: solid;
-	font-weight: 300;
+ */	font-weight: 300;
 	padding: 0 1em;
 	position: sticky;
 	top: 0;
