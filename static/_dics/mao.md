@@ -13,12 +13,12 @@ profile:
   power_hunger: 1
   agression: 1
   cynicism: 1
-  bullshit1: 1
   autocracy: 1
   telling_lies: 1
   corruption: 1
   megalomania: 1
   manipulation: 1
+  bullshit1: 5
   militancy: 1
   narcissism: 1
 power:
@@ -29,10 +29,10 @@ power:
   culture: 1
   state: 1
   religion: 1
-  bullshit2: 1
   online: 1
   constitution: 1
   economy: 1
+  bullshit2: 5
   justice: 1
 photo: /uploads/mao.jpg
 ---
