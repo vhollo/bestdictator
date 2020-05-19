@@ -70,7 +70,10 @@ $: rank = calcrank(post._id, level_overall)
 </script>
 
 <svelte:head>
-  <title>{post.title}</title>
+	<title>{post.title}</title>
+	{#if post.desc}<meta name='description' content='{post.desc}'>{/if}
+	
+
 </svelte:head>
 
 <Header_dic post="{post}" level_overall="{level_overall}" rank="{rank}" />

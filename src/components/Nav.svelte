@@ -21,7 +21,8 @@ nav {
 /* 	border-bottom: 4px;
 	border-color: var(--toolbg);
 	border-style: solid;
- */	font-weight: 300;
+ */
+	font-weight: 300;
 	padding: 0 1em;
 	position: sticky;
 	top: 0;
@@ -35,33 +36,11 @@ ul {
 	justify-content: flex-end;
 }
 
-/* clearfix */
-/* ul::after {
-	content: '';
-	display: block;
-	clear: both;
-} */
-
-li {
-		/* display: block;
-		float: left; */
-}
-
 [aria-current] {
 	position: relative;
 	display: inline-block;
 	background: var(--maincolor);
 }
-
-/* [aria-current]::after {
-	position: absolute;
-	content: '';
-	width: calc(100% - 1em);
-	height: 2px;
-	background-color: var(--maincolor);
-	display: block;
-	bottom: -1px;
-} */
 
 a {
 	text-decoration: none;

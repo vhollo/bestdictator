@@ -86,7 +86,7 @@ export default {
       }),
       svelte({
 				generate: 'ssr',
-				/* preprocess: sveltePreprocess({ postcss: true }), */
+				preprocess: sveltePreprocess({ postcss: true }),
         dev
       }),
       resolve({
