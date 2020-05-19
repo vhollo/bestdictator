@@ -116,3 +116,28 @@ collections:
     fields:
       - {label: "Name", name: title}
       - {label: "Cause of death", name: "cause", widget: "markdown", minimal: true, required: false}
+
+  - name: "tests" # Used in routes, e.g., /admin/collections/blog
+    label: "Tests" # Used in the UI
+    label_singular: "Test"
+    folder: "static/_tests" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{slug}}" # Filename template, e.g., title.md
+    fields: # The fields for each document, usually in front matter
+      - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime", required: false}
+      - {label: "Content", name: "body", widget: "markdown"}
+      - name: "questions"
+        label: "Questions"
+        widget: "list"
+        collapsed: false
+        fields: 
+          - {label: "Question", name: "q", widget: "string"}
+          - label: Answers
+            name: answers
+            widget: list
+            collapsed: false
+            fields:
+              - {label: Answer, name: a, widget: string}
+              - {label: Value, name: value, widget: number}

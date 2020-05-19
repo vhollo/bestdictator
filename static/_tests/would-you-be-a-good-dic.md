@@ -2,7 +2,7 @@
 layout: blog
 title: Would You be a good DiC?
 date: 2020-05-19T20:26:27.343Z
-q:
+questions:
   - answers:
       - a: I'm okay
         value: 0
