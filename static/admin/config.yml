@@ -140,4 +140,4 @@ collections:
             collapsed: false
             fields:
               - {label: Answer, name: a, widget: string}
-              - {label: Value, name: value, widget: number}
+              - {label: Value, name: value, widget: number, valueType: "int", min: 0, default: 0}
