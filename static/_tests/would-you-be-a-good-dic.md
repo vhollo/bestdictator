@@ -14,4 +14,4 @@ questions:
         value: 3
     q: Do you Love Yourself?
 ---
-This is a small test to challange your authoriter values
+This is a small test to challange your authoriter values 
