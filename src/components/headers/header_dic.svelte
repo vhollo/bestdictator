@@ -1,6 +1,5 @@
 <script>
-	import LogoDic from '../svg/dic-logo.svelte';
-	import IconDic from '../svg/dic-icon.svelte';
+	import RankDic from '../svg/dic-rank.svelte';
 	import Pie from '../css/pie.svelte';
 	export let post
 	export let rank = '?'
@@ -9,8 +8,7 @@
 
 <header>
 	<aside>
-		<LogoDic />
-		<span>{rank}</span>
+		<RankDic rank="{rank}" />
 	</aside>
 	<figure>
 		<img src="{post.photo}" alt="{post.title}">
@@ -40,10 +38,6 @@
 	}
 	aside :global(svg) {
 		width: 80px;
-	}
-	aside span {
-		font-size: xx-large;
-		font-weight: bold;
 	}
 	figure {
 		@apply flex flex-wrap items-center;
