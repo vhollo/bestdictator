@@ -20,7 +20,7 @@ questions:
   - q: Do you hate other people?
     answers:
       - value: 0
-        a: No, we are one
+        a: No, we are One
         bull: Go and watch Orange is the new Black on Netflix
       - value: 1
         a: I only hate some
