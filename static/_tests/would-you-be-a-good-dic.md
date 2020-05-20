@@ -1,6 +1,6 @@
 ---
 layout: blog
-title: Would You be a good DiC?
+title: Could I be a Dictator?
 date: 2020-05-19T20:26:27.343Z
 questions:
   - answers:
@@ -9,15 +9,15 @@ questions:
         bull: You think so?
       - a: Somewhat…
         value: 1
-        bull: Check again
+        bull: Check yourself again
       - a: I'm better than You
         value: 2
         bull: No, I'm better than You!
-      - a: My mother always told me I'm gonna go to Hell
+      - a: My mother always told me I'll go to Hell
         value: 3
         bull: Relax, you will
     q: Do you love Yourself?
-  - q: Do you hate the other people?
+  - q: Do you hate other people?
     answers:
       - value: 0
         a: No, we are one
@@ -32,4 +32,4 @@ questions:
         a: I only hate the working class
         bull: And the middle class, right?
 ---
-This is a small test to challange your authoriter values 
+This is an easy test to challange your authoriter values 

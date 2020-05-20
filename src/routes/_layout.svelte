@@ -1,7 +1,8 @@
-<script>
+<script context="module">
 import Tailwindcss from '../components/Tailwindcss.svelte';
 import Nav from '../components/Nav.svelte';
-
+</script>
+<script>
 export let segment;
 </script>
 <Tailwindcss />

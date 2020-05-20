@@ -24,7 +24,7 @@
 <form>
 	{#each post.questions as q, i}
 	<fieldset>
-		<legend>{q.q}</legend>
+		<legend><h2>{q.q}</h2></legend>
 		<div class="answers">
 			{#each q.answers as a, j}
 			<div class="answer">
@@ -33,7 +33,7 @@
 				<label for="answer-{i}-{j}">
 					<span class="icon"></span>
 					{a.a}
-					<span class="reveal">{a.bull}</span>
+					<h3 class="reveal">{a.bull}</h3>
 				</label>
 			</div>
 			{/each}
@@ -80,9 +80,6 @@ form:valid .message { display: block; }
 
 form { counter-reset: count; counter-reset: score; }
 fieldset { counter-increment: count;}
-legend:before {
-	content: counter(count) ". ";
-}
 input:checked ~ :global(u) { counter-increment: score; }
 
 .score:after { content:counter(score) "/" attr(data-question-count) }
