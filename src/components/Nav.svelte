@@ -10,7 +10,7 @@ export let segment;
 		     the blog data when we hover over the link or tap it on a touchscreen -->
 		<li><a rel=prefetch aria-current='{segment === "dics" ? "page" : undefined}' href='dics'>dics</a></li>
 		<li><a rel=prefetch aria-current='{segment === "wtfs" ? "page" : undefined}' href='wtfs'>wtfs</a></li>
-		<li><a rel=prefetch aria-current='{segment === "tests" ? "page" : undefined}' href='tests/would-you-be-a-good-dic'>test</a></li>
+		<li><a rel=prefetch aria-current='{segment === "tests" ? "page" : undefined}' href='tests/could-i-be-a-dictator'>test</a></li>
 		<li><a rel=prefetch aria-current='{segment === "psyche" ? "page" : undefined}' href='psyche'>psyche</a></li>
 	</ul>
 </nav>
