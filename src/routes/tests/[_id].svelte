@@ -40,9 +40,9 @@
 		</div>
 	</fieldset>
 	{/each}
-
+<!-- 
 	<button type="submit">Submit answers</button>
-
+ -->
 	<div class="message">
 		<div class="score-message">
 			You got…
