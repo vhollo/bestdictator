@@ -6,13 +6,13 @@ import Header_rate from '../components/headers/header_rate.svelte';
 	<title>Rate Your Dictator</title>
 </svelte:head>
 
-<Header_rate />
+<!-- <Header_rate /> -->
 
-<h1>Great success!</h1>
+<!-- <h1>Great success!</h1> -->
 
 <figure>
-	<img alt='Borat' src='great-success.png' class="darkinv">
-	<figcaption>HIGH FIVE!</figcaption>
+	<img alt='Borat' src='mockup-3.jpg'>
+	<!-- <figcaption>HIGH FIVE!</figcaption> -->
 </figure>
 
-<p><strong>Try editing this file (src/routes/index.svelte) to test live reloading.</strong></p>
+<!-- <p><strong>Try editing this file (src/routes/index.svelte) to test live reloading.</strong></p> -->
