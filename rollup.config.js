@@ -14,7 +14,13 @@ import pkg from './package.json'
 import sveltePreprocess from 'svelte-preprocess'
 
 const preprocess = sveltePreprocess({
-	postcss: true
+	postcss: true,
+  scss: {
+		includePaths: ['src'],
+	},
+	/* postcss: {
+		plugins: [require('autoprefixer')],
+	}, */
 });
 
 const mode = process.env.NODE_ENV

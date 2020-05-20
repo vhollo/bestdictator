@@ -1,51 +1,52 @@
-<h1>Would You be a good DiC?</h1>
+<script context="module">
+	import { findPost } from '../tests'
 
+	export function preload(page) {
+		return { post: findPost(page.params._id) }
+	}
+		let repeat = (n, t) => t.repeat(n)
+</script>
 
-<form method="POST">
+<script>
+	export let post
+</script>
+
+<svelte:head>
+	<title>{post.title}</title>
+</svelte:head>
+
+<h1>{post.title}</h1>
+
+<div class='content'>
+	{@html post.html}
+</div>
+
+<form>
+	{#each post.questions as q, i}
 	<fieldset>
-		<legend>Do you Love Yourself?</legend>
+		<legend>{q.q}</legend>
 		<div class="answers">
+			{#each q.answers as a, j}
 			<div class="answer">
-				<input type="radio" name="answers" id="answer-1-1" value="1" required>
-				<label for="answer-1-1">
+				<input type="radio" name="answer-{i}" id="answer-{i}-{j}" value="{a.value}" required>
+				{@html repeat(a.value, `<u></u>`)}
+				<label for="answer-{i}-{j}">
 					<span class="icon"></span>
-					I'm okay
-					<span class="reveal">Explanation</span>
+					{a.a}
+					<span class="reveal">Explanation. Must be funny so that you want to see all.</span>
 				</label>
 			</div>
-			<div class="answer">
-				<input type="radio" name="answers" id="answer-1-2" value="2" required><span class="point"></span>
-				<label for="answer-1-2">
-					<span class="icon"></span>
-					Somewhat
-					<span class="reveal">Explanation</span>
-				</label>
-			</div>
-			<div class="answer">
-				<input type="radio" name="answers" id="answer-1-3" value="3" required><span class="point"></span><span class="point"></span>
-				<label for="answer-1-3">
-					<span class="icon"></span>
-					I'm better than You
-					<span class="reveal">Explanation</span>
-				</label>
-			</div>
-			<div class="answer">
-				<input type="radio" name="answers" id="answer-1-4" value="4" required><span class="point"></span><span class="point"></span><span class="point"></span>
-				<label for="answer-1-4">
-					<span class="icon"></span>
-					My mother always told me I'm gonna go to Hell
-					<span class="reveal">Explanation</span>
-				</label>
-			</div>
+			{/each}
 		</div>
 	</fieldset>
+	{/each}
 
 	<button type="submit">Submit answers</button>
 
 	<div class="message">
 		<div class="score-message">
 			You got…
-			<span class="score" data-question-count="3"></span>
+			<span class="score" data-question-count="6"></span>
 			points.
 		</div>
 	</div>
@@ -78,22 +79,25 @@ input:checked ~ label {
 form:valid .message { display: block; }
 
 form { counter-reset: count; counter-reset: score; }
-input:checked ~ .point { counter-increment: score; }
-
-legend { counter-increment: count; }
+fieldset { counter-increment: count;}
 legend:before {
 	content: counter(count) ". ";
 }
+legend:after {
+	content: counter(score);
+}
+input:checked ~ u { counter-increment: score; }
+
 .score:after { content:counter(score) "/" attr(data-question-count) }
 
 input:valid ~ label {
 	pointer-events: none;
 	user-select: none;
 }
-input:valid:checked ~ label {
+/* input:valid:checked ~ label {
 	
 }
-
+ */
 
 /* Labels not clickable on results page */
 .is-results label { cursor: default }
