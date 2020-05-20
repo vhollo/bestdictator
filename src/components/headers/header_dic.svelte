@@ -1,6 +1,6 @@
 <script>
 	import RankDic from '../svg/dic-rank.svelte';
-	import Pie from '../css/pie.svelte';
+	import Pie from '../css/Pie.svelte';
 	export let post
 	export let rank = '?'
 	export let level_overall = 0

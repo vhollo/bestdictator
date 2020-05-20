@@ -131,13 +131,13 @@ collections:
       - name: "questions"
         label: "Questions"
         widget: "list"
-        collapsed: false
+        collapsed: true
         fields: 
           - {label: "Question", name: "q", widget: "string"}
           - label: Answers
             name: answers
             widget: list
-            collapsed: false
+            collapsed: true
             fields:
               - {label: Answer, name: a, widget: string}
               - {label: Value, name: value, widget: number, valueType: "int", min: 0, default: 0}

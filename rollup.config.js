@@ -15,9 +15,9 @@ import sveltePreprocess from 'svelte-preprocess'
 
 const preprocess = sveltePreprocess({
 	postcss: true,
-  scss: {
+  /* scss: {
 		includePaths: ['src'],
-	},
+	}, */
 	/* postcss: {
 		plugins: [require('autoprefixer')],
 	}, */

@@ -54,7 +54,7 @@ export function calcaverage(_id, profile, power) {
 </script>
 
 <script>
-import Header_dic from '../../components/headers/header_dic.svelte'
+import Header_dic from '../../components/headers/Header_dic.svelte'
 import Profile from '../../components/profile.svelte'
 export let post
 let profile = post.profile
