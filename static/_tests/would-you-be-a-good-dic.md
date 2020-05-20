@@ -21,7 +21,7 @@ questions:
     answers:
       - value: 0
         a: No, we are one
-        bull: Ok, go and watch Orange is the new Black on Netflix
+        bull: Go and watch Orange is the new Black on Netflix
       - value: 1
         a: I only hate some
         bull: They are the lucky ones
