@@ -33,7 +33,7 @@
 				<label for="answer-{i}-{j}">
 					<span class="icon"></span>
 					{a.a}
-					<span class="reveal">Explanation. Must be funny so that you want to see all.</span>
+					<span class="reveal">{a.bull}</span>
 				</label>
 			</div>
 			{/each}
@@ -83,10 +83,7 @@ fieldset { counter-increment: count;}
 legend:before {
 	content: counter(count) ". ";
 }
-legend:after {
-	content: counter(score);
-}
-input:checked ~ u { counter-increment: score; }
+input:checked ~ :global(u) { counter-increment: score; }
 
 .score:after { content:counter(score) "/" attr(data-question-count) }
 
