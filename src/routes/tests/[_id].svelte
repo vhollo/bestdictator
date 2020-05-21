@@ -69,7 +69,7 @@ label {
 		border-width: 2px;
 }
 /* Hover/keyboard focus should change the background colour of the item, if not yet answered */
-input:not(:checked) ~ label:hover, input:not(:checked):focus ~ label { background-color: #ec19ec }
+input:not(:checked) ~ label:hover, input:not(:checked):focus ~ label { background-color: var(--toolbg); }
 
 /* Show any extra explanatory text */
 input:checked ~ label .reveal { display: block; }

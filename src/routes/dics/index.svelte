@@ -26,6 +26,9 @@ li {
 	border-width: 2px;
 	padding: 0 1rem;
 }
+li:hover {
+	background-color: var(--toolbg);
+}
 a {
 	display: block;
 	padding: 1rem 0;

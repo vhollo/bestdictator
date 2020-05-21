@@ -16,8 +16,8 @@ module.exports = {
 				light_main: '#c0ff55',
 				light: '#eee',
 				dark: '#111',
-				darkgray: 'darkslategray',
-				lightgray: 'lightsteelblue'
+				darkgray: '#0f2537',
+				lightgray: '#1f4667'
 			},
 			margin: {
 				'96': '24rem',

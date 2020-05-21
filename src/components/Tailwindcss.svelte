@@ -50,7 +50,7 @@ html {
 	--txtcolor: theme('colors.light');
 	--maincolor: theme('colors.dark_main');
 	--extcolor: theme('colors.light_main');
-	--toolbg: theme('colors.darkgray');
+	--toolbg: theme('colors.lightgray');
 	--textshadow: none;
 }
 .lighttheme {
