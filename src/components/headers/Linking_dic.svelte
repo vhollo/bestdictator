@@ -1,6 +1,5 @@
 <script>
 	import { calcrank } from '../../routes/dics'
-	import RankDic from '../svg/dic-rank.svelte';
 	import Pie from '../css/Pie.svelte';
 	export let post
 	//export let profile = post.profile
@@ -9,57 +8,41 @@
 	$: rank = calcrank(post._id, level_overall)
 </script>
 
-<header style="order:{rank}">
-	<aside>
-		<RankDic rank="{rank}" />
-	</aside>
+<a href="{`/dics/${post._id}`}" style="order:{rank}">
 	<figure>
 		<img src="{post.photo}" alt="{post.title}">
 		<figcaption><b>{post.title}</b>{post.desc}</figcaption>
 	</figure>
-	<aside>
-		<label>Dictator LEVEL</label>
-		<Pie level="{level_overall}" />
-	</aside>
-</header>
+</a>
+<aside style="order:{rank}">
+	<Pie level="{level_overall}" />
+</aside>
 
 <style>
-header {
-	background-color: var(--maincolor);
-	color: var(--txtcolor);
-	display: flex;
-	position: sticky;
-	top: 0;
-	z-index: 1;
+a {
+	display: block;
+	padding: 1rem 0;
 }
 aside {
-	width: min-content;
-	text-align: center;
-	padding: 2%;
 	display: flex;
-	flex-direction: column;
-	justify-content: space-evenly;
-	--maskcolor: var(--maincolor);
+	align-items: center;
+	--maskcolor: var(--bgcolor);
 }
 aside :global(svg) {
 	width: 80px;
 }
 figure {
-	@apply flex flex-wrap items-center;
-	justify-content: space-evenly;
+	@apply flex items-center;
 }
 
 figure img {
-	max-width: 30%;
+	max-width: 20%;
 	min-width: 80px;
 }
 
 figcaption {
-	font-size: x-large;
+	font-size: large;
 	line-height: 1;
-	text-align: center;
-	margin-right: auto;
-	margin-left: auto;
 	padding: 1rem .5rem;
 }
 figcaption b {

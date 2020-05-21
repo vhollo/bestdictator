@@ -22,7 +22,7 @@ div:before {
 	bottom: 0;
 	right: 0;
   border-radius: 50%;
-	background: conic-gradient(var(--maincolor) var(--mask), transparent 0);
+	background: conic-gradient(var(--maskcolor) var(--mask), transparent 0);
 	opacity: .75;
 }
 div:after {
@@ -32,7 +32,7 @@ div:after {
 	top: 15%;
 	left: 15%;
   border-radius: 50%;
-	background: var(--maincolor);
+	background: var(--maskcolor);
 	display: flex;
 	justify-content: center;
 	align-items: center;

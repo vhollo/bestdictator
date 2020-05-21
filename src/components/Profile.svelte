@@ -9,7 +9,7 @@ export let average
 <label>
 	{names[key]}
 	<div>
-		<input type=range min="1" max="5" bind:value={data[key]} on:change={data[key] = value} style="--level:{(value-1)*25}%">
+		<input type=range min="1" max="5" bind:value={data[key]} on:change={data[key] = value} style="--level:{(value-1)*25}%" tabindex="0">
 		<mark style="--mark:{(average[key] - 1) * 25}%"></mark>
 	</div>
 </label>
@@ -28,7 +28,7 @@ input{
 	position: relative;
 	visibility: hidden;
 }
-input:hover {
+input:hover, input:focus {
 	visibility: visible;
 }
 input:before {
@@ -52,7 +52,7 @@ input:after {
 	width: var(--level);
 	background: var(--maincolor);
 }
-input:hover:before, input:hover:after {
+input:hover:before, input:hover:after, input:focus:before, input:focus:after {
 	visibility: hidden;
 }
 

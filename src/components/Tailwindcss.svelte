@@ -9,16 +9,11 @@ svg {
 	fill: var(--txtcolor);
 	margin: 0 auto;
 }
-figcaption {
-	margin-right: auto;
-	margin-left: auto;
-	padding: 1rem 0;
-}
 
 h1, .h1 {
 @apply text-3xl;
 color: var(--maincolor);
-text-shadow: var(--textshadow);
+/* text-shadow: var(--textshadow); */
 @apply mt-8 mb-4;
 }
 .h2 {

@@ -1,14 +1,22 @@
 <script>
+import Linking_dic from '../../components/headers/Linking_dic.svelte'
 import {posts} from '../dics'
+
 </script>
 
 <svelte:head>
   <title>Recent DiCs</title>
 </svelte:head>
 
-<h1>Recent DiCs</h1>
+<h1>Dictator Top 10</h1>
 
-<ul>
+<section>
+{#each posts as post}
+	<Linking_dic post="{post}" />
+{/each}
+</section>
+
+<!-- <ul>
 {#each posts as post}
 	<li>
 		<a href={`/dics/${post._id}`}>
@@ -17,9 +25,14 @@ import {posts} from '../dics'
 	</li>
 {/each}
 </ul>
-
+ -->
 <style>
-ul {
+section {
+	display: grid;
+	grid-template-columns: 1fr min-content;
+	grid-gap: 0 2rem;
+}
+/* ul {
 }
 li {
 	margin: 0 0 1rem 0;
@@ -28,9 +41,5 @@ li {
 }
 li:hover {
 	background-color: var(--toolbg);
-}
-a {
-	display: block;
-	padding: 1rem 0;
-}
+} */
 </style>
