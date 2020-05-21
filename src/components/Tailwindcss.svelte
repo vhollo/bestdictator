@@ -10,11 +10,14 @@ svg {
 	margin: 0 auto;
 }
 
-h1, .h1 {
+.h1 {
 @apply text-3xl;
 color: var(--maincolor);
 /* text-shadow: var(--textshadow); */
 @apply mt-8 mb-4;
+}
+h1 {
+	@apply h1;
 }
 .h2 {
 @apply text-2xl;
@@ -24,13 +27,19 @@ text-transform: uppercase;
 h2 {
 	@apply h2;
 }
-h3, .h3 {
+.h3 {
 @apply text-xl;
 @apply mt-6 mb-3;
 }
-h4, .h4 {
+h3 {
+	@apply h3;
+}
+.h4 {
 @apply text-lg;
 @apply mt-6 mb-3;
+}
+h4 {
+	@apply h4;
 }
 
 
@@ -49,6 +58,7 @@ html {
 	--maincolor: theme('colors.orange');
 	--extcolor: theme('colors.green');
 	--toolbg: theme('colors.lightgray');
+	--infobg: theme('colors.darkgray');
 	--textshadow:  1px 1px theme('colors.orange');
 }
 .lighttheme {
@@ -56,7 +66,8 @@ html {
 	--txtcolor: theme('colors.dark');
 	--maincolor: theme('colors.green');
 	--extcolor: theme('colors.orange');
-	--toolbg: theme('colors.lightgray');
+	--infobg: theme('colors.lightgray');
+	--toolbg: theme('colors.darkgray');
 	--textshadow: 1px 1px theme('colors.green');
 }
 .darktheme .darkinv, .lighttheme .lightinv {

@@ -53,17 +53,24 @@
 </form>
 
 <style>
+.answers {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(49%, 1fr));
+	grid-gap: .5rem;
+}
+
 input[type="radio"] { display: none; }
 
-.answer {
-	margin: 0 0 1rem 0;
-}
+/* .answer {
+	margin: 0 auto 1rem auto;
+} */
 
 fieldset + fieldset { display: none; }
 fieldset:valid + fieldset { display: block; }
 input:valid ~ label {
 	pointer-events: none;
 	user-select: none;
+	background-color: var(--infobg);
 }
 
 label {
@@ -72,6 +79,7 @@ label {
 	cursor: pointer;
 	padding: 0.75rem 1.25rem;
 	background-color: var(--toolbg);
+	height: 100%;
 }
 /* Hover/keyboard focus should change the background colour of the item, if not yet answered */
 input:not(:checked) ~ label:hover, input:not(:checked):focus ~ label { background-color: var(--maincolor); }
@@ -84,7 +92,13 @@ input:checked ~ label {
 	background-color: var(--maincolor);
 }
 
-form:valid .message { display: block; }
+.message {
+	position: sticky;
+	bottom: 0;
+	padding: 1rem 0;
+	background-color: var(--bgcolor);
+	margin-top: 1rem;
+}
 
 form { counter-reset: count; counter-reset: score; }
 fieldset { counter-increment: count;}
