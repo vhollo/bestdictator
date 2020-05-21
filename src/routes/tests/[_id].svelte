@@ -20,7 +20,6 @@
 <div class='content'>
 	{@html post.html}
 </div>
-{@debug post}
 <form>
 	{#each post.questions as q, i}
 	<fieldset>
@@ -45,7 +44,7 @@
 	<div class="message">
 		<div class="score-message">
 			You got…
-			<span class="score" data-question-count="7"></span>
+			<span class="score" data-question-count="9"></span>
 			points.
 		</div>
 	</div>
