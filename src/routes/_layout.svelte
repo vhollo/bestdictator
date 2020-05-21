@@ -13,10 +13,15 @@ export let segment;
 	<slot></slot>
 </main>
 
+<footer></footer>
+
 <style global>
 #sapper {
 	max-width: 64em;
 	margin: 0 auto;
 	padding: 0 1em;
+}
+footer {
+	height: 4em;
 }
 </style>
