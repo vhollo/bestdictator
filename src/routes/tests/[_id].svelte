@@ -55,6 +55,10 @@
 
 <style>
 input[type="radio"] { display: none; }
+
+.answer {
+	margin: 0 0 1rem 0;
+}
 label {
 		/* background-color: var(--txtcolor);
 		color: var(--bgcolor); */
