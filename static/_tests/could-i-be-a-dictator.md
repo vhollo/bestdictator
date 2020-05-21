@@ -10,18 +10,18 @@ questions:
       - choice: Somewhat…
         score: 1
         bully: Check yourself again
-      - choice: I'm better than You
+      - choice: I'm better than you
         score: 2
-        bully: No, I'm better than You!
-      - choice: My mother always told me I'll go to Hell
+        bully: No, I'm better than you!
+      - choice: My mother told me I'll go to Hell
         score: 3
         bully: Relax, you will
     q: Do you love Yourself?
   - q: Do you hate other people?
     choices:
       - score: 0
-        choice: No, we are One
-        bully: Go and watch Orange is the new Black on Netflix
+        choice: No, we are one
+        bully: Go watch Orange is the new Black on Netflix
       - score: 1
         choice: I only hate some
         bully: They are the lucky ones
@@ -29,15 +29,21 @@ questions:
         choice: People are rude
         bully: This.
       - score: 3
-        choice: I only hate the working class
+        choice: I only hate working class
         bully: And the middle class, right?
   - q: Do you trust people?
     choices:
       - score: 0
         choice: Everybody deserves trust at first
-        bully: Just like you deserve to get scammed at first
+        bully: Just as you deserve to get scammed at first
       - score: 1
         choice: I only trust the ones I know
         bully: Who can we really know?
+      - score: 2
+        choice: I'm suspicious enough
+        bully: Let me tell you who to trust
+      - score: 3
+        choice: You better trust ME
+        bully: Or else
 ---
 This is an easy test to challange your authoriter values 
