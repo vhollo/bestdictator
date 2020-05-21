@@ -35,7 +35,7 @@ questions:
     choices:
       - score: 0
         choice: Everybody deserves trust at first
-        bully: Just like you deserve to get scammed at first
+        bully: As much as you deserve to get scammed at first
       - score: 1
         choice: I only trust the ones I know
         bully: Who can we really know?
