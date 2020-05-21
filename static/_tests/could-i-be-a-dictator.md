@@ -21,7 +21,7 @@ questions:
     choices:
       - score: 0
         choice: No, we are One
-        bully: Go and watch Orange is the new Black on Netflix
+        bully: Go watch Orange is the new Black on Netflix
       - score: 1
         choice: I only hate some
         bully: They are the lucky ones
