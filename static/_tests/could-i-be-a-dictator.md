@@ -20,7 +20,7 @@ questions:
   - q: Do you hate other people?
     choices:
       - score: 0
-        choice: No, we are One
+        choice: No, we are one
         bully: Go watch Orange is the new Black on Netflix
       - score: 1
         choice: I only hate some
