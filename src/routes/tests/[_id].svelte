@@ -20,7 +20,7 @@
 <div class='content'>
 	{@html post.html}
 </div>
-
+{@debug post}
 <form>
 	{#each post.questions as q, i}
 	<fieldset>
@@ -31,7 +31,7 @@
 				<input type="radio" name="answer-{i}" id="answer-{i}-{j}" value="{ch.score}" required>
 				{@html repeat(ch.score, `<u></u>`)}
 				<label for="answer-{i}-{j}">
-					{ch.ch}
+					{ch.choice}
 					<h3 class="reveal">{ch.bully}</h3>
 				</label>
 			</div>
