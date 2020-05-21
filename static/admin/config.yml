@@ -139,6 +139,6 @@ collections:
             widget: list
             collapsed: true
             fields:
-              - {label: Choice, name: ch, widget: string}
+              - {label: Choice, name: choice, widget: string}
               - {label: Score, name: score, widget: number, valueType: "int", min: 0, default: 0}
               - {label: Bully, name: bully, widget: string}
