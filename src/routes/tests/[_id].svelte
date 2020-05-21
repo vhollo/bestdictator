@@ -70,6 +70,7 @@ input:valid ~ label {
 	pointer-events: none;
 	user-select: none;
 	background-color: var(--infobg);
+	color: var(--toolbg);
 }
 
 label {
@@ -89,6 +90,7 @@ input:checked ~ label .reveal { display: block; }
 
 input:checked ~ label { 
 	background-color: var(--maincolor);
+	color: inherit;
 }
 
 .message {
