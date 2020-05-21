@@ -31,5 +31,13 @@ questions:
       - value: 3
         a: I only hate the working class
         bull: And the middle class, right?
+  - q: Do you trust people?
+    answers:
+      - value: 0
+        a: Everybody deserves trust at first
+        bull: Just like you deserve to get scammed at first
+      - value: 1
+        a: I can only trust the ones I know
+        bull: Who can we really know?
 ---
 This is an easy test to challange your authoriter values 
