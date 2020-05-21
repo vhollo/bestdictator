@@ -10,10 +10,10 @@ questions:
       - choice: Somewhat…
         score: 1
         bully: Check yourself again
-      - choice: I'm better than You
+      - choice: I'm better than you
         score: 2
-        bully: No, I'm better than You!
-      - choice: My mother always told me I'll go to Hell
+        bully: No, I'm better than you!
+      - choice: My mother told me I'll go to Hell
         score: 3
         bully: Relax, you will
     q: Do you love Yourself?
