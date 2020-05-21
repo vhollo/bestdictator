@@ -26,13 +26,13 @@
 	<fieldset>
 		<legend><h2>{q.q}</h2></legend>
 		<div class="answers">
-			{#each q.answers as a, j}
+			{#each q.choices as ch, j}
 			<div class="answer">
-				<input type="radio" name="answer-{i}" id="answer-{i}-{j}" value="{a.value}" required>
-				{@html repeat(a.value, `<u></u>`)}
+				<input type="radio" name="answer-{i}" id="answer-{i}-{j}" value="{ch.score}" required>
+				{@html repeat(ch.score, `<u></u>`)}
 				<label for="answer-{i}-{j}">
-					{a.a}
-					<h3 class="reveal">{a.bull}</h3>
+					{ch.ch}
+					<h3 class="reveal">{ch.bully}</h3>
 				</label>
 			</div>
 			{/each}
@@ -45,7 +45,7 @@
 	<div class="message">
 		<div class="score-message">
 			You got…
-			<span class="score" data-question-count="6"></span>
+			<span class="score" data-question-count="7"></span>
 			points.
 		</div>
 	</div>
@@ -61,17 +61,20 @@ input[type="radio"] { display: none; }
 
 fieldset + fieldset { display: none; }
 fieldset:valid + fieldset { display: block; }
+input:valid ~ label {
+	pointer-events: none;
+	user-select: none;
+}
+
 label {
-		/* background-color: var(--txtcolor);
-		color: var(--bgcolor); */
-    display: block;
-    position: relative;
-    cursor: pointer;
-		padding: 0.75rem 1.25rem;
-		border-width: 2px;
+	display: block;
+	position: relative;
+	cursor: pointer;
+	padding: 0.75rem 1.25rem;
+	background-color: var(--toolbg);
 }
 /* Hover/keyboard focus should change the background colour of the item, if not yet answered */
-input:not(:checked) ~ label:hover, input:not(:checked):focus ~ label { background-color: var(--toolbg); }
+input:not(:checked) ~ label:hover, input:not(:checked):focus ~ label { background-color: var(--maincolor); }
 
 /* Show any extra explanatory text */
 .reveal { display: none }
@@ -89,10 +92,6 @@ input:checked ~ :global(u) { counter-increment: score; }
 
 .score:after { content:counter(score) "/" attr(data-question-count) }
 
-input:valid ~ label {
-	pointer-events: none;
-	user-select: none;
-}
 
 </style>
 

@@ -134,11 +134,11 @@ collections:
         collapsed: true
         fields: 
           - {label: "Question", name: "q", widget: "string"}
-          - label: Answers
-            name: answers
+          - label: Choices
+            name: choices
             widget: list
             collapsed: true
             fields:
-              - {label: Answer, name: a, widget: string}
-              - {label: Value, name: value, widget: number, valueType: "int", min: 0, default: 0}
-              - {label: Bully, name: bull, widget: string}
+              - {label: Choice, name: ch, widget: string}
+              - {label: Score, name: score, widget: number, valueType: "int", min: 0, default: 0}
+              - {label: Bully, name: bully, widget: string}
