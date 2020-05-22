@@ -14,7 +14,7 @@
   <title>{post.title}</title>
 </svelte:head>
 
-<h1>{post.title}</h1>
+<!-- <h1>{post.title}</h1> -->
 <header class="darkinv"></header>
 <main>
 	{@html post.html}

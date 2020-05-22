@@ -1,11 +1,11 @@
 <script>
+import IconDic from './svg/dic-icon.svelte';
 export let segment;
 </script>
 
 <nav>
+	<a aria-current='{segment === undefined ? "page" : undefined}' href='.'><IconDic /></a>
 	<ul>
-		<li><a aria-current='{segment === undefined ? "page" : undefined}' href='.'>home</a></li>
-
 		<!-- for the blog link, we're using rel=prefetch so that Sapper prefetches
 		     the blog data when we hover over the link or tap it on a touchscreen -->
 		<li><a rel=prefetch aria-current='{segment === "dics" ? "page" : undefined}' href='dics'>dics</a></li>
@@ -17,12 +17,14 @@ export let segment;
 
 <style>
 nav {
-	background-color: var(--bgcolor);
 	font-weight: 300;
 	position: relative;
 	top: 0;
 	z-index: 1;
 	@apply py-0 px-4 ml-auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-end;
 }
 @media screen and (min-height: 480px) {
 	nav {
@@ -31,18 +33,22 @@ nav {
 	}
 }
 @media screen and (min-width: 900px) {
-	nav {
+	ul {
 		width: fit-content;
 	}
 }
-
-ul {
-	@apply m-0 p-0;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: flex-end;
+nav a {
+	background-color: var(--bgcolor);
+	margin-right: auto;
 }
 
+ul {
+	/* background-color: var(--bgcolor); */
+	height: fit-content;
+}
+li {
+	display: inline-block;
+}
 [aria-current] {
 	position: relative;
 	display: inline-block;
