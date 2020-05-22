@@ -19,19 +19,21 @@ import {posts} from '../wtfs'
 </ul>
 
 <style>
-ul {}
-
+ul {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(49%, 1fr));
+	grid-gap: .5rem;
+}
 li {
 	margin: 0 0 1rem 0;
-	border-width: 2px;
-	padding: 0 1rem;
+	background-color: var(--toolbg);
 }
 li:hover {
-	background-color: var(--toolbg);
+	background-color: var(--maincolor);
 }
 
 a {
 	display: block;
-	padding: 1rem 0;
+	padding: 0.75rem 1.25rem;
 }
 </style>

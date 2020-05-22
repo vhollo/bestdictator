@@ -16,16 +16,6 @@ import {posts} from '../dics'
 {/each}
 </section>
 
-<!-- <ul>
-{#each posts as post}
-	<li>
-		<a href={`/dics/${post._id}`}>
-			{post.title}
-		</a>
-	</li>
-{/each}
-</ul>
- -->
 <style>
 section {
 	display: grid;

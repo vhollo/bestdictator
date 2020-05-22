@@ -9,7 +9,7 @@ export let segment;
 		<!-- for the blog link, we're using rel=prefetch so that Sapper prefetches
 		     the blog data when we hover over the link or tap it on a touchscreen -->
 		<li><a rel=prefetch aria-current='{segment === "dics" ? "page" : undefined}' href='dics'>dics</a></li>
-		<li><a rel=prefetch aria-current='{segment === "wtfs" ? "page" : undefined}' href='wtfs'>wtfs</a></li>
+		<li><a rel=prefetch aria-current='{segment === "wtfs" ? "page" : undefined}' href='wtfs/why-how'>wtfs</a></li>
 		<li><a rel=prefetch aria-current='{segment === "tests" ? "page" : undefined}' href='tests/could-i-be-a-dictator'>test</a></li>
 		<li><a rel=prefetch aria-current='{segment === "psyche" ? "page" : undefined}' href='psyche'>psyche</a></li>
 	</ul>
@@ -18,21 +18,28 @@ export let segment;
 <style>
 nav {
 	background-color: var(--bgcolor);
-/* 	border-bottom: 4px;
-	border-color: var(--toolbg);
-	border-style: solid;
- */
 	font-weight: 300;
-	padding: 0 1em;
-	position: sticky;
+	position: relative;
 	top: 0;
 	z-index: 1;
+	@apply py-0 px-4 ml-auto;
+}
+@media screen and (min-height: 480px) {
+	nav {
+		position: sticky;
+		top: 0;
+	}
+}
+@media screen and (min-width: 900px) {
+	nav {
+		width: fit-content;
+	}
 }
 
 ul {
-	margin: 0;
-	padding: 0;
+	@apply m-0 p-0;
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: flex-end;
 }
 
@@ -44,7 +51,7 @@ ul {
 
 a {
 	text-decoration: none;
-	padding: 1em 0.5em;
+	@apply py-2 px-4;
 	display: block;
 	text-transform: uppercase;
 }

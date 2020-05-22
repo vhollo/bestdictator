@@ -15,7 +15,10 @@
 	</aside>
 	<figure>
 		<img src="{post.photo}" alt="{post.title}">
-		<figcaption><b>{post.title}</b>{post.desc}</figcaption>
+		<figcaption>
+			<p><b>{post.firstname || ''} {post.middlename || ''} {post.lastname || ''}</b></p>
+			<p>{post.desc}</p>
+		</figcaption>
 	</figure>
 	<aside>
 		<label>Dictator LEVEL</label>
@@ -26,11 +29,18 @@
 <style>
 header {
 	background-color: var(--maincolor);
-	color: var(--txtcolor);
+	border-width: 0 0 .25rem;
+	border-color: var(--bgcolor);
 	display: flex;
-	position: sticky;
-	top: 0;
+	position: relative;
+	overflow-x: auto;
 	z-index: 1;
+}
+@media screen and (min-height: 480px) {
+	header {
+		position: sticky;
+		top: 0;
+	}
 }
 aside {
 	width: min-content;
@@ -45,26 +55,28 @@ aside :global(svg) {
 	width: 80px;
 }
 figure {
-	@apply flex flex-wrap items-center;
-	justify-content: space-evenly;
+	@apply flex items-center;
+	/* justify-content: space-evenly; */
 }
 
 figure img {
 	max-width: 30%;
-	min-width: 80px;
+	min-width: 120px;
 }
 
 figcaption {
-	font-size: x-large;
-	line-height: 1;
-	text-align: center;
+	font-size: large;
+	line-height: 1.25;
+	/* text-align: center;
 	margin-right: auto;
-	margin-left: auto;
+	margin-left: auto; */
 	padding: 1rem .5rem;
 }
 figcaption b {
-	font-size: xx-large;
 	display: block;
+	font-size: xx-large;
+	line-height: 1;
+	margin-bottom: .5rem;
 }
 
 </style>

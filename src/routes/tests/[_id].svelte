@@ -26,7 +26,7 @@
 		<legend><h2>{q.q}</h2></legend>
 		<div class="answers">
 			{#each q.choices as ch, j}
-			<div class="answer">
+			<div>
 				<input type="radio" name="answer-{i}" id="answer-{i}-{j}" value="{ch.score}" required>
 				{@html repeat(ch.score, `<u></u>`)}
 				<label for="answer-{i}-{j}">
@@ -59,10 +59,6 @@
 }
 
 input[type="radio"] { display: none; }
-
-/* .answer {
-	margin: 0 auto 1rem auto;
-} */
 
 fieldset + fieldset { display: none; }
 fieldset:valid + fieldset { display: block; }

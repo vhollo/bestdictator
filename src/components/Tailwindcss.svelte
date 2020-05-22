@@ -1,6 +1,9 @@
 <style global>
 @tailwind base;
 
+html {
+	line-height: 1.75
+}
 body {
 	background-color: var(--bgcolor);
 	color: var(--txtcolor);
@@ -11,32 +14,31 @@ svg {
 }
 
 .h1 {
-@apply text-3xl;
-color: var(--maincolor);
-/* text-shadow: var(--textshadow); */
-@apply mt-8 mb-4;
+	@apply text-3xl;
+	@apply mt-8 mb-4;
+	color: var(--maincolor);
 }
 h1 {
 	@apply h1;
 }
 .h2 {
-@apply text-2xl;
-text-transform: uppercase;
-@apply mt-8 mb-4;
+	@apply text-2xl;
+	@apply mt-8 mb-4;
+	text-transform: uppercase;
 }
 h2 {
 	@apply h2;
 }
 .h3 {
-@apply text-xl;
-@apply mt-6 mb-3;
+	@apply text-xl;
+	@apply mt-6 mb-3;
 }
 h3 {
 	@apply h3;
 }
 .h4 {
-@apply text-lg;
-@apply mt-6 mb-3;
+	@apply text-lg;
+	@apply mt-6 mb-3;
 }
 h4 {
 	@apply h4;

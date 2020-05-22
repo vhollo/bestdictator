@@ -32,6 +32,12 @@ $: average = calcaverage(post._id, profile, power)
 
 <Header_dic post="{post}" />
 	<!-- {@debug profile} -->
+<h2>Bio</h2>
+<p>Date of Birth: <time>{post.birthdate || '?'}</time></p>
+{#if post.isdead}
+<p>Date of Death: <time>{post.deathdate || '?'}</time></p>
+{/if}
+<p>{@html post.bio}</p>
 
 {#if post.profile}
 <h2>Profile</h2>
@@ -40,7 +46,7 @@ $: average = calcaverage(post._id, profile, power)
 </section>
 {/if}
 
-<h2>Bio</h2>
+<!-- 
 <h1>{post.firstname || ''} {post.middlename || ''} {post.lastname || ''}</h1>
 {#if post.bio}
 <p>{@html post.bio}</p>
@@ -49,7 +55,7 @@ $: average = calcaverage(post._id, profile, power)
 {#if post.isdead}
 <p>Date of Death: <time>{post.deathdate || '?'}</time></p>
 {/if}
-
+ -->
 {#if post.power}
 <h2>Power Indicators</h2>
 <section>
