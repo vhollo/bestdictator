@@ -41,6 +41,9 @@ nav a {
 	background-color: var(--bgcolor);
 	margin-right: auto;
 }
+nav a svg {
+	fill: var(--maincolor);
+}
 
 ul {
 	/* background-color: var(--bgcolor); */
