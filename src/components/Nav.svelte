@@ -38,7 +38,7 @@ nav {
 white-space: nowrap;
 	}
 }
-nav a {
+nav > a {
 	background-color: var(--bgcolor);
 	margin-right: auto;
 }
