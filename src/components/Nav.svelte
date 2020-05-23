@@ -24,7 +24,7 @@ nav {
 	@apply py-0 px-4 ml-auto;
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: flex-end;
+	justify-content: space-between;
 }
 @media screen and (min-height: 480px) {
 	nav {
@@ -46,7 +46,7 @@ nav a svg {
 }
 
 ul {
-	/* background-color: var(--bgcolor); */
+	background-color: var(--bgcolor);
 	height: fit-content;
 }
 li {
