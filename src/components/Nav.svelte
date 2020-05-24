@@ -41,6 +41,7 @@ nav {
 nav > a {
 	background-color: var(--bgcolor);
 	margin-right: auto;
+height: 0;
 }
 nav a svg {
 	fill: var(--maincolor);
