@@ -25,6 +25,7 @@ nav {
 	display: flex;
 	/*flex-wrap: wrap;*/
 	justify-content: space-between;
+   align-items: flex-start;
 }
 @media screen and (min-height: 480px) {
 	nav {
