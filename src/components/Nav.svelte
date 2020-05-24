@@ -35,7 +35,6 @@ nav {
 @media screen and (min-width: 900px) {
 	ul {
 		width: fit-content;
-white-space: nowrap;
 	}
 }
 nav > a {
@@ -49,6 +48,9 @@ nav a svg {
 ul {
 	background-color: var(--bgcolor);
 	overflow-x: auto;
+
+white-space: nowrap;
+
 }
 li {
 	display: inline-block;
