@@ -23,7 +23,7 @@ nav {
 	z-index: 1;
 	@apply py-0 px-4 ml-auto;
 	display: flex;
-	flex-wrap: wrap;
+	/*flex-wrap: wrap;*/
 	justify-content: space-between;
 }
 @media screen and (min-height: 480px) {
