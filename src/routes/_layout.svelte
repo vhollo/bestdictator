@@ -19,8 +19,11 @@ export let segment;
 #sapper {
 	max-width: 64em;
 	margin: 0 auto;
-	padding: 0 1em;
 }
+main {
+  padding: 0 1em;
+}
+
 footer {
 	height: 4em;
 }
