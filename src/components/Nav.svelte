@@ -42,7 +42,7 @@ overflow-y:visible;
 nav > a {
 	background-color: var(--bgcolor);
 	margin-right: auto;
-margin-bottom:100%;
+margin-bottom:-100%;
 }
 nav a svg {
 	fill: var(--maincolor);
