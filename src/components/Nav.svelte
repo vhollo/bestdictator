@@ -26,7 +26,6 @@ nav {
 	/*flex-wrap: wrap;*/
 	justify-content: space-between;
    align-items: flex-start;
-height:min-content;
 overflow-y:visible;
 }
 @media screen and (min-height: 480px) {
@@ -43,6 +42,7 @@ overflow-y:visible;
 nav > a {
 	background-color: var(--bgcolor);
 	margin-right: auto;
+margin-bottom:100%;
 }
 nav a svg {
 	fill: var(--maincolor);
