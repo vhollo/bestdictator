@@ -73,5 +73,15 @@ questions:
       - score: 3
         choice: Hell, yeah!
         bully: Like hell, yeah.
+  - q: Is everything fine in Your country?
+    choices:
+      - score: 0
+        choice: Democracy still needs some improvement
+        bully: Phew…
+      - score: 10
+        choice: Our country desperately needs a mighty leader who will do what has to be
+          done to destroy the radical new ways and sinfulness that are ruining
+          us
+        bully: Wow, we'll keep in touch!
 ---
 This is an easy test to challange your authoriter values 
