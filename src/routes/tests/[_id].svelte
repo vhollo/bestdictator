@@ -36,18 +36,18 @@
 		<input type="radio" name="answer-{i}" id="answer-{i}-{j}" value="{ch.score}" required on:change={_score(ch.score),_scroll(`q-${i}`)}>
 		<label for="answer-{i}-{j}">
 			{ch.choice}
-			<h3 class="reveal">{ch.bully} <br><small>({ch.score} points)</small></h3>
+			<aside>{ch.bully} <br><small>({ch.score} points)</small></aside>
 		</label>
 		{/each}
 	</fieldset>
 	{/each}
 </form>
-<aside>
+<header>
 	You got… {score}/{max} points.<br>
 	{#if score > 10}
 	Now you are allowed to <button>RATE</button> your favorite DiCs.
 	{/if}
-</aside>
+</header>
 
 <style>
 
@@ -90,15 +90,19 @@ label {
 input:not(:checked) ~ label:hover, input:not(:checked):focus ~ label { background-color: var(--maincolor); }
 
 /* Show any extra explanatory text */
-.reveal { display: none }
-input:checked + label .reveal { display: block; }
+aside { display: none }
+input:checked + label aside { 
+	display: block;
+	font-size: var(--midsize);
+	line-height: var(--headsize);
+}
 
 input:checked + label { 
 	background-color: var(--maincolor);
 	color: inherit;
 }
 
-aside {
+header {
 	position: sticky;
 	bottom: 0;
 	padding: var(--gutter);
