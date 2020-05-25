@@ -51,13 +51,13 @@ questions:
         choice: I only drink tap water, instead of bottled
         bully: Plastic bottles are evil.
       - score: 1
-        choice: The environment can protect itself
+        choice: The Earth can protect itself
         bully: …from the activists?
       - score: 2
         choice: Important to keep some Pandas for hunting
         bully: Pandas fart too much.
       - score: 3
-        choice: I'll protect my people from the environment
+        choice: I'd protect my people from the environment
         bully: Because you can.
   - q: Are you looking good?
     choices:
@@ -73,6 +73,20 @@ questions:
       - score: 3
         choice: Hell, yeah!
         bully: Like hell, yeah.
+  - q: What science means to you?
+    choices:
+      - score: "0"
+        choice: Generates progression
+        bully: Simplicity is closer to me
+      - score: "1"
+        choice: Books. More and more books
+        bully: Glad you can read at all.
+      - score: "2"
+        choice: It's what Albert Einstein did on LSD
+        bully: Why not follow him?
+      - score: "3"
+        choice: Talking about topics made up to talk about
+        bully: Kinda belief.
   - q: Is everything fine in Your country?
     choices:
       - score: -10
@@ -83,5 +97,13 @@ questions:
           done to destroy the radical new ways and sinfulness that are ruining
           us
         bully: We'll keep in touch!
+  - q: Did you lie when answering any of the previous questions?
+    choices:
+      - score: "0"
+        choice: No
+        bully: Better you should!
+      - score: x2
+        choice: Sure
+        bully: Come closer!
 ---
 This is an easy test to challange your authoriter values 
