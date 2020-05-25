@@ -99,7 +99,7 @@ questions:
         bully: We'll keep in touch!
   - q: Did you lie when answering any of the previous questions?
     choices:
-      - score: "0"
+      - score: x.5
         choice: No!
         bully: Better you should!
       - score: x2
