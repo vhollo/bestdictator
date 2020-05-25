@@ -6,7 +6,7 @@ questions:
   - choices:
       - choice: I'm okay
         score: 0
-        bully: You think so?
+        bully: Watch out, there are liars around.
       - choice: Somewhat…
         score: 1
         bully: Check yourself again.
@@ -50,7 +50,7 @@ questions:
       - score: 0
         choice: I only drink tap water, instead of bottled
         bully: Plastic bottles are evil.
-      - score: 2
+      - score: 1
         choice: The environment can protect itself
         bully: …from the activists
       - score: 2
@@ -72,6 +72,6 @@ questions:
         bully: Pocket version means handsome.
       - score: 3
         choice: Hell, yeah!
-        bully: Like hell.
+        bully: Like hell, yeah.
 ---
 This is an easy test to challange your authoriter values 
