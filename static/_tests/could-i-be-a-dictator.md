@@ -55,7 +55,7 @@ questions:
         bully: From the activists
       - score: 2
         choice: Important to keep some Pandas for hunting
-        bully: Pandas fart a lot
+        bully: Pandas fart too much
       - score: 3
         choice: I'll protect my people from the environment
         bully: Because I can
