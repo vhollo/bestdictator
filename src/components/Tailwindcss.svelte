@@ -1,7 +1,8 @@
 <style global>
 @tailwind base;
 
-html {
+:root {
+  font-size: clamp(75%, 70% + 0.666vw, 115%);
 	line-height: 1.75
 }
 body {

@@ -8,31 +8,37 @@
 	$: rank = calcrank(post._id, level_overall)
 </script>
 
-<a href="{`/dics/${post._id}`}" style="order:{rank}">
-	<figure>
-		<img src="{post.photo}" alt="{post.title}">
-		<figcaption><b>{post.title}</b>{post.desc}</figcaption>
-	</figure>
-</a>
+<figure style="order:{rank}">
+	<img src="{post.photo}" alt="{post.title}">
+	<figcaption><a href="{`/dics/${post._id}`}"><b>{post.title}</b></a>{post.desc}</figcaption>
+</figure>
 <aside style="order:{rank}">
-	<Pie level="{level_overall}" />
+	<a href="{`/dics/${post._id}`}"><Pie level="{level_overall}" /></a>
 </aside>
 
+
 <style>
-a {
-	display: block;
-	padding: 1rem 0;
+a::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 aside {
 	display: flex;
 	align-items: center;
 	--maskcolor: var(--bgcolor);
+	position: relative;
 }
 aside :global(svg) {
 	width: 80px;
 }
 figure {
-	@apply flex items-center;
+	display: flex;
+	align-items: center;
+	position: relative;
 }
 
 figure img {
@@ -41,12 +47,12 @@ figure img {
 }
 
 figcaption {
-	font-size: large;
+	font-size: larger;
 	line-height: 1;
-	padding: 1rem .5rem;
+	padding: 0 .5rem;
 }
 figcaption b {
-	font-size: xx-large;
+	font-size: 2rem;
 	display: block;
 }
 

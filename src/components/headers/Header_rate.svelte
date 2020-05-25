@@ -24,7 +24,9 @@
 	}
 
 	figure {
-		@apply flex flex-wrap items-center;
+		display: flex ;
+		flex-wrap: wrap;
+		align-items: center;
 		justify-content: space-evenly;
 	}
 

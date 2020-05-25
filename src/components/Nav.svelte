@@ -32,11 +32,6 @@ overflow-y:visible;
 		top: 0;
 	}
 }
-/* @media screen and (min-width: 900px) {
-	ul {
-		width: fit-content;
-	}
-} */
 nav > a {
 	background-color: var(--bgcolor);
 	margin-right: auto;

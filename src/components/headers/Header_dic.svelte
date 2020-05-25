@@ -67,7 +67,7 @@ figure img {
 }
 
 figcaption {
-	font-size: large;
+	font-size: larger;
 	line-height: 1.25;
 	/* text-align: center;
 	margin-right: auto;
@@ -76,7 +76,7 @@ figcaption {
 }
 figcaption b {
 	display: block;
-	font-size: xx-large;
+	font-size: 2rem;
 	line-height: 1;
 	margin-bottom: .5rem;
 }

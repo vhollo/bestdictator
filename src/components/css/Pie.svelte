@@ -36,6 +36,6 @@ div:after {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	font-size: x-large;
+	font-size: larger;
 }
 </style>
