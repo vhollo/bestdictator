@@ -45,5 +45,19 @@ questions:
       - score: 3
         choice: You better trust ME
         bully: Or else
+  - q: " Is environmental protection important to you?"
+    choices:
+      - score: 0
+        choice: I only drink tap water, instead of bottled
+        bully: Bottles are evil
+      - score: 1
+        choice: The environment can protect itself
+        bully: From the activists
+      - score: 2
+        choice: Important to keep some Pandas for hunting
+        bully: Pandas fart a lot
+      - score: 3
+        choice: I'll protect my people from the environment
+        bully: Because I can
 ---
 This is an easy test to challange your authoriter values 
