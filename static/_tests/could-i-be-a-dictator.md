@@ -57,7 +57,7 @@ questions:
         choice: Important to keep some Pandas for hunting
         bully: Pandas fart too much.
       - score: 3
-        choice: I'll protect my people from the environment
+        choice: I'd protect my people from the environment
         bully: Because you can.
   - q: Are you looking good?
     choices:
