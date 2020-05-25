@@ -4,11 +4,16 @@
 	export function preload(page) {
 		return { post: findPost(page.params._id) }
 	}
-		let repeat = (n, t) => t.repeat(n)
+	let repeat = (n, t) => t.repeat(n)
 </script>
 
 <script>
 	export let post
+	export let score = 0
+	function _score(s) {
+		score = isNaN(s) && s.startsWith('x') ? score * s.substr(1) : score + s
+		console.log(score,s)
+	}
 </script>
 
 <svelte:head>
@@ -17,21 +22,22 @@
 
 <h1>{post.title}</h1>
 
-<div class='content'>
+<div>
 	{@html post.html}
 </div>
+
 <form>
 	{#each post.questions as q, i}
 	<fieldset>
-		<legend><h2>{q.q}</h2></legend>
+		<legend>{q.q}</legend>
 		<div class="answers">
 			{#each q.choices as ch, j}
 			<div>
-				<input type="radio" name="answer-{i}" id="answer-{i}-{j}" value="{ch.score}" required>
-				{@html repeat(ch.score, `<u></u>`)}
+				<input type="radio" name="answer-{i}" id="answer-{i}-{j}" value="{ch.score}" required on:change={_score(ch.score)}>
+				<!-- {@html repeat(ch.score, `<u></u>`)} -->
 				<label for="answer-{i}-{j}">
 					{ch.choice}
-					<h3 class="reveal">{ch.bully}</h3>
+					<h3 class="reveal">{ch.bully} ({ch.score} points)</h3>
 				</label>
 			</div>
 			{/each}
@@ -41,17 +47,18 @@
 <!-- 
 	<button type="submit">Submit answers</button>
  -->
-	<div class="message">
-		<div class="score-message">
-			You got…
-			<span class="score" data-max-score="14"></span>
-			points.
-		</div>
-	</div>
-
+	<p class="message">
+		You got… {score}/30 points.
+	</p>
 </form>
 
 <style>
+
+legend {
+	font-size: 1.5rem;
+	margin-top: 2rem;
+	text-transform: uppercase;
+}
 .answers {
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(49%, 1fr));
@@ -96,13 +103,12 @@ input:checked ~ label {
 	background-color: var(--bgcolor);
 	margin-top: 1rem;
 }
-
+/* 
 form { counter-reset: count; counter-reset: score; }
 fieldset { counter-increment: count;}
 input:checked ~ :global(u) { counter-increment: score; }
-
 .score:after { content:counter(score) "/" attr(data-max-score) }
-
+ */
 
 </style>
 

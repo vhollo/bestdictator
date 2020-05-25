@@ -140,5 +140,5 @@ collections:
             collapsed: true
             fields:
               - {label: Choice, name: choice, widget: string}
-              - {label: Score, name: score, widget: number, valueType: "int", min: 0, default: 0}
+              - {label: Score, name: score, widget: string, default: "0"}
               - {label: Bully, name: bully, widget: string}
