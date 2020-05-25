@@ -52,7 +52,7 @@ questions:
         bully: Plastic bottles are evil.
       - score: 1
         choice: The environment can protect itself
-        bully: …from the activists
+        bully: …from the activists?
       - score: 2
         choice: Important to keep some Pandas for hunting
         bully: Pandas fart too much.
