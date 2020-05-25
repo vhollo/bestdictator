@@ -56,8 +56,8 @@ aside :global(svg) {
 	width: 80px;
 }
 figure {
-	@apply flex items-center;
-	/* justify-content: space-evenly; */
+	display: flex;
+	align-items: center;
 }
 
 figure img {

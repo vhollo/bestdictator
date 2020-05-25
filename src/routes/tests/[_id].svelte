@@ -44,7 +44,7 @@
 	<div class="message">
 		<div class="score-message">
 			You got…
-			<span class="score" data-question-count="9"></span>
+			<span class="score" data-question-count="12"></span>
 			points.
 		</div>
 	</div>

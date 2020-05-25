@@ -65,9 +65,7 @@ li {
 
 a {
 	text-decoration: none;
-	@apply px-4;
-	padding-top: 0.625rem;
-	padding-bottom: 0.625rem;
+	padding: .625rem 1rem;
 	display: block;
 	text-transform: uppercase;
 }
