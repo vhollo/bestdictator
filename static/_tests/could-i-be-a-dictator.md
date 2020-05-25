@@ -73,16 +73,6 @@ questions:
       - score: 3
         choice: Hell, yeah!
         bully: Like hell, yeah.
-  - q: Is everything fine in Your country?
-    choices:
-      - score: -10
-        choice: Democracy still needs some improvement
-        bully: Phew…
-      - score: x2
-        choice: Our country desperately needs a mighty leader who will do what has to be
-          done to destroy the radical new ways and sinfulness that are ruining
-          us
-        bully: We'll keep in touch!
   - q: What science means to you?
     choices:
       - score: "0"
@@ -97,11 +87,21 @@ questions:
       - score: "3"
         choice: Talking about topics made up to talk about
         bully: Kinda belief.
+  - q: Is everything fine in Your country?
+    choices:
+      - score: -10
+        choice: Democracy still needs some improvement
+        bully: Phew…
+      - score: x2
+        choice: Our country desperately needs a mighty leader who will do what has to be
+          done to destroy the radical new ways and sinfulness that are ruining
+          us
+        bully: We'll keep in touch!
   - q: Did you lie when answering any of the previous questions?
     choices:
       - score: "0"
-        choice: No!
-        bully: Better you should.
+        choice: No
+        bully: Better you should!
       - score: x2
         choice: Sure
         bully: Come closer!
