@@ -23,8 +23,7 @@ nav {
 	z-index: 1;
 	display: flex;
 	justify-content: space-between;
-	align-items: flex-start;
-	overflow-y:visible;
+	border-bottom: 2px solid var(--extcolor);
 }
 @media screen and (min-height: 480px) {
 	nav {
@@ -63,6 +62,5 @@ a {
 	padding: calc(var(--gutterx) + var(--gutterz)) var(--gutter);
 	display: block;
 	text-transform: uppercase;
-	border-bottom: 2px solid var(--extcolor);
 }
 </style>
