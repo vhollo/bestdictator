@@ -64,5 +64,6 @@ a {
 	padding: .625rem 1rem;
 	display: block;
 	text-transform: uppercase;
+	border-bottom: 2px solid var(--extcolor);
 }
 </style>
