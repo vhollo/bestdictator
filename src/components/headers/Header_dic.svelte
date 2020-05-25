@@ -63,6 +63,7 @@ figure {
 figure img {
 	max-width: 30%;
 	min-width: 120px;
+	object-fit: cover;
 }
 
 figcaption {
@@ -71,7 +72,7 @@ figcaption {
 	/* text-align: center;
 	margin-right: auto;
 	margin-left: auto; */
-	padding: 1rem .5rem;
+	padding: 1rem;
 }
 figcaption b {
 	display: block;
