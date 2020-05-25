@@ -61,11 +61,11 @@ questions:
         bully: Because I can
   - q: Are you looking good?
     choices:
+      - score: 0
+        choice: It's not important for me
+        bully: You go for the ugliest girl
       - score: 2
         choice: I look like James Bond’s China-made pocket version, with less hair
         bully: Pocket version means handsome
-      - score: 0
-        choice: It's not important form me
-        bully: I chose the ugliest girl for a life
 ---
 This is an easy test to challange your authoriter values 
