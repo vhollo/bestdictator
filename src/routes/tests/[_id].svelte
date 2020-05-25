@@ -44,7 +44,7 @@
 	<div class="message">
 		<div class="score-message">
 			You got…
-			<span class="score" data-question-count="12"></span>
+			<span class="score" data-max-score="14"></span>
 			points.
 		</div>
 	</div>
@@ -101,7 +101,7 @@ form { counter-reset: count; counter-reset: score; }
 fieldset { counter-increment: count;}
 input:checked ~ :global(u) { counter-increment: score; }
 
-.score:after { content:counter(score) "/" attr(data-question-count) }
+.score:after { content:counter(score) "/" attr(data-max-score) }
 
 
 </style>

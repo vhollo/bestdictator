@@ -33,7 +33,7 @@ aside {
 	position: relative;
 }
 aside :global(svg) {
-	width: 80px;
+	width: var(--toolsize);
 }
 figure {
 	display: flex;
@@ -43,13 +43,15 @@ figure {
 
 figure img {
 	max-width: 20%;
-	min-width: 80px;
+	min-width: var(--toolsize);
 }
 
 figcaption {
 	font-size: larger;
 	line-height: 1;
-	padding: 0 .5rem;
+	padding-left: 1rem;
+	height: var(--toolsize);
+	overflow-y: auto;
 }
 figcaption b {
 	font-size: 2rem;

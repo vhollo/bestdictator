@@ -16,10 +16,10 @@
 
 <!-- <h1>{post.title}</h1> -->
 <header class="darkinv"></header>
-<main>
+<article>
 	{@html post.html}
 	<small>Coming to your country soon</small>
-</main>
+</article>
 
 <style>
 header {
@@ -30,12 +30,7 @@ header {
 	background-size: 60vh;
 	background-repeat: no-repeat;
 }
-main {
-	/* position: fixed;
-	top: 0;
-	z-index: -1;
-	overflow-y: scroll;
-	height: 100vh; */
+article {
 	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
@@ -46,7 +41,7 @@ main {
 	font-family: monospace;
 	text-transform: uppercase;
 	max-width: 20em;
-	font-size: xx-large;
+	font-size: 1.5rem;
 	font-weight: normal;
 }
 small {

@@ -31,7 +31,7 @@
 	}
 
 	figcaption {
-		font-size: 5rem;
+		font-size: var(--toolsize);
 		line-height: 1;
 		text-align: center;
 	}

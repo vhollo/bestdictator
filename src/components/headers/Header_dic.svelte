@@ -53,7 +53,7 @@ aside {
 	--maskcolor: var(--maincolor);
 }
 aside :global(svg) {
-	width: 80px;
+	width: var(--toolsize);
 }
 figure {
 	display: flex;

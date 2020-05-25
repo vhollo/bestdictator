@@ -9,7 +9,7 @@ export let level = 0
 <style>
 div {
 	position: relative;
-  width: 80px; height: 80px;
+  width: var(--toolsize); height: var(--toolsize);
   border-radius: 50%;
 	margin: 0 auto;
 	background: transparent repeating-conic-gradient(transparent 0 10deg, white 0 20deg);

@@ -9,6 +9,11 @@ body {
 	background-color: var(--bgcolor);
 	color: var(--txtcolor);
 }
+#sapper {
+	max-width: 64em;
+	margin: 0 auto;
+}
+
 svg {
 	fill: var(--txtcolor);
 	margin: 0 auto;
@@ -53,6 +58,7 @@ h4 {
 html {
 	--pie-width: 12px;
 	--pie-pos: -12px;
+	--toolsize: 5rem;
 }
 
 .darktheme {
@@ -62,7 +68,6 @@ html {
 	--extcolor: theme('colors.green');
 	--toolbg: theme('colors.lightgray');
 	--infobg: theme('colors.darkgray');
-	--textshadow:  1px 1px theme('colors.orange');
 }
 .lighttheme {
 	--bgcolor: theme('colors.light');
@@ -71,7 +76,6 @@ html {
 	--extcolor: theme('colors.orange');
 	--infobg: theme('colors.lightgray');
 	--toolbg: theme('colors.darkgray');
-	--textshadow: 1px 1px theme('colors.green');
 }
 .darktheme .darkinv, .lighttheme .lightinv {
 	filter: invert(100%);
@@ -79,27 +83,5 @@ html {
 mark {
 	background-color: var(--extcolor);
 }
-
-/* 
-.h1 {
-@apply text-3xl;
-color: var(--maincolor);
-text-shadow: var(--textshadow);
-@apply mt-8 mb-4;
-}
-.h2 {
-@apply text-2xl;
-text-transform: uppercase;
-@apply mt-8 mb-4;
-}
-.h3 {
-@apply text-xl;
-@apply mt-6 mb-3;
-}
-.h4 {
-@apply text-lg;
-@apply mt-6 mb-3;
-}
- */
 
 </style>

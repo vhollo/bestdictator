@@ -15,11 +15,7 @@ export let segment;
 
 <footer></footer>
 
-<style global>
-#sapper {
-	max-width: 64em;
-	margin: 0 auto;
-}
+<style>
 main {
   padding: 0 1em;
 }

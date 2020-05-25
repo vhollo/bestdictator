@@ -20,7 +20,7 @@ import {posts} from '../dics'
 section {
 	display: grid;
 	grid-template-columns: 1fr min-content;
-	grid-gap: 1rem 2rem;
+	grid-gap: 1rem;
 }
 /* ul {
 }
