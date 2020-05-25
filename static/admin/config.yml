@@ -130,11 +130,13 @@ collections:
       - {label: "Content", name: "body", widget: "markdown"}
       - name: "questions"
         label: "Questions"
+        label_singular: "Question"
         widget: "list"
         collapsed: true
         fields: 
           - {label: "Question", name: "q", widget: "string"}
           - label: Choices
+            label_singular: "Choice"
             name: choices
             widget: list
             collapsed: true

@@ -15,7 +15,7 @@
 	function _scroll(id) {
 		document.getElementById(id).scrollIntoView({behavior: 'smooth'})
 	}
-	export let max = 30
+	/* export let max = 30 */
 </script>
 
 <svelte:head>
@@ -43,7 +43,7 @@
 	{/each}
 </form>
 <header>
-	You got… {score}/{max} points.<br>
+	You got… {score}<!-- /{max} --> points.<br>
 	{#if score > 10}
 	Now you are allowed to <button>RATE</button> your favorite DiCs.
 	{/if}
