@@ -64,6 +64,9 @@ article, fieldset {
 	grid-template-columns: repeat(auto-fill, minmax(49%, 1fr));
 	grid-gap: .5rem;
 }
+.answers div {
+	height: max-content;
+}
 legend {
 	font-size: 1.5rem;
 	text-transform: uppercase;
