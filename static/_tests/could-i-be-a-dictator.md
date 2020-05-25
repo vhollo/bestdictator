@@ -83,5 +83,19 @@ questions:
           done to destroy the radical new ways and sinfulness that are ruining
           us
         bully: We'll keep in touch!
+  - q: What science means to you?
+    choices:
+      - score: "0"
+        choice: Generates progression
+        bully: Simplicity is closer to me
+      - score: "1"
+        choice: Books. More and more books
+        bully: Glad you can read at all.
+      - score: "2"
+        choice: It's what Albert Einstein did on LSD
+        bully: Why not follow him?
+      - score: "3"
+        choice: Talking about topics made up to talk about
+        bully: Kinda belief.
 ---
 This is an easy test to challange your authoriter values 
