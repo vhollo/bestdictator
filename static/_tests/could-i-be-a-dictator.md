@@ -70,5 +70,8 @@ questions:
       - score: 2
         choice: I look like James Bond’s China-made pocket version, with less hair
         bully: Pocket version means handsome.
+      - score: 3
+        choice: Hell, yeah!
+        bully: Like hell.
 ---
 This is an easy test to challange your authoriter values 
