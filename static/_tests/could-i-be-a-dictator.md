@@ -97,5 +97,13 @@ questions:
       - score: "3"
         choice: Talking about topics made up to talk about
         bully: Kinda belief.
+  - q: Did you lie when answering any of the previous questions?
+    choices:
+      - score: "0"
+        choice: No!
+        bully: Better you should.
+      - score: x2
+        choice: Sure
+        bully: Come closer!
 ---
 This is an easy test to challange your authoriter values 
