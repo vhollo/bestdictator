@@ -49,7 +49,7 @@ questions:
     choices:
       - score: 0
         choice: I only drink tap water, instead of bottled
-        bully: Bottles are evil
+        bully: Plastic bottles are evil
       - score: 1
         choice: The environment can protect itself
         bully: From the activists
