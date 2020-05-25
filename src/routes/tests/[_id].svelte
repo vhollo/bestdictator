@@ -12,6 +12,10 @@
 	function _score(s) {
 		score = isNaN(parseInt(s,10)) && s.startsWith('x') ? score * parseInt(s.substr(1),10) : score + s
 	}
+	function _scroll(id) {
+console.log(id, document.getElementById(id))
+		document.getElementById(id).scrollIntoView({behavior: 'smooth'})
+	}
 //console.log(post)
 	export let max = 30
 </script>
@@ -29,16 +33,14 @@
 <form>
 	{#each post.questions as q, i}
 	<fieldset>
-			<legend>{q.q}</legend>
-			{#each q.choices as ch, j}
-			<div>
-				<input type="radio" name="answer-{i}" id="answer-{i}-{j}" value="{ch.score}" required on:change={_score(ch.score)}>
-				<label for="answer-{i}-{j}">
-					{ch.choice}
-					<h3 class="reveal">{ch.bully} <br><small>({ch.score} points)</small></h3>
-				</label>
-			</div>
-			{/each}
+		<legend id="q-{i}">{q.q}</legend>
+		{#each q.choices as ch, j}
+		<input type="radio" name="answer-{i}" id="answer-{i}-{j}" value="{ch.score}" required on:change={_score(ch.score),_scroll(`q-${i}`)}>
+		<label for="answer-{i}-{j}">
+			{ch.choice}
+			<h3 class="reveal">{ch.bully} <br><small>({ch.score} points)</small></h3>
+		</label>
+		{/each}
 	</fieldset>
 	{/each}
 <!-- 
@@ -54,9 +56,9 @@
 
 <style>
 
-article, fieldset {
+/* article, fieldset {
 	margin-bottom: 2rem;
-}
+} */
 form {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
@@ -65,19 +67,19 @@ form {
 fieldset {
 	display: contents;
 }
-fieldset div {
+label {
 	height: max-content;
 }
 legend {
 	font-size: 1.5rem;
 	text-transform: uppercase;
 	grid-column: 1 / 3;
+	margin-top: 4rem;
 }
 
 input[type="radio"] { display: none; }
 
 fieldset:not(:valid) + fieldset { display: none; }
-/* fieldset:valid + fieldset { display: grid; } */
 input:valid ~ label {
 	pointer-events: none;
 	user-select: none;
@@ -91,16 +93,15 @@ label {
 	cursor: pointer;
 	padding: 0.75rem 1.25rem;
 	background-color: var(--toolbg);
-	height: 100%;
 }
 /* Hover/keyboard focus should change the background colour of the item, if not yet answered */
 input:not(:checked) ~ label:hover, input:not(:checked):focus ~ label { background-color: var(--maincolor); }
 
 /* Show any extra explanatory text */
 .reveal { display: none }
-input:checked ~ label .reveal { display: block; }
+input:checked + label .reveal { display: block; }
 
-input:checked ~ label { 
+input:checked + label { 
 	background-color: var(--maincolor);
 	color: inherit;
 }
@@ -109,10 +110,11 @@ aside {
 	position: sticky;
 	bottom: 0;
 	padding: 1rem;
-	background-color: var(--infobg);
-	margin-top: 4rem;
+	background-color: var(--bgcolor);
+	margin-top: 6rem;
 	margin-left: -1rem;
 	margin-right: -1rem;
+	border-top: 2px solid var(--extcolor);
 }
 
 button {
