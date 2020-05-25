@@ -77,7 +77,7 @@ questions:
     choices:
       - score: "0"
         choice: Generates progression
-        bully: Simplicity is closer to me
+        bully: Where has simplicity gone?
       - score: "1"
         choice: Books. More and more books
         bully: Glad you can read at all.
@@ -100,10 +100,10 @@ questions:
   - q: Did you lie when answering any of the previous questions?
     choices:
       - score: "0"
-        choice: No
+        choice: No!
         bully: Better you should!
       - score: x2
-        choice: Sure
+        choice: Absolutely!
         bully: Come closer!
 ---
 This is an easy test to challange your authoriter values 
