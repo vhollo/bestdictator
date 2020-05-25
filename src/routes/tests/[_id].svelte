@@ -10,7 +10,7 @@
 	export let post
 	export let score = 0
 	function _score(s) {
-		score = isNaN(parseInt(s,10)) && s.startsWith('x') ? score * parseInt(s.substr(1),10) : score + parseInt(s)
+		score = isNaN(parseInt(s,10)) && s.startsWith('x') ? score * parseFloat(s.substr(1),10) : score + parseInt(s)
 	}
 	function _scroll(id) {
 		document.getElementById(id).scrollIntoView({behavior: 'smooth'})
