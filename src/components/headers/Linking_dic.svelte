@@ -49,12 +49,12 @@ figure img {
 figcaption {
 	font-size: larger;
 	line-height: 1;
-	padding-left: 1rem;
+	padding-left: var(--gutter);
 	height: var(--toolsize);
 	overflow-y: auto;
 }
 figcaption b {
-	font-size: 2rem;
+	font-size: var(--headsize);
 	display: block;
 }
 

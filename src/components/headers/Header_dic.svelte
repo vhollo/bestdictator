@@ -29,9 +29,9 @@
 <style>
 header {
 	background-color: var(--maincolor);
-	border-width: 0 0 .25rem;
+	border-width: var(--gutterz) 0;
 	border-color: var(--bgcolor);
-	margin: 0 -1rem;
+	margin: 0 var(--gutter-);
 	display: flex;
 	position: relative;
 	overflow-x: auto;
@@ -72,13 +72,13 @@ figcaption {
 	/* text-align: center;
 	margin-right: auto;
 	margin-left: auto; */
-	padding: 1rem;
+	padding: var(--gutter);
 }
 figcaption b {
 	display: block;
-	font-size: 2rem;
+	font-size: var(--headsize);
 	line-height: 1;
-	margin-bottom: .5rem;
+	margin-bottom: var(--gutterx);
 }
 
 </style>

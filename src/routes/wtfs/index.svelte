@@ -22,10 +22,10 @@ import {posts} from '../wtfs'
 ul {
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(49%, 1fr));
-	grid-gap: .5rem;
+	grid-gap: var(--gutterx);
 }
 li {
-	margin: 0 0 1rem 0;
+	margin: 0 0 var(--gutter) 0;
 	background-color: var(--toolbg);
 }
 li:hover {
@@ -34,6 +34,6 @@ li:hover {
 
 a {
 	display: block;
-	padding: 0.75rem 1.25rem;
+	padding: var(--gutter);
 }
 </style>

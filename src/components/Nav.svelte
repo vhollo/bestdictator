@@ -35,12 +35,11 @@ nav {
 nav > a {
 	background-color: var(--bgcolor);
 	margin-right: auto;
-	margin-bottom:-100%;
-	padding: .5rem 1rem;
+	padding: var(--gutterx);
 }
 nav > a :global(svg) {
 	width: auto;
-	height: 2rem;
+	height: var(--headsize);
 	fill: var(--maincolor);
 }
 
@@ -61,7 +60,7 @@ li {
 
 a {
 	text-decoration: none;
-	padding: .625rem 1rem;
+	padding: calc(var(--gutterx) + var(--gutterz)) var(--gutter);
 	display: block;
 	text-transform: uppercase;
 	border-bottom: 2px solid var(--extcolor);

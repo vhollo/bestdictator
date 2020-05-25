@@ -19,6 +19,6 @@ import Header_rate from '../components/headers/Header_rate.svelte';
 
 <style>
 figure {
-	margin: 0 -1rem;
+	margin: 0 var(--gutter-);
 }
 </style>

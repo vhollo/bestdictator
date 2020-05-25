@@ -20,16 +20,6 @@ import {posts} from '../dics'
 section {
 	display: grid;
 	grid-template-columns: 1fr min-content;
-	grid-gap: 1rem;
+	grid-gap: var(--gutter);
 }
-/* ul {
-}
-li {
-	margin: 0 0 1rem 0;
-	border-width: 2px;
-	padding: 0 1rem;
-}
-li:hover {
-	background-color: var(--toolbg);
-} */
 </style>

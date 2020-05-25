@@ -59,6 +59,15 @@ html {
 	--pie-width: 12px;
 	--pie-pos: -12px;
 	--toolsize: 5rem;
+	--headsize: 2rem;
+	--midsize: 1.5rem;
+	--smallsize: .75rem;
+	--gutter: 1rem;
+	--gutter-: -1rem;
+	--gutterx: calc(var(--gutter) / 2);
+	--guttery: calc(var(--gutter) / 4);
+	--gutterz: calc(var(--gutter) / 8);
+	--spacing: calc(4 * var(--gutter));
 }
 
 .darktheme {

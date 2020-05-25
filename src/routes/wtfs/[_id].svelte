@@ -26,8 +26,10 @@ header {
 	background-image: url(/DiC-Logo.svg);
 	height: 100vh;
 	margin-bottom: 50vh;
+	margin-left: var(--gutter-);
+	margin-right: var(--gutter-);
 	background-position: center;
-	background-size: 60vh;
+	background-size: 40vh;
 	background-repeat: no-repeat;
 }
 article {
@@ -36,15 +38,15 @@ article {
 	flex-direction: column;
 	margin: 0 auto;
 	justify-content: center;
-	padding: 1rem;
+	padding: var(--gutter);
 	hyphens: auto;
 	font-family: monospace;
 	text-transform: uppercase;
 	max-width: 20em;
-	font-size: 1.5rem;
+	font-size: var(--midsize);
 	font-weight: normal;
 }
 small {
-	padding: 2rem 0;
+	padding: var(--spacing) 0;
 }
 </style>

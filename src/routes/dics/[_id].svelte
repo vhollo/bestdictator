@@ -72,7 +72,7 @@ $: average = calcaverage(post._id, profile, power)
 section {
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(18em, 1fr));
-	grid-gap: 0 2rem;
+	grid-gap: 0 var(--spacing);
 }
 
 </style>

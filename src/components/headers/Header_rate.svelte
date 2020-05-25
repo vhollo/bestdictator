@@ -47,6 +47,6 @@
 	}
 
 	nav a {
-		padding: 1rem;
+		padding: var(--gutter);
 	}
 </style>

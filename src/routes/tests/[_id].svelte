@@ -13,10 +13,8 @@
 		score = isNaN(parseInt(s,10)) && s.startsWith('x') ? score * parseInt(s.substr(1),10) : score + s
 	}
 	function _scroll(id) {
-console.log(id, document.getElementById(id))
 		document.getElementById(id).scrollIntoView({behavior: 'smooth'})
 	}
-//console.log(post)
 	export let max = 30
 </script>
 
@@ -43,9 +41,6 @@ console.log(id, document.getElementById(id))
 		{/each}
 	</fieldset>
 	{/each}
-<!-- 
-	<button type="submit">Submit answers</button>
- -->
 </form>
 <aside>
 	You got… {score}/{max} points.<br>
@@ -56,13 +51,10 @@ console.log(id, document.getElementById(id))
 
 <style>
 
-/* article, fieldset {
-	margin-bottom: 2rem;
-} */
 form {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	grid-gap: .5rem;
+	grid-gap: var(--gutterx);
 }
 fieldset {
 	display: contents;
@@ -71,10 +63,10 @@ label {
 	height: max-content;
 }
 legend {
-	font-size: 1.5rem;
+	font-size: var(--midsize);
 	text-transform: uppercase;
 	grid-column: 1 / 3;
-	margin-top: 4rem;
+	margin-top: var(--spacing);
 }
 
 input[type="radio"] { display: none; }
@@ -91,7 +83,7 @@ label {
 	display: block;
 	position: relative;
 	cursor: pointer;
-	padding: 0.75rem 1.25rem;
+	padding: var(--gutter);
 	background-color: var(--toolbg);
 }
 /* Hover/keyboard focus should change the background colour of the item, if not yet answered */
@@ -109,25 +101,19 @@ input:checked + label {
 aside {
 	position: sticky;
 	bottom: 0;
-	padding: 1rem;
+	padding: var(--gutter);
 	background-color: var(--bgcolor);
-	margin-top: 6rem;
-	margin-left: -1rem;
-	margin-right: -1rem;
+	margin-top: var(--spacing);
+	margin-left: var(--gutter-);
+	margin-right: var(--gutter-);
 	border-top: 2px solid var(--extcolor);
 }
 
 button {
 	outline: 2px solid var(--maincolor);
-	padding: 0 .5rem;
-	margin: 0 .25rem;
+	padding: 0 var(--gutterx);
+	margin: 0 var(--guttery);
 }
-/* 
-form { counter-reset: count; counter-reset: score; }
-fieldset { counter-increment: count;}
-input:checked ~ :global(u) { counter-increment: score; }
-.score:after { content:counter(score) "/" attr(data-max-score) }
- */
 
 </style>
 
