@@ -51,7 +51,7 @@ questions:
         choice: I only drink tap water, instead of bottled
         bully: Plastic bottles are evil.
       - score: 1
-        choice: The environment can protect itself
+        choice: The Earth can protect itself
         bully: …from the activists?
       - score: 2
         choice: Important to keep some Pandas for hunting
