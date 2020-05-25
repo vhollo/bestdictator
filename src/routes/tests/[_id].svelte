@@ -4,7 +4,6 @@
 	export function preload(page) {
 		return { post: findPost(page.params._id) }
 	}
-	let repeat = (n, t) => t.repeat(n)
 </script>
 
 <script>
@@ -12,8 +11,9 @@
 	export let score = 0
 	function _score(s) {
 		score = isNaN(parseInt(s,10)) && s.startsWith('x') ? score * parseInt(s.substr(1),10) : score + s
-		console.log(score,s)
 	}
+//console.log(post)
+	export let max = 30
 </script>
 
 <svelte:head>
@@ -22,22 +22,21 @@
 
 <h1>{post.title}</h1>
 
-<div>
+<article>
 	{@html post.html}
-</div>
+</article>
 
 <form>
 	{#each post.questions as q, i}
 	<fieldset>
-		<legend>{q.q}</legend>
 		<div class="answers">
+			<legend>{q.q}</legend>
 			{#each q.choices as ch, j}
 			<div>
 				<input type="radio" name="answer-{i}" id="answer-{i}-{j}" value="{ch.score}" required on:change={_score(ch.score)}>
-				<!-- {@html repeat(ch.score, `<u></u>`)} -->
 				<label for="answer-{i}-{j}">
 					{ch.choice}
-					<h3 class="reveal">{ch.bully} ({ch.score} points)</h3>
+					<h3 class="reveal">{ch.bully} <br><small>({ch.score} points)</small></h3>
 				</label>
 			</div>
 			{/each}
@@ -48,21 +47,27 @@
 	<button type="submit">Submit answers</button>
  -->
 	<p class="message">
-		You got… {score}/30 points.
+		You got… {score}/{max} points.
+		{#if score > 15}
+		Now you are allowed to <button>RATE</button> your favorite DiCs.
+		{/if}
 	</p>
 </form>
 
 <style>
 
-legend {
-	font-size: 1.5rem;
-	margin-top: 2rem;
-	text-transform: uppercase;
+article, fieldset {
+	margin-bottom: 2rem;
 }
 .answers {
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(49%, 1fr));
 	grid-gap: .5rem;
+}
+legend {
+	font-size: 1.5rem;
+	text-transform: uppercase;
+	grid-column: 1 / 3;
 }
 
 input[type="radio"] { display: none; }
@@ -102,6 +107,12 @@ input:checked ~ label {
 	padding: 1rem 0;
 	background-color: var(--bgcolor);
 	margin-top: 1rem;
+}
+
+button {
+	outline: 2px solid var(--maincolor);
+	padding: 0 .5rem;
+	margin: 0 .25rem;
 }
 /* 
 form { counter-reset: count; counter-reset: score; }
