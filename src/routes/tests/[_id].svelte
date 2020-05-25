@@ -29,7 +29,6 @@
 <form>
 	{#each post.questions as q, i}
 	<fieldset>
-		<div class="answers">
 			<legend>{q.q}</legend>
 			{#each q.choices as ch, j}
 			<div>
@@ -40,31 +39,33 @@
 				</label>
 			</div>
 			{/each}
-		</div>
 	</fieldset>
 	{/each}
 <!-- 
 	<button type="submit">Submit answers</button>
  -->
-	<p class="message">
-		You got… {score}/{max} points.
-		{#if score > 15}
-		Now you are allowed to <button>RATE</button> your favorite DiCs.
-		{/if}
-	</p>
 </form>
+<aside>
+	You got… {score}/{max} points.<br>
+	{#if score > 10}
+	Now you are allowed to <button>RATE</button> your favorite DiCs.
+	{/if}
+</aside>
 
 <style>
 
 article, fieldset {
 	margin-bottom: 2rem;
 }
-.answers {
+form {
 	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(49%, 1fr));
+	grid-template-columns: 1fr 1fr;
 	grid-gap: .5rem;
 }
-.answers div {
+fieldset {
+	display: contents;
+}
+fieldset div {
 	height: max-content;
 }
 legend {
@@ -75,8 +76,8 @@ legend {
 
 input[type="radio"] { display: none; }
 
-fieldset + fieldset { display: none; }
-fieldset:valid + fieldset { display: block; }
+fieldset:not(:valid) + fieldset { display: none; }
+/* fieldset:valid + fieldset { display: grid; } */
 input:valid ~ label {
 	pointer-events: none;
 	user-select: none;
@@ -104,12 +105,14 @@ input:checked ~ label {
 	color: inherit;
 }
 
-.message {
+aside {
 	position: sticky;
 	bottom: 0;
-	padding: 1rem 0;
-	background-color: var(--bgcolor);
-	margin-top: 1rem;
+	padding: 1rem;
+	background-color: var(--infobg);
+	margin-top: 4rem;
+	margin-left: -1rem;
+	margin-right: -1rem;
 }
 
 button {

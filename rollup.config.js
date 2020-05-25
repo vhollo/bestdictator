@@ -35,7 +35,7 @@ const dedupe = importee => importee === 'svelte' || importee.startsWith('svelte/
 
 export default {
   client: {
-		sourcemap: false,
+		treeshake: false,
     input: config.client.input(),
     output: config.client.output(),
 		preserveEntrySignatures: 'false',

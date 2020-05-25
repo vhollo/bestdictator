@@ -62,12 +62,12 @@ html {
 }
 
 .darktheme {
-	--bgcolor: theme('colors.dark');
+	--bgcolor: theme('colors.darkgray');
 	--txtcolor: theme('colors.light');
 	--maincolor: theme('colors.orange');
 	--extcolor: theme('colors.green');
 	--toolbg: theme('colors.lightgray');
-	--infobg: theme('colors.darkgray');
+	--infobg: theme('colors.dark');
 }
 .lighttheme {
 	--bgcolor: theme('colors.light');
