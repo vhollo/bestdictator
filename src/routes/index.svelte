@@ -16,3 +16,9 @@ import Header_rate from '../components/headers/Header_rate.svelte';
 </figure>
 
 <!-- <p><strong>Try editing this file (src/routes/index.svelte) to test live reloading.</strong></p> -->
+
+<style>
+figure {
+	margin: 0 -1rem;
+}
+</style>

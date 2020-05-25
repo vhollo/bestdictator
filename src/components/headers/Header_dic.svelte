@@ -31,6 +31,7 @@ header {
 	background-color: var(--maincolor);
 	border-width: 0 0 .25rem;
 	border-color: var(--bgcolor);
+	margin: 0 -1rem;
 	display: flex;
 	position: relative;
 	overflow-x: auto;

@@ -1,10 +1,10 @@
 <script>
-import IconDic from './svg/dic-icon.svelte';
+import FavDic from './svg/dic-fav.svelte';
 export let segment;
 </script>
 
 <nav>
-	<a aria-current='{segment === undefined ? "page" : undefined}' href='.'><IconDic /></a>
+	<a aria-current='{segment === undefined ? "page" : undefined}' href='.'><FavDic /></a>
 	<ul>
 		<!-- for the blog link, we're using rel=prefetch so that Sapper prefetches
 		     the blog data when we hover over the link or tap it on a touchscreen -->
@@ -21,11 +21,9 @@ nav {
 	position: relative;
 	top: 0;
 	z-index: 1;
-	@apply py-0 px-4 ml-auto;
 	display: flex;
-	/*flex-wrap: wrap;*/
 	justify-content: space-between;
-   align-items: flex-start;
+	align-items: flex-start;
 overflow-y:visible;
 }
 @media screen and (min-height: 480px) {
@@ -34,34 +32,35 @@ overflow-y:visible;
 		top: 0;
 	}
 }
-@media screen and (min-width: 900px) {
+/* @media screen and (min-width: 900px) {
 	ul {
 		width: fit-content;
 	}
-}
+} */
 nav > a {
 	background-color: var(--bgcolor);
 	margin-right: auto;
-margin-bottom:-100%;
+	margin-bottom:-100%;
 }
-nav a svg {
+nav > a :global(svg) {
+	width: auto;
+	height: 1.75rem;
 	fill: var(--maincolor);
 }
 
 ul {
 	background-color: var(--bgcolor);
 	overflow-x: auto;
-
-white-space: nowrap;
-
+	white-space: nowrap;
 }
 li {
 	display: inline-block;
 }
 [aria-current] {
-	position: relative;
-	display: inline-block;
 	background: var(--maincolor);
+}
+[aria-current] :global(svg) {
+	fill: var(--txtcolor);
 }
 
 a {
