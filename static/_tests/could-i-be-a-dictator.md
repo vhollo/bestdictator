@@ -45,5 +45,27 @@ questions:
       - score: 3
         choice: You better trust ME
         bully: Or else
+  - q: " Is environmental protection important to you?"
+    choices:
+      - score: 0
+        choice: I only drink tap water, instead of bottled
+        bully: Plastic bottles are evil
+      - score: 2
+        choice: The environment can protect itself
+        bully: From the activists
+      - score: 2
+        choice: Important to keep some Pandas for hunting
+        bully: Pandas fart too much
+      - score: 3
+        choice: I'll protect my people from the environment
+        bully: Because I can
+  - q: Are you looking good?
+    choices:
+      - score: 2
+        choice: I look like James Bond’s China-made pocket version, with less hair
+        bully: Pocket version means handsome
+      - score: 0
+        choice: It's not important form me
+        bully: I chose the ugliest girl for a life
 ---
 This is an easy test to challange your authoriter values 
