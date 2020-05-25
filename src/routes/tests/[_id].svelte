@@ -11,7 +11,7 @@
 	export let post
 	export let score = 0
 	function _score(s) {
-		score = isNaN(s) && s.startsWith('x') ? score * s.substr(1) : score + s
+		score = isNaN(parseInt(s,10)) && s.startsWith('x') ? score * parseInt(s.substr(1),10) : score + s
 		console.log(score,s)
 	}
 </script>
