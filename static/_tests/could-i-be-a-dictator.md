@@ -75,10 +75,10 @@ questions:
         bully: Like hell, yeah.
   - q: Is everything fine in Your country?
     choices:
-      - score: 0
+      - score: "-10"
         choice: Democracy still needs some improvement
         bully: Phew…
-      - score: 10
+      - score: x2
         choice: Our country desperately needs a mighty leader who will do what has to be
           done to destroy the radical new ways and sinfulness that are ruining
           us
