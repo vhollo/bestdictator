@@ -63,7 +63,10 @@ questions:
     choices:
       - score: 0
         choice: It's not important for me
-        bully: You go for the ugliest girl, right?
+        bully: You go for the ugliest, right?
+      - score: 1
+        choice: I'm more or less OK
+        bully: Your self-esteem flaws more or less.
       - score: 2
         choice: I look like James Bond’s China-made pocket version, with less hair
         bully: Pocket version means handsome.
