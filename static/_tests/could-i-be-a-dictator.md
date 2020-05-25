@@ -6,7 +6,7 @@ questions:
   - choices:
       - choice: I'm okay
         score: 0
-        bully: Watch out, there are liars around.
+        bully: Watch out, liars around you!
       - choice: Somewhat…
         score: 1
         bully: Check yourself again.
@@ -82,6 +82,6 @@ questions:
         choice: Our country desperately needs a mighty leader who will do what has to be
           done to destroy the radical new ways and sinfulness that are ruining
           us
-        bully: Wow, we'll keep in touch!
+        bully: We'll keep in touch!
 ---
 This is an easy test to challange your authoriter values 
