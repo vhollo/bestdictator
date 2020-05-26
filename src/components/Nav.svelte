@@ -1,4 +1,5 @@
 <script>
+import { bx_brightness_half } from '../components/svg/boxicons.svelte';
 import FavDic from './svg/dic-fav.svelte';
 export let segment;
 </script>
@@ -12,6 +13,7 @@ export let segment;
 		<li><a rel=prefetch aria-current='{segment === "wtfs" ? "page" : undefined}' href='wtfs/why-how'>wtfs</a></li>
 		<li><a rel=prefetch aria-current='{segment === "tests" ? "page" : undefined}' href='tests/could-i-be-a-dictator'>test</a></li>
 		<li><a rel=prefetch aria-current='{segment === "psyche" ? "page" : undefined}' href='psyche'>psyche</a></li>
+		<li><label for="dm">{@html bx_brightness_half}</label></li>
 	</ul>
 </nav>
 
@@ -24,6 +26,8 @@ nav {
 	display: flex;
 	justify-content: space-between;
 	border-bottom: 2px solid var(--extcolor);
+	background: var(--navbg);
+	backdrop-filter: blur(3px);
 }
 @media screen and (min-height: 480px) {
 	nav {
@@ -32,7 +36,7 @@ nav {
 	}
 }
 nav > a {
-	background-color: var(--bgcolor);
+	/* background-color: var(--bgcolor); */
 	margin-right: auto;
 	padding: var(--gutterx);
 }
@@ -43,12 +47,19 @@ nav > a :global(svg) {
 }
 
 ul {
-	background-color: var(--bgcolor);
+	/* background-color: var(--bgcolor); */
 	overflow-x: auto;
 	white-space: nowrap;
 }
 li {
 	display: inline-block;
+	vertical-align: middle;
+}
+a {
+	text-decoration: none;
+	padding: calc(var(--gutterx) + var(--gutterz)) var(--gutter);
+	display: block;
+	text-transform: uppercase;
 }
 [aria-current] {
 	background: var(--maincolor);
@@ -57,10 +68,12 @@ li {
 	fill: var(--txtcolor);
 }
 
-a {
-	text-decoration: none;
-	padding: calc(var(--gutterx) + var(--gutterz)) var(--gutter);
+label {
+	padding: var(--gutterx);
 	display: block;
-	text-transform: uppercase;
+}
+label > :global(svg) {
+	height: var(--headsize);
+	width: auto;
 }
 </style>

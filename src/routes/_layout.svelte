@@ -13,7 +13,8 @@ export let segment;
 	<slot></slot>
 </main>
 
-<footer></footer>
+<footer>
+</footer>
 
 <style>
 main {
@@ -21,6 +22,6 @@ main {
 }
 
 footer {
-	height: 4em;
+	min-height: 4em;
 }
 </style>

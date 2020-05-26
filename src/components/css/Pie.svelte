@@ -12,7 +12,7 @@ div {
   width: var(--toolsize); height: var(--toolsize);
   border-radius: 50%;
 	margin: 0 auto;
-	background: transparent repeating-conic-gradient(transparent 0 10deg, white 0 20deg);
+	background: transparent repeating-conic-gradient(transparent 0 10deg, var(--txtcolor) 0 20deg);
 }
 div:before {
 	content: '';

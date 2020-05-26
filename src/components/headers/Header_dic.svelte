@@ -1,12 +1,19 @@
 <script>
+	import { tweened } from 'svelte/motion';
+	import { cubicOut } from 'svelte/easing';
 	import { calcrank } from '../../routes/dics'
 	import RankDic from '../svg/dic-rank.svelte';
 	import Pie from '../css/Pie.svelte';
 	export let post
 	//export let profile = post.profile
 	//export let power = post.power
-	$: level_overall = ((Object.values(post.profile).reduce((t, n) => t + (n - 1), 0) + Object.values(post.power).reduce((t, n) => t + (n - 1), 0)) / 9.6)
-	$: rank = calcrank(post._id, level_overall)
+	const level_overall = tweened(0, {
+			duration: 500,
+			easing: cubicOut
+		});
+
+	$: $level_overall = ((Object.values(post.profile).reduce((t, n) => t + (n - 1), 0) + Object.values(post.power).reduce((t, n) => t + (n - 1), 0)) / 9.6)
+	$: rank = calcrank(post._id, $level_overall)
 </script>
 
 <header style="order:{rank}">
@@ -22,14 +29,14 @@
 	</figure>
 	<aside>
 		<label>Dictator LEVEL</label>
-		<Pie level="{level_overall}" />
+		<Pie level="{$level_overall}" />
 	</aside>
 </header>
 
 <style>
 header {
 	background-color: var(--maincolor);
-	border-width: var(--gutterz) 0;
+	border-bottom-width: var(--gutterz);
 	border-color: var(--bgcolor);
 	margin: 0 var(--gutter-);
 	display: flex;

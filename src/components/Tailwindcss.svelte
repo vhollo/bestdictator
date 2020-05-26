@@ -1,17 +1,73 @@
+
 <style global>
 @tailwind base;
 
 :root {
-  font-size: clamp(75%, 70% + 0.666vw, 115%);
-	line-height: 1.75
+  font-size: clamp(75%, 78% + .5vw, 115%);
+	line-height: 1.75;
+	--orange: #ff3d00;
+	--green: #c0ff55;
+	--light: #eee;
+	--dark: #111;
+	--darkgray: #0f2537;
+	--midtone: #1f4667;
+	--lightgray: #e2e8f0;
+
+	--pie-width: 12px;
+	--pie-pos: -12px;
+	--toolsize: 5rem;
+	--headsize: 2rem;
+	--midsize: 1.5rem;
+	--smallsize: .75rem;
+	--gutter: 1rem;
+	--gutter-: -1rem;
+	--gutterx: calc(var(--gutter) / 2);
+	--guttery: calc(var(--gutter) / 4);
+	--gutterz: calc(var(--gutter) / 8);
+	--spacing: calc(4 * var(--gutter));
 }
+
 body {
-	background-color: var(--bgcolor);
-	color: var(--txtcolor);
+	position: relative;
+	min-height: 100vh;
+	background-color: var(--lightgray);
+}
+
+/* dark theme */
+#dm:not(:checked) ~ #sapper {
+	--bgcolor: var(--darkgray);
+	--txtcolor: var(--light);
+	--maincolor: var(--orange);
+	--extcolor: var(--green);
+	--toolbg: var(--midtone);
+	--infobg: var(--dark);
+	--navbg: #0f2537bf;
+}
+
+/* light theme */
+#dm:checked ~ #sapper {
+	--bgcolor: var(--lightgray);
+	--txtcolor: var(--dark);
+	--maincolor: var(--orange);
+	--extcolor: var(--darkgray);
+	--toolbg: var(--green);
+	--infobg: var(--midtone);
+	--navbg: #e2e8f0bf;
 }
 #sapper {
 	max-width: 64em;
 	margin: 0 auto;
+	color: var(--txtcolor);
+}
+#sapper:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background-color: var(--bgcolor);
+	z-index: -1;
 }
 
 svg {
@@ -50,43 +106,12 @@ h4 {
 	@apply h4;
 }
 
-
 @tailwind components;
-
+/* 
 @tailwind utilities;
+ */
 
-html {
-	--pie-width: 12px;
-	--pie-pos: -12px;
-	--toolsize: 5rem;
-	--headsize: 2rem;
-	--midsize: 1.5rem;
-	--smallsize: .75rem;
-	--gutter: 1rem;
-	--gutter-: -1rem;
-	--gutterx: calc(var(--gutter) / 2);
-	--guttery: calc(var(--gutter) / 4);
-	--gutterz: calc(var(--gutter) / 8);
-	--spacing: calc(4 * var(--gutter));
-}
-
-.darktheme {
-	--bgcolor: theme('colors.darkgray');
-	--txtcolor: theme('colors.light');
-	--maincolor: theme('colors.orange');
-	--extcolor: theme('colors.green');
-	--toolbg: theme('colors.lightgray');
-	--infobg: theme('colors.dark');
-}
-.lighttheme {
-	--bgcolor: theme('colors.light');
-	--txtcolor: theme('colors.dark');
-	--maincolor: theme('colors.green');
-	--extcolor: theme('colors.orange');
-	--infobg: theme('colors.lightgray');
-	--toolbg: theme('colors.darkgray');
-}
-.darktheme .darkinv, .lighttheme .lightinv {
+#dm:checked ~ #sapper .lightinv, #dm:not(:checked) ~ #sapper .darkinv {
 	filter: invert(100%);
 }
 mark {
