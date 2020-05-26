@@ -30,7 +30,7 @@
 body {
 	position: relative;
 	min-height: 100vh;
-	background-color: var(--lightgray);
+	background-color: var(--darkgray);
 }
 
 /* dark theme */
@@ -54,6 +54,11 @@ body {
 	--infobg: var(--midtone);
 	--navbg: #e2e8f0bf;
 }
+
+#dm:checked ~ #sapper svg#white { display: none; }
+#dm:not(:checked) ~ #sapper svg#black { display: none; }
+
+
 #sapper {
 	max-width: 64em;
 	margin: 0 auto;

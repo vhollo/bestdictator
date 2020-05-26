@@ -1,4 +1,5 @@
 <script context="module">
+	import DiClogo from '../../components/svg/dic-logo.svelte';
   import {findPost} from '../wtfs'
 
   export function preload(page) {
@@ -15,7 +16,7 @@
 </svelte:head>
 
 <!-- <h1>{post.title}</h1> -->
-<header class="darkinv"></header>
+<header><DiClogo/></header>
 <article>
 	{@html post.html}
 	<small>Coming to your country soon</small>
@@ -23,14 +24,15 @@
 
 <style>
 header {
-	background-image: url(/DiC-Logo.svg);
-	height: 100vh;
 	margin-bottom: 50vh;
 	margin-left: var(--gutter-);
 	margin-right: var(--gutter-);
-	background-position: center;
-	background-size: 40vh;
-	background-repeat: no-repeat;
+}
+
+header :global(svg) {
+	width: 40vh;
+	height: 100vh;
+	fill: var(--txtcolor);
 }
 article {
 	min-height: 100vh;
