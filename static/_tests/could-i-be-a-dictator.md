@@ -89,7 +89,7 @@ questions:
         bully: Kinda belief.
   - q: Is everything fine in Your country?
     choices:
-      - score: "0"
+      - score: "-3"
         choice: Democracy still needs some improvement
         bully: Phew…
       - score: "3"
