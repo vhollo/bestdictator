@@ -1,16 +1,15 @@
 <script context="module">
+	import { score } from '../stores.js';
 	import { findPost } from '../tests'
-
 	export function preload(page) {
-		return { post: findPost(page.params._id) }
+	return { post: findPost(page.params._id) }
 	}
 </script>
 
 <script>
 	export let post
-	export let score = 0
 	function _score(s) {
-		score = isNaN(parseInt(s,10)) && s.startsWith('x') ? score * parseFloat(s.substr(1),10) : score + parseInt(s)
+		$score = isNaN(parseInt(s,10)) && s.startsWith('x') ? $score * parseFloat(s.substr(1),10) : $score + parseInt(s)
 	}
 	function _scroll(id) {
 		document.getElementById(id).scrollIntoView({behavior: 'smooth'})
@@ -43,9 +42,9 @@
 	{/each}
 </form>
 <header>
-	You got… {score}<!-- /{max} --> points.<br>
-	{#if score > 10}
-	Now you are allowed to <button>RATE</button> your favorite DiCs.
+	You got… {$score} points.<br>
+	{#if $score > 10}
+	Now you are allowed to <button><a href="/dics">RATE</a></button> your favorite DiCs. (You have {$score} points)
 	{/if}
 </header>
 
@@ -66,7 +65,7 @@ legend {
 	font-size: var(--midsize);
 	text-transform: uppercase;
 	grid-column: 1 / 3;
-	margin-top: var(--spacing);
+	margin-top: var(--spacer);
 }
 
 input[type="radio"] { display: none; }
@@ -107,16 +106,10 @@ header {
 	bottom: 0;
 	padding: var(--gutter);
 	background-color: var(--bgcolor);
-	margin-top: var(--spacing);
+	margin-top: var(--spacer);
 	margin-left: var(--gutter-);
 	margin-right: var(--gutter-);
 	border-top: 2px solid var(--extcolor);
-}
-
-button {
-	outline: 2px solid var(--maincolor);
-	padding: 0 var(--gutterx);
-	margin: 0 var(--guttery);
 }
 
 </style>

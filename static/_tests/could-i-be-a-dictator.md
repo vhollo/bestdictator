@@ -1,5 +1,5 @@
 ---
-layout: blog
+layout: column
 title: Could I be a Dictator?
 date: 2020-05-19T20:26:27.343Z
 questions:

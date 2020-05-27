@@ -48,7 +48,7 @@ figure img {
 
 figcaption {
 	font-size: larger;
-	line-height: 1;
+	line-height: 1.1;
 	padding-left: var(--gutter);
 	height: var(--toolsize);
 	overflow-y: auto;

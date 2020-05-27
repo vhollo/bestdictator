@@ -1,25 +1,15 @@
 <script>
-import Linking_dic from '../../components/headers/Linking_dic.svelte'
-import {posts} from '../dics'
-
+	import { score } from '../stores.js';
+	import Linking_dic from '../../components/headers/Linking_dic.svelte'
+	import {posts} from '../dics'
+	import Dic_grid from '../../components/dic-grid.svelte'
 </script>
 
 <svelte:head>
   <title>Recent DiCs</title>
 </svelte:head>
 
-<h1>Dictator Top 10</h1>
-
-<section>
-{#each posts as post}
-	<Linking_dic post="{post}" />
-{/each}
-</section>
+<Dic_grid list="list" score={$score}/>
 
 <style>
-section {
-	display: grid;
-	grid-template-columns: 1fr min-content;
-	grid-gap: var(--gutter);
-}
 </style>

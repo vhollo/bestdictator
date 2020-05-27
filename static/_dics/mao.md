@@ -1,5 +1,5 @@
 ---
-layout: blog
+layout: column
 title: Mao
 firstname: Mao
 lastname: Zedong

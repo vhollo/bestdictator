@@ -24,7 +24,7 @@
 	--gutterx: calc(var(--gutter) / 2);
 	--guttery: calc(var(--gutter) / 4);
 	--gutterz: calc(var(--gutter) / 8);
-	--spacing: calc(4 * var(--gutter));
+	--spacer: calc(4 * var(--gutter));
 }
 
 body {
@@ -122,5 +122,12 @@ h4 {
 mark {
 	background-color: var(--extcolor);
 }
+
+button {
+	outline: 2px solid var(--maincolor);
+	padding: 0 var(--gutterx);
+	margin: 0 var(--guttery);
+}
+
 
 </style>

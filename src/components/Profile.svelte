@@ -2,6 +2,7 @@
 export let data
 export let names
 export let average
+export let score
 </script>
 
 
@@ -9,7 +10,7 @@ export let average
 <label>
 	{names[key]}
 	<div>
-		<input type=range min="1" max="5" bind:value={data[key]} on:change={data[key] = value} style="--level:{(value-1)*25}%" tabindex="0">
+		<input disabled={score < 10} type=range min="1" max="5" bind:value={data[key]} on:change={data[key] = value} style="--level:{(value-1)*25}%" tabindex="0">
 		<mark style="--mark:{(average[key] - 1) * 25}%"></mark>
 	</div>
 </label>
@@ -28,7 +29,7 @@ input{
 	position: relative;
 	visibility: hidden;
 }
-input:hover, input:focus {
+input:not(:disabled):hover, input:not(:disabled):focus {
 	visibility: visible;
 }
 input:before {
@@ -52,7 +53,7 @@ input:after {
 	width: var(--level);
 	background: var(--maincolor);
 }
-input:hover:before, input:hover:after, input:focus:before, input:focus:after {
+input:not(:disabled):hover:before, input:not(:disabled):hover:after, input:not(:disabled):focus:before, input:not(:disabled):focus:after {
 	visibility: hidden;
 }
 

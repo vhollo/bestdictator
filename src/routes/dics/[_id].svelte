@@ -2,6 +2,7 @@
 import _ from 'lodash'
 import {posts, findPost, calcaverage} from '../dics'
 import { profile_names, power_names } from '../../components/txt'
+import { score } from '../stores.js';
 
 export function preload(page) {
 	return { 
@@ -11,6 +12,9 @@ export function preload(page) {
 </script>
 
 <script>
+/* import { writable } from 'svelte/store';
+import { get } from 'svelte/store';
+const score = get(score); */
 import Header_dic from '../../components/headers/Header_dic.svelte'
 import Profile from '../../components/Profile.svelte'
 export let post
@@ -31,48 +35,39 @@ $: average = calcaverage(post._id, profile, power)
 </svelte:head>
 
 <Header_dic post="{post}" />
-	<!-- {@debug profile} -->
-<h2>Bio</h2>
-<p>Date of Birth: <time>{post.birthdate || '?'}</time></p>
-{#if post.isdead}
-<p>Date of Death: <time>{post.deathdate || '?'}</time></p>
-{/if}
-<p>{@html post.bio}</p>
-
-{#if post.profile}
-<h2>Profile</h2>
 <section>
-	<Profile bind:data="{profile}" average="{average}" names="{profile_names}" />
-</section>
-{/if}
+	<p>(You have {$score} points)</p>
+	<h2>Bio</h2>
+	<p>Date of Birth: <time>{post.birthdate || '?'}</time></p>
+	{#if post.isdead}
+	<p>Date of Death: <time>{post.deathdate || '?'}</time></p>
+	{/if}
+	<p>{@html post.bio}</p>
 
-<!-- 
-<h1>{post.firstname || ''} {post.middlename || ''} {post.lastname || ''}</h1>
-{#if post.bio}
-<p>{@html post.bio}</p>
-{/if}
-<p>Date of Birth: <time>{post.birthdate || '?'}</time></p>
-{#if post.isdead}
-<p>Date of Death: <time>{post.deathdate || '?'}</time></p>
-{/if}
- -->
-{#if post.power}
-<h2>Power Indicators</h2>
-<section>
-	<Profile bind:data="{power}" average="{average}" names="{power_names}" />
-</section>
-{/if}
+	{#if post.profile}
+	<h2>Profile</h2>
+	<aside>
+		<Profile bind:data="{profile}" average="{average}" names="{profile_names}" score={$score}/>
+	</aside>
+	{/if}
 
-<h2>Knowledge</h2>
-<div class='content'>
+	{#if post.power}
+	<h2>Power Indicators</h2>
+	<aside>
+		<Profile bind:data="{power}" average="{average}" names="{power_names}" score={$score}/>
+	</aside>
+	{/if}
+
+	<h2>Knowledge</h2>
 	{@html post.html}
-</div>
+
+</section>
 
 <style>
-section {
+aside {
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(18em, 1fr));
-	grid-gap: 0 var(--spacing);
+	grid-gap: 0 var(--spacer);
 }
 
 </style>

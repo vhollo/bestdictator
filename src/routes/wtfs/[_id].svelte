@@ -1,5 +1,5 @@
 <script context="module">
-	import DiClogo from '../../components/svg/dic-logo.svelte';
+	import LogoDic from '../../components/svg/dic-logo.svelte';
   import {findPost} from '../wtfs'
 
   export function preload(page) {
@@ -16,7 +16,7 @@
 </svelte:head>
 
 <!-- <h1>{post.title}</h1> -->
-<header><DiClogo/></header>
+<header><LogoDic/></header>
 <article>
 	{@html post.html}
 	<small>Coming to your country soon</small>
@@ -49,6 +49,6 @@ article {
 	font-weight: normal;
 }
 small {
-	padding: var(--spacing) 0;
+	padding: var(--spacer) 0;
 }
 </style>

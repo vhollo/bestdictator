@@ -1,6 +1,6 @@
 <script>
 	import { tweened } from 'svelte/motion';
-	import { cubicOut } from 'svelte/easing';
+	import { quadInOut } from 'svelte/easing';
 	import { calcrank } from '../../routes/dics'
 	import RankDic from '../svg/dic-rank.svelte';
 	import Pie from '../css/Pie.svelte';
@@ -8,15 +8,15 @@
 	//export let profile = post.profile
 	//export let power = post.power
 	const level_overall = tweened(0, {
-			duration: 500,
-			easing: cubicOut
+			duration: 1000,
+			easing: quadInOut
 		});
 
 	$: $level_overall = ((Object.values(post.profile).reduce((t, n) => t + (n - 1), 0) + Object.values(post.power).reduce((t, n) => t + (n - 1), 0)) / 9.6)
 	$: rank = calcrank(post._id, $level_overall)
 </script>
 
-<header style="order:{rank}">
+<header>
 	<aside>
 		<RankDic rank="{rank}" />
 	</aside>

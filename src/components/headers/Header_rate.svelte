@@ -6,7 +6,7 @@
 <header>
 	<figure>
 		<LogoDic />
-		<figcaption>Rate your <big>Dictator</big></figcaption>
+		<figcaption>Rate your <b>Dictator</b></figcaption>
 	</figure>
 	<nav>
 		<a href="/liar"><IconDic/>Who's the biggest liar?</a>
@@ -17,36 +17,48 @@
 	</nav>
 </header>
 
+
 <style>
-	header {
-		background-color: var(--maincolor);
-		color: var(--txtcolor);
-	}
+header {
+	background-color: var(--maincolor);
+	color: var(--txtcolor);
+	margin: 0 var(--gutter-);
+	padding: 0 var(--gutter);
+}
 
-	figure {
-		display: flex ;
-		flex-wrap: wrap;
-		align-items: center;
-		justify-content: space-evenly;
-	}
+figure {
+	display: flex ;
+	flex-wrap: wrap;
+	align-items: flex-end;
+	padding: var(--gutter) 0;
+}
+figure :global(svg) {
+	max-width: 30%;
+	min-width: 120px;
+	align-items: flex-end;
+	margin: 0 var(--gutter) 0 0;
+}
+figcaption {
+	font-size: var(--spacer);
+	line-height: 0.8;
+}
+figcaption b {
+	display: block;
+	font-size: larger;
+}
 
-	figcaption {
-		font-size: var(--toolsize);
-		line-height: 1;
-		text-align: center;
-	}
+nav {
+	display: flex;
+	text-align: center;
+	overflow-x: auto;
+	padding: var(--gutter);
+	line-height: 1.5;
+}
+nav a {
+	padding: var(--gutter);
+}
+nav a :global(svg) {
+	margin-bottom: var(--gutter);
+}
 
-	figcaption big {
-		display: block;
-	}
-
-	nav {
-		display: flex;
-		text-align: center;
-		overflow-x: auto;
-	}
-
-	nav a {
-		padding: var(--gutter);
-	}
 </style>

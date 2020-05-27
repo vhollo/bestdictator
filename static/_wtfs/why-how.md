@@ -1,5 +1,5 @@
 ---
-layout: blog
+layout: row
 title: Why & How?
 date: ""
 ---

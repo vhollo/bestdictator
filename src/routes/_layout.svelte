@@ -1,9 +1,9 @@
 <script context="module">
-import Tailwindcss from '../components/Tailwindcss.svelte';
-import Nav from '../components/Nav.svelte';
+	import Tailwindcss from '../components/Tailwindcss.svelte';
+	import Nav from '../components/Nav.svelte';
 </script>
 <script>
-export let segment;
+	export let segment;
 </script>
 <Tailwindcss />
 
@@ -18,7 +18,7 @@ export let segment;
 
 <style>
 main {
-  padding: 0 1em;
+	padding: 0 1em;
 }
 
 footer {
