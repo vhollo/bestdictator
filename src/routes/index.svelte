@@ -11,7 +11,9 @@
 
 <Header_rate />
 
-<Dic_grid list="3" score={$score}/>
+<section>
+<Dic_grid list="3" score={$score} />
+</section>
 
 <figure>
 	<img alt='Mockup' src='mockup-3.jpg'>
@@ -21,8 +23,9 @@
 <!-- <p><strong>Try editing this file (src/routes/index.svelte) to test live reloading.</strong></p> -->
 
 <style>
-:global(section) {
-	max-width: 60%;
+section {
+	margin: var(--gutter) 0;
+	width: 50%;
 }
 
 figure {

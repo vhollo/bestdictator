@@ -8,18 +8,14 @@
   <title>DiCs</title>
 </svelte:head>
 
+<section>
 <Dic_grid list="list"/>
+</section>
 
 <ButtonTys backid={''}/>
 
 <style>
-nav {
-	margin-top: var(--spacer);
-}
-nav a {
-	display: block;
-	width: fit-content;
-	margin-left: auto;
-	margin-right: auto;
+section {
+	margin: var(--gutter) 0;
 }
 </style>

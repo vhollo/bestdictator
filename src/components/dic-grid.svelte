@@ -4,24 +4,19 @@ import { posts } from '../routes/dics'
 export let list = 'list'
 </script>
 
-<section>
-	<h1>Dictator Top {list}</h1>
-	<div>
-		{#each posts as post, i}
-		{#if list === 'list' || i < list}
-		<Linking_dic post="{post}" />
-		{/if}
-		{/each}
-	</div>
-	{#if list != 'list'}
-	<button><a href="/dics">FULL LIST</a></button>
+<h1>Dictator Top {list}</h1>
+<div>
+	{#each posts as post, i}
+	{#if list === 'list' || i < list}
+	<Linking_dic post="{post}" />
 	{/if}
-</section>
+	{/each}
+</div>
+{#if list != 'list'}
+<button><a href="/dics">FULL LIST</a></button>
+{/if}
 
 <style>
-section {
-	margin: var(--gutter) 0;
-}
 div {
 	display: grid;
 	grid-template-columns: 1fr min-content;
@@ -29,6 +24,7 @@ div {
 }
 button {
 	display: block;
+	margin-top: var(--gutter);
 	margin-left: auto;
 	margin-right: auto;;
 }
