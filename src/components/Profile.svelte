@@ -24,8 +24,14 @@ label {
 	justify-content: flex-end;
 	align-items: center;
 	white-space: nowrap;
-	margin-right: 2em;
+	margin-right: 10%;
 }
+div{ 
+	position: relative;
+	display: flex;
+	margin-left: var(--gutter);
+}
+
 input{ 
 	position: relative;
 	visibility: hidden;
@@ -58,11 +64,6 @@ input:not(:disabled):hover:before, input:not(:disabled):hover:after, input:not(:
 	visibility: hidden;
 }
 
-div{ 
-	position: relative;
-	display: flex;
-	margin-left: 1em;
-}
 mark {
 	position: absolute;
 	left: var(--mark);

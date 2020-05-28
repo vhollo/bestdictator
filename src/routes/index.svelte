@@ -14,7 +14,7 @@
 <Dic_grid list="3" score={$score}/>
 
 <figure>
-	<img alt='Borat' src='mockup-3.jpg'>
+	<img alt='Mockup' src='mockup-3.jpg'>
 	<!-- <figcaption>HIGH FIVE!</figcaption> -->
 </figure>
 

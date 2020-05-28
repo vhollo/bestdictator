@@ -35,7 +35,7 @@ $: average = calcaverage(post._id, profile, power)
 </svelte:head>
 
 <Header_dic post="{post}" />
-<section>
+<article>
 	<h2>Bio</h2>
 	<p>Date of Birth: <time>{post.birthdate || '?'}</time></p>
 	{#if post.isdead}
@@ -60,11 +60,13 @@ $: average = calcaverage(post._id, profile, power)
 	<h2>Knowledge</h2>
 	{@html post.html}
 
-	{#if $score < $threshold}
-	<p>You have to <button><a href="/tests">TEST</a></button> yourself to rate this DiC</p>
-	{/if}
-</section>
+</article>
 
+{#if $score < $threshold}
+<nav>
+	<a href="/tests"><button>TEST</button> yourself to rate this DiC</a>
+</nav>
+{/if}
 
 
 <style>
@@ -73,7 +75,13 @@ aside {
 	grid-template-columns: repeat(auto-fill, minmax(18em, 1fr));
 	grid-gap: 0 var(--spacer);
 }
-button {
+nav {
 	margin-top: var(--spacer);
+}
+nav a {
+	display: block;
+	width: fit-content;
+	margin-left: auto;
+	margin-right: auto;
 }
 </style>

@@ -14,12 +14,12 @@
 </main>
 
 <footer>
-	<small>Graphics © KA & NoClass CSS © VL</small>
+	<small>graphics&nbsp;by&nbsp;KA &nbsp;&&nbsp; developed&nbsp;by&nbsp;VL</small>
 </footer>
 
 <style>
 	main {
-		padding: 0 1em;
+		padding: 0 1em 5em;
 		min-height: 100vh;
 	}
 
