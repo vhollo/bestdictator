@@ -15,20 +15,15 @@
 <Dic_grid list="3" score={$score} />
 </section>
 
-<figure>
-	<img alt='Mockup' src='mockup-3.jpg'>
-	<!-- <figcaption>HIGH FIVE!</figcaption> -->
-</figure>
-
-<!-- <p><strong>Try editing this file (src/routes/index.svelte) to test live reloading.</strong></p> -->
-
 <style>
 section {
 	margin: var(--gutter) 0;
 	width: 50%;
+	padding-right: var(--gutter);
+	border-right: var(--gutterx) dotted var(--toolbg);
 }
 
-figure {
+/* figure {
 	margin: var(--gutter) var(--gutter-);
-}
+} */
 </style>
