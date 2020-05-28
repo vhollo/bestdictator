@@ -1,5 +1,4 @@
 <script context="module">
-	import { score, threshold } from '../stores.js';
 	import { findPost } from '../tests'
 	export function preload(page) {
 	return { post: findPost(page.params._id) }
@@ -7,6 +6,7 @@
 </script>
 
 <script>
+	import { score, threshold, bckid } from '../stores.js';
 	export let post
 	function _score(s) {
 		$score = isNaN(parseInt(s,10)) && s.startsWith('x') ? $score * parseFloat(s.substr(1),10) : $score + parseInt(s)
@@ -44,7 +44,7 @@
 <header>
 	You got… {$score} points.<br>
 	{#if $score >= $threshold}
-	Now you are allowed to <button><a href="/dics">RATE</a></button> your favorite DiCs.
+	Now you are allowed to <button><a href="/dics/{$bckid}">RATE</a></button> your favorite DiCs.
 	{/if}
 </header>
 

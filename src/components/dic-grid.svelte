@@ -1,11 +1,7 @@
 <script>
-/* import { writable } from 'svelte/store';
-import { get } from 'svelte/store';
-const score = get(score); */
 import Linking_dic from './headers/Linking_dic.svelte'
 import { posts } from '../routes/dics'
 export let list = 'list'
-//export let score = 0
 </script>
 
 <section>

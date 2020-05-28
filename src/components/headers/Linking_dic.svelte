@@ -2,8 +2,6 @@
 	import { calcrank } from '../../routes/dics'
 	import Pie from '../css/Pie.svelte';
 	export let post
-	//export let profile = post.profile
-	//export let power = post.power
 	$: level_overall = ((Object.values(post.profile).reduce((t, n) => t + (n - 1), 0) + Object.values(post.power).reduce((t, n) => t + (n - 1), 0)) / 9.6)
 	$: rank = calcrank(post._id, level_overall)
 </script>

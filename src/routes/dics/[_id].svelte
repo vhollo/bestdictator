@@ -1,29 +1,27 @@
 <script context="module">
-import _ from 'lodash'
-import {posts, findPost, calcaverage} from '../dics'
-import { profile_names, power_names } from '../../components/txt'
-import { score, threshold } from '../stores.js';
+	import _ from 'lodash'
+	import {posts, findPost, calcaverage} from '../dics'
+	import { profile_names, power_names } from '../../components/txt'
+	import { score, threshold } from '../stores.js';
 
-export function preload(page) {
-	return { 
-		post: findPost(page.params._id)
+	export function preload(page) {
+		return { 
+			post: findPost(page.params._id)
+		}
 	}
-}
 </script>
 
 <script>
-/* import { writable } from 'svelte/store';
-import { get } from 'svelte/store';
-const score = get(score); */
-import Header_dic from '../../components/headers/Header_dic.svelte'
-import Profile from '../../components/Profile.svelte'
-export let post
-export let profile = post.profile
-export let power = post.power
-$: post.profile = profile
-$: post.power = power
+	import Header_dic from '../../components/headers/Header_dic.svelte'
+	import Profile from '../../components/Profile.svelte'
+	import ButtonTys from '../../components/button-tys.svelte'
+	export let post
+	export let profile = post.profile
+	export let power = post.power
+	$: post.profile = profile
+	$: post.power = power
 
-$: average = calcaverage(post._id, profile, power)
+	$: average = calcaverage(post._id, profile, power)
 
 </script>
 
@@ -62,12 +60,7 @@ $: average = calcaverage(post._id, profile, power)
 
 </article>
 
-{#if $score < $threshold}
-<nav>
-	<a href="/tests"><button>TEST</button> yourself to rate this DiC</a>
-</nav>
-{/if}
-
+<ButtonTys backid={post._id}/>
 
 <style>
 aside {

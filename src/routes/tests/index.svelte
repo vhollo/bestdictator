@@ -1,5 +1,6 @@
 <script>
 import {posts} from '../tests'
+import ButtonTys from '../../components/button-tys.svelte'
 </script>
 
 <svelte:head>
@@ -17,6 +18,8 @@ import {posts} from '../tests'
 	</li>
 {/each}
 </ul>
+
+<ButtonTys/>
 
 <style>
 ul {
