@@ -2,7 +2,7 @@
 import _ from 'lodash'
 import {posts, findPost, calcaverage} from '../dics'
 import { profile_names, power_names } from '../../components/txt'
-import { score } from '../stores.js';
+import { score, threshold } from '../stores.js';
 
 export function preload(page) {
 	return { 
@@ -36,7 +36,6 @@ $: average = calcaverage(post._id, profile, power)
 
 <Header_dic post="{post}" />
 <section>
-	<p>(You have {$score} points)</p>
 	<h2>Bio</h2>
 	<p>Date of Birth: <time>{post.birthdate || '?'}</time></p>
 	{#if post.isdead}
@@ -47,21 +46,26 @@ $: average = calcaverage(post._id, profile, power)
 	{#if post.profile}
 	<h2>Profile</h2>
 	<aside>
-		<Profile bind:data="{profile}" average="{average}" names="{profile_names}" score={$score}/>
+		<Profile bind:data="{profile}" average="{average}" names="{profile_names}" score={$score} threshold={$threshold}/>
 	</aside>
 	{/if}
 
 	{#if post.power}
 	<h2>Power Indicators</h2>
 	<aside>
-		<Profile bind:data="{power}" average="{average}" names="{power_names}" score={$score}/>
+		<Profile bind:data="{power}" average="{average}" names="{power_names}" score={$score} threshold={$threshold}/>
 	</aside>
 	{/if}
 
 	<h2>Knowledge</h2>
 	{@html post.html}
 
+	{#if $score < $threshold}
+	<p>You have to <button><a href="/tests">TEST</a></button> yourself to rate this DiC</p>
+	{/if}
 </section>
+
+
 
 <style>
 aside {
@@ -69,5 +73,7 @@ aside {
 	grid-template-columns: repeat(auto-fill, minmax(18em, 1fr));
 	grid-gap: 0 var(--spacer);
 }
-
+button {
+	margin-top: var(--spacer);
+}
 </style>

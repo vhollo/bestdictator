@@ -3,6 +3,7 @@ export let data
 export let names
 export let average
 export let score
+export let threshold
 </script>
 
 
@@ -10,7 +11,7 @@ export let score
 <label>
 	{names[key]}
 	<div>
-		<input disabled={score < 10} type=range min="1" max="5" bind:value={data[key]} on:change={data[key] = value} style="--level:{(value-1)*25}%" tabindex="0">
+		<input disabled={score < threshold} type=range min="1" max="5" bind:value={data[key]} on:change={score >= threshold && (data[key] = value)} style="--level:{(value-1)*25}%" tabindex="0">
 		<mark style="--mark:{(average[key] - 1) * 25}%"></mark>
 	</div>
 </label>

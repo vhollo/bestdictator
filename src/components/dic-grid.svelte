@@ -15,7 +15,9 @@ export let score = 0
 	<Linking_dic post="{post}" />
 	{/if}
 	{/each}
-	<button><a href="/dics">FULL LIST</a> (You have {score} points)</button>
+	{#if list != 'list'}
+	<button><a href="/dics">FULL LIST</a></button>
+	{/if}
 </section>
 
 <style>

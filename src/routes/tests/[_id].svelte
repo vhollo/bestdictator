@@ -1,5 +1,5 @@
 <script context="module">
-	import { score } from '../stores.js';
+	import { score, threshold } from '../stores.js';
 	import { findPost } from '../tests'
 	export function preload(page) {
 	return { post: findPost(page.params._id) }
@@ -43,8 +43,8 @@
 </form>
 <header>
 	You got… {$score} points.<br>
-	{#if $score > 10}
-	Now you are allowed to <button><a href="/dics">RATE</a></button> your favorite DiCs. (You have {$score} points)
+	{#if $score >= $threshold}
+	Now you are allowed to <button><a href="/dics">RATE</a></button> your favorite DiCs.
 	{/if}
 </header>
 
