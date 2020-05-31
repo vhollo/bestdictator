@@ -44,7 +44,7 @@
 <header>
 	You got… {$score} points.<br>
 	{#if $score >= $threshold}
-	Now you are allowed to <button><a href="/dics/{$bckid}">RATE</a></button> your favorite DiCs.
+	<a href="/dics/{$bckid}">Now you've proven your authoriter values. You are allowed to <button>RATE</button> your favorite DiCs.</a>
 	{/if}
 </header>
 
