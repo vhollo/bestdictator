@@ -7,11 +7,10 @@
 	line-height: 1.75;
 	--orange: #ff3d00;
 	--green: #c0ff55;
-	--light: #eee;
+	--light: #e2e8f0;
 	--dark: #111;
 	--darkgray: #0f2537;
 	--midtone: #1f4667;
-	--lightgray: #e2e8f0;
 
 	--pie-width: 12px;
 	--pie-pos: -12px;
@@ -49,7 +48,7 @@ body {
 
 /* light theme */
 #dm:checked ~ #sapper {
-	--bgcolor: var(--lightgray);
+	--bgcolor: var(--light);
 	--txtcolor: var(--dark);
 	--maincolor: var(--orange);
 	--extcolor: var(--darkgray);
@@ -87,7 +86,8 @@ svg {
 .h1 {
 	@apply text-5xl;
 	@apply mt-8 mb-4;
-	/* color: var(--maincolor); */
+	line-height: 1;
+	margin-bottom: 0;
 }
 h1 {
 	@apply h1;
@@ -95,7 +95,6 @@ h1 {
 .h2 {
 	@apply text-2xl;
 	@apply mt-8 mb-4;
-	text-transform: uppercase;
 }
 h2 {
 	@apply h2;

@@ -8,7 +8,7 @@ import ButtonTys from '../../components/button-tys.svelte'
 </svelte:head>
 
 <h1>Self tests</h1>
-
+<p>TEST your aptitude to rate a DiC</p>
 <ul>
 	{#each posts as post}
 	<li>
@@ -16,16 +16,15 @@ import ButtonTys from '../../components/button-tys.svelte'
 			{post.title}
 		</a>
 	</li>
-{/each}
+	{/each}
 </ul>
-
-<ButtonTys/>
 
 <style>
 ul {
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(49%, 1fr));
 	grid-gap: var(--gutterx);
+	margin: 2rem 0;
 }
 li {
 	margin: 0 0 var(--gutter) 0;

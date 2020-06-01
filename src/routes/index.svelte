@@ -1,7 +1,7 @@
 <script>
 	import { score } from './stores.js';
 	import Header_rate from '../components/headers/Header_rate.svelte';
-	/* import Linking_dic from '../components/headers/Linking_dic.svelte' */
+	import IconDic from '../components/svg/dic-icon.svelte';
 	import Dic_grid from '../components/dic-grid.svelte'
 </script>
 
@@ -13,7 +13,7 @@
 
 <div>
 	<section>
-		<Dic_grid list="3" score={$score} />
+		<Dic_grid list="3"/>
 	</section>
 	<figure>
 		<h1>DiC STRiP</h1>
@@ -21,6 +21,14 @@
 		<figcaption>Design a new style for your most beloved one!</figcaption>
 	</figure>
 </div>
+
+<figure>
+	<IconDic icon="crown" />
+	<figcaption>
+		<h2>Could I be a Dictator?</h2>
+		<p>Complete our test to challange your authoriter values</p>
+	</figcaption>
+</figure>
 
 <style>
 div {
@@ -44,25 +52,40 @@ div:before {
 	/* flex: 0 0 0; */
 	order: 1;
 }
-section {
+div section {
 	flex: 1 0 20rem;
 	margin: 0 var(--gutter2);
 	order: 0;
 }
-figure {
+div figure {
 	flex: 1 0 10rem;
 	margin: 0 var(--gutter2);
 	text-align: center;
 	order: 2;
 }
-figure h1 {
+div figure h1 {
 	color: var(--maincolor);
 }
-figure img {
+div figure img {
 	margin: 0 auto;
 }
-
-/* figure {
-	margin: var(--gutter) var(--gutter-);
-} */
+div + figure {
+	display: flex;
+	align-items: flex-end;
+	background-color: var(--bgcolor);
+}
+div + figure :global(svg) {
+	width: var(--toolsize);
+	height: auto;
+	fill: var(--midtone);
+}
+div + figure figcaption {
+	margin-left: var(--gutter2);
+	flex-grow: 1;
+	color: var(--midtone);
+}
+div + figure figcaption h2 {
+	margin-bottom: 0;
+	color: var(--txtcolor);
+}
 </style>

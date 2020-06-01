@@ -63,6 +63,9 @@
 <ButtonTys backid={post._id}/>
 
 <style>
+h2 {
+	text-transform: uppercase;
+}
 aside {
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(18em, 1fr));
