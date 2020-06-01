@@ -7,6 +7,7 @@
 
 <script>
 	import { score, threshold, bckid } from '../stores.js';
+	score.set(0)
 	export let post
 	function _score(s) {
 		$score = isNaN(parseInt(s,10)) && s.startsWith('x') ? $score * parseFloat(s.substr(1),10) : $score + parseInt(s)

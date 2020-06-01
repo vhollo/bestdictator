@@ -1,7 +1,9 @@
+<script context="module">
+	import IconDic from '../components/svg/dic-icon.svelte';
+	import Header_rate from '../components/headers/Header_rate.svelte';
+</script>
 <script>
 	import { score } from './stores.js';
-	import Header_rate from '../components/headers/Header_rate.svelte';
-	import IconDic from '../components/svg/dic-icon.svelte';
 	import Dic_grid from '../components/dic-grid.svelte'
 </script>
 
@@ -25,8 +27,10 @@
 <figure>
 	<IconDic icon="crown" />
 	<figcaption>
-		<h2>Could I be a Dictator?</h2>
-		<p>Complete our test to challange your authoriter values</p>
+		<a href="/tests/could-i-be-a-dictator">
+			<h2>Could I be a Dictator?</h2>
+			<p>Complete our test to challange your authoriter values</p>
+		</a>
 	</figcaption>
 </figure>
 
