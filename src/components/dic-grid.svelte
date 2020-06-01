@@ -24,9 +24,7 @@ div {
 }
 button {
 	display: block;
-	margin-top: var(--gutter);
-	margin-left: auto;
-	margin-right: auto;;
+	margin: var(--gutter2) auto;
 }
 
 </style>

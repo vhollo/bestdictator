@@ -12,7 +12,7 @@
 		<a href="/liar"><IconDic icon="liar" />Who's the biggest liar?</a>
 		<a href="/corrupt"><IconDic icon="cash" />Who's the most corrupt?</a>
 		<a href="/cruel"><IconDic icon="bomb" />Who's the cruelest?</a>
-		<a href="/idiot"><IconDic icon="crown" />Who's the largest idiot?</a>
+		<a href="/idiot"><IconDic icon="idiot" />Who's the largest idiot?</a>
 		<a href="/why"><IconDic icon="vote" />Why people vote a DiC?</a>
 	</nav>
 </header>
@@ -22,7 +22,7 @@
 header {
 	background-color: var(--maincolor);
 	color: var(--txtcolor);
-	margin: 0 var(--gutter-);
+	margin: 0 var(--gutter2-);
 	padding: 0 var(--gutter);
 }
 

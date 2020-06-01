@@ -20,8 +20,11 @@
 	--midsize: 1.5rem;
 	--smallsize: .75rem;
 	--gutter: 1rem;
+	--gutter2: 2rem;
 	--gutter-: -1rem;
+	--gutter2-: -2rem;
 	--gutterx: calc(var(--gutter) / 2);
+	--gutterx-: calc(var(--gutter) / -2);
 	--guttery: calc(var(--gutter) / 4);
 	--gutterz: calc(var(--gutter) / 8);
 	--spacer: calc(4 * var(--gutter));
@@ -63,6 +66,7 @@ body {
 	max-width: 64em;
 	margin: 0 auto;
 	color: var(--txtcolor);
+	--maskcolor: var(--bgcolor);
 }
 #sapper:before {
 	content: '';
@@ -81,9 +85,9 @@ svg {
 }
 
 .h1 {
-	@apply text-3xl;
+	@apply text-5xl;
 	@apply mt-8 mb-4;
-	color: var(--maincolor);
+	/* color: var(--maincolor); */
 }
 h1 {
 	@apply h1;

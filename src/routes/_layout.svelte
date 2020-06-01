@@ -19,7 +19,7 @@
 
 <style>
 	main {
-		padding: 0 1em 5em;
+		padding: 0 var(--gutter2) 5em;
 		min-height: 100vh;
 	}
 
@@ -30,5 +30,6 @@
 		display: flex;
     align-items: center;
     justify-content: center;
+		background-color: var(--toolbg);
 	}
 </style>

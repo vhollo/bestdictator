@@ -27,7 +27,6 @@ a::after {
 aside {
 	display: flex;
 	align-items: center;
-	--maskcolor: var(--bgcolor);
 	position: relative;
 }
 aside :global(svg) {

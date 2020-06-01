@@ -1,11 +1,11 @@
 <script>
 import { bx_brightness_half } from '../components/svg/boxicons.svelte';
-import FavDic from './svg/dic-fav.svelte';
+import IconDic from './svg/dic-icon.svelte';
 export let segment;
 </script>
 
 <nav>
-	<a aria-current='{segment === undefined ? "page" : undefined}' href='.'><FavDic /></a>
+	<a aria-current='{segment === undefined ? "page" : undefined}' href='.'><IconDic /></a>
 	<ul>
 		<!-- for the blog link, we're using rel=prefetch so that Sapper prefetches
 		     the blog data when we hover over the link or tap it on a touchscreen -->
