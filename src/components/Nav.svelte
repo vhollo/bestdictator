@@ -5,14 +5,14 @@ export let segment;
 </script>
 
 <nav>
-	<a aria-current='{segment === undefined ? "page" : undefined}' href='.'><IconDic /></a>
+	<a aria-current='{segment === undefined ? "page" : undefined}' href='.' aria-label="Landing page"><IconDic /></a>
 	<ul>
 		<!-- for the blog link, we're using rel=prefetch so that Sapper prefetches
 		     the blog data when we hover over the link or tap it on a touchscreen -->
-		<li><a rel=prefetch aria-current='{segment === "dics" ? "page" : undefined}' href='dics'>dics</a></li>
-		<li><a rel=prefetch aria-current='{segment === "wtfs" ? "page" : undefined}' href='wtfs/why-how'>wtfs</a></li>
-		<li><a rel=prefetch aria-current='{segment === "tests" ? "page" : undefined}' href='tests/could-i-be-a-dictator'>test</a></li>
-		<li><a rel=prefetch aria-current='{segment === "psyche" ? "page" : undefined}' href='psyche'>psyche</a></li>
+		<li><a rel=prefetch aria-current='{segment === "dics" ? "page" : undefined}' href='dics' aria-label="Dictators">dics</a></li>
+		<li><a rel=prefetch aria-current='{segment === "wtfs" ? "page" : undefined}' href='wtfs/why-how' aria-label="Why and how we do it?">wtfs</a></li>
+		<li><a rel=prefetch aria-current='{segment === "tests" ? "page" : undefined}' href='tests/could-i-be-a-dictator' aria-label="Test your authoriter values">test</a></li>
+		<li><a rel=prefetch aria-current='{segment === "psyche" ? "page" : undefined}' href='psyche' aria-label="Psyche">psyche</a></li>
 		<li><label for="dm">{@html bx_brightness_half}</label></li>
 	</ul>
 </nav>
