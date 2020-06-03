@@ -12,11 +12,9 @@
 	$score[post._id] = 0
 	function _score(s) {
 		if (String(s).startsWith('x') || String(s).startsWith('*')) {
-			console.log($score_sum, $score[post._id], parseFloat(s.substr(1), 10))
-			$score[post._id] = parseInt($score[post._id]) * parseFloat(s.substr(1), 10)
+			$score[post._id] = parseFloat($score[post._id]) * parseFloat(s.substr(1), 10)
 		} else {
-			console.log($score_sum, $score[post._id], parseInt(s, 10))
-			$score[post._id] += parseInt(s, 10)
+			$score[post._id] += parseFloat(s, 10)
 		}
 		//$score[post._id].set(isNaN(parseInt(s,10)) && s.startsWith('x') ? $score[post._id] * parseFloat(s.substr(1),10) : $score[post._id] + parseInt(s,10))
 	}
@@ -65,7 +63,7 @@
 
 <header>
 	You got… {$score[post._id]} points.<br>
-	{@debug score}
+	{score_sum}
 	{#if $score_sum >= $threshold}
 	<a href="/dics/{$bckid}">Now you've proven your authoriter values. You are allowed to <button>RATE</button> your favorite DiCs.</a>
 	{/if}
