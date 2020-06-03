@@ -21,6 +21,7 @@
 		<h1>DiC STRiP</h1>
 		<img src="uploads/DiCStrip-mockup.jpg" alt="dic strip" />
 		<figcaption>Design a new style for your most beloved one!</figcaption>
+		<p>Coming soon to your country</p>
 	</figure>
 </div>
 
@@ -72,6 +73,9 @@ div figure h1 {
 }
 div figure img {
 	margin: 0 auto;
+}
+div figure p {
+	color: var(--maincolor);
 }
 div + figure {
 	display: flex;
