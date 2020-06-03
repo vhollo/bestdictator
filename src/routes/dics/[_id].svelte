@@ -37,7 +37,7 @@
 	<h2>Bio</h2>
 	<p>Date of Birth: <time>{post.birthdate || '?'}</time></p>
 	{#if post.isdead || post.lost}
-	<p>Date of Death: <time>{post.deathdate || post.lost ? 'Lost/hiding' : '?'}</time></p>
+	<p>Date of Death: <time>{post.deathdate || (post.lost ? 'Lost/hiding' : '?')}</time></p>
 	{/if}
 	{#if post.cause}
 	<p>Cause of Death: {post.cause}</p>
