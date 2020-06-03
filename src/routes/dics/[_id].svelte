@@ -2,7 +2,7 @@
 	import _ from 'lodash'
 	import {posts, findPost, calcaverage} from '../dics'
 	import { profile_names, power_names } from '../../components/txt'
-	import { score, threshold } from '../stores.js';
+	import { score_sum, threshold } from '../stores.js';
 
 	export function preload(page) {
 		return { 
@@ -33,7 +33,7 @@
 </svelte:head>
 
 <Header_dic post="{post}" />
-<article>
+<article id="post">
 	<h2>Bio</h2>
 	<p>Date of Birth: <time>{post.birthdate || '?'}</time></p>
 	{#if post.isdead || post.lost}
@@ -49,14 +49,14 @@
 	{#if post.profile}
 	<h2>Profile</h2>
 	<aside>
-		<Profile bind:data="{profile}" average="{average}" names="{profile_names}" score={$score} threshold={$threshold}/>
+		<Profile bind:data="{profile}" average="{average}" names="{profile_names}" score={$score_sum} threshold={$threshold}/>
 	</aside>
 	{/if}
 
 	{#if post.power}
 	<h2>Power Indicators</h2>
 	<aside>
-		<Profile bind:data="{power}" average="{average}" names="{power_names}" score={$score} threshold={$threshold}/>
+		<Profile bind:data="{power}" average="{average}" names="{power_names}" score={$score_sum} threshold={$threshold}/>
 	</aside>
 	{/if}
 
@@ -65,7 +65,7 @@
 
 </article>
 
-<ButtonTys backid={post._id}/>
+<ButtonTys backid="{post._id}#post"/>
 
 <style>
 h2 {

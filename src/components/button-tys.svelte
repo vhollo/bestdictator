@@ -1,5 +1,5 @@
 <script>
-	import { score, threshold, bckid } from '../routes/stores.js';
+	import { score_sum, threshold, bckid } from '../routes/stores.js';
 	export let backid = $bckid
 	function _click() {
 		$bckid = backid
@@ -7,10 +7,10 @@
 </script>
 
 <nav>
-{#if $score < $threshold}
+{#if $score_sum < $threshold}
 	<a href="/tests" on:click={_click}><button>TEST</button> yourself to rate your favorite DiCs</a>
 {:else}
-	<a href="/dics"><button>RATE</button> your favorite DiCs</a>
+	<a href="/dics/{$bckid}">You may <button>RATE</button> your favorite DiC</a>
 {/if}
 </nav>
 
