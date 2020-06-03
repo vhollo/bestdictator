@@ -69,7 +69,7 @@ questions:
         bully: Your self-esteem flaws more or less.
       - score: 2
         choice: I look like James Bond’s China-made pocket version, with less hair
-        bully: Pocket version means handsome.
+        bully: Pocket version meaning handsome.
       - score: 3
         choice: Hell, yeah!
         bully: Like hell, yeah.
@@ -100,7 +100,7 @@ questions:
   - q: Did you lie when answering any of the previous questions?
     choices:
       - score: "0"
-        choice: No
+        choice: false
         bully: Better you should!
       - score: x2
         choice: Absolutely
