@@ -1,21 +1,28 @@
 <script context="module">
 	import { findPost } from '../tests'
 	export function preload(page) {
-	return { post: findPost(page.params._id) }
+		return { post: findPost(page.params._id) }
 	}
 </script>
 
 <script>
-	import { score, threshold, bckid } from '../stores.js';
-	score.set(0)
+	import { score, score_sum, threshold, bckid } from '../stores.js';
 	export let post
+	//$score[post._id].set(0)
+	$score[post._id] = 0
 	function _score(s) {
-		$score = isNaN(parseInt(s,10)) && s.startsWith('x') ? $score * parseFloat(s.substr(1),10) : $score + parseInt(s)
+		if (String(s).startsWith('x') || String(s).startsWith('*')) {
+			console.log($score_sum, $score[post._id], parseFloat(s.substr(1), 10))
+			$score[post._id] = parseInt($score[post._id]) * parseFloat(s.substr(1), 10)
+		} else {
+			console.log($score_sum, $score[post._id], parseInt(s, 10))
+			$score[post._id] += parseInt(s, 10)
+		}
+		//$score[post._id].set(isNaN(parseInt(s,10)) && s.startsWith('x') ? $score[post._id] * parseFloat(s.substr(1),10) : $score[post._id] + parseInt(s,10))
 	}
 	function _scroll(id) {
 		document.getElementById(id).scrollIntoView({behavior: 'smooth'})
 	}
-	/* export let max = 30 */
 </script>
 
 <svelte:head>
@@ -41,10 +48,25 @@
 		{/each}
 	</fieldset>
 	{/each}
+	<!-- <fieldset>
+		<legend id="q-{i+1}">Is Cartman your favorite South Park character?</legend>
+		<input type="radio" name="answer-{i+1}" id="answer-{i+1}-0" value="x0" required>
+		<label for="answer-{i+1}-0">
+			Absoulutely
+			<aside>gotcha boy <br><small>(x0 points)</small></aside>
+		</label>
+		<input type="radio" name="answer-{i+1}" id="answer-{i+1}-1" value="x0" required>
+		<label for="answer-{i+1}-1">
+			Absoulutely not
+			<aside>gotcha baby <br><small>(x0 points)</small></aside>
+		</label>
+	</fieldset> -->
 </form>
+
 <header>
-	You got… {$score} points.<br>
-	{#if $score >= $threshold}
+	You got… {$score[post._id]} points.<br>
+	{@debug score}
+	{#if $score_sum >= $threshold}
 	<a href="/dics/{$bckid}">Now you've proven your authoriter values. You are allowed to <button>RATE</button> your favorite DiCs.</a>
 	{/if}
 </header>
@@ -71,7 +93,7 @@ legend {
 
 input[type="radio"] { display: none; }
 
-fieldset:not(:valid) + fieldset { display: none; }
+fieldset:not(:valid) + fieldset, fieldset(:last-of-type) { display: none; }
 input:valid ~ label {
 	pointer-events: none;
 	user-select: none;
@@ -108,9 +130,9 @@ header {
 	padding: var(--gutter);
 	background-color: var(--bgcolor);
 	margin-top: var(--spacer);
-	margin-left: var(--gutter-);
-	margin-right: var(--gutter-);
-	border-top: 2px solid var(--extcolor);
+	/* margin-left: var(--gutter2-);
+	margin-right: var(--gutter2-); */
+	border-top: 2px solid var(--maincolor);
 }
 
 </style>
