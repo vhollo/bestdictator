@@ -21,7 +21,7 @@
 		<h1>DiC STRiP</h1>
 		<img src="uploads/DiCStrip-mockup.jpg" alt="dic strip" />
 		<figcaption>Design a new style for your most beloved one!</figcaption>
-		<p>Coming soon to your country</p>
+		<p>Coming to your country soon</p>
 	</figure>
 </div>
 
@@ -79,7 +79,7 @@ div figure p {
 }
 div + figure {
 	display: flex;
-	align-items: flex-end;
+	align-items: center;
 	background-color: var(--bgcolor);
 }
 div + figure :global(svg) {

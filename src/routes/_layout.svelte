@@ -19,7 +19,7 @@
 
 <style>
 	main {
-		padding: 0 var(--gutter2) 5em;
+		padding: 0 var(--gutter2);
 		min-height: 100vh;
 	}
 
