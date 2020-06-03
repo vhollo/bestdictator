@@ -63,7 +63,6 @@
 
 <header>
 	You got… {$score[post._id]} points.<br>
-	{score_sum}
 	{#if $score_sum >= $threshold}
 	<a href="/dics/{$bckid}">Now you've proven your authoriter values. You are allowed to <button>RATE</button> your favorite DiCs.</a>
 	{/if}
