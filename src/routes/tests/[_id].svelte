@@ -62,9 +62,9 @@
 </form>
 
 <header>
-	You got… {$score[post._id]} points.<br>
+	You got… {$score[post._id]} points.
 	{#if $score_sum >= $threshold}
-	<a href="/dics/{$bckid}">Now you've proven your authoriter values. You are allowed to <button>RATE</button> your favorite DiCs.</a>
+	<br><a href="/dics/{$bckid}">Now you've proven your authoriter values. You are allowed to <button>RATE</button> your favorite DiCs.</a>
 	{/if}
 </header>
 
