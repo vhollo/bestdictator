@@ -1,7 +1,7 @@
 ---
 layout: blog
-title: Why & How?
-date: ""
+title: Legyen ez az elso
+date: 2020-06-03T12:14:51.529Z
 ---
 Our goal is to show in an entertaining way that the authoritarian personality type is actually a psychic defect that can be traced back to improper childhood education.
 
