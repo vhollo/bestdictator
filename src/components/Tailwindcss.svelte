@@ -43,7 +43,7 @@ body {
 	--extcolor: var(--green);
 	--toolbg: var(--midtone);
 	--infobg: var(--dark);
-	--navbg: #0f2537d0;
+	--navbg: #0f2537f0;
 }
 
 /* light theme */
@@ -54,7 +54,7 @@ body {
 	--extcolor: var(--darkgray);
 	--toolbg: var(--green);
 	--infobg: var(--midtone);
-	--navbg: #e2e8f0d0;
+	--navbg: #e2e8f0f0;
 }
 
 #dm:checked ~ #sapper svg#white { display: none; }
@@ -112,6 +112,10 @@ h3 {
 }
 h4 {
 	@apply h4;
+}
+
+p {
+	margin-bottom: var(--gutter2);
 }
 
 @tailwind components;
