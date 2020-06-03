@@ -86,7 +86,7 @@ div + figure :global(svg) {
 div + figure figcaption {
 	margin-left: var(--gutter2);
 	flex-grow: 1;
-	color: var(--midtone);
+	color: var(--maincolor);
 }
 div + figure figcaption h2 {
 	margin-bottom: 0;
