@@ -43,7 +43,7 @@ body {
 	--extcolor: var(--green);
 	--toolbg: var(--midtone);
 	--infobg: var(--dark);
-	--navbg: #0f2537bf;
+	--navbg: #0f2537d0;
 }
 
 /* light theme */
@@ -54,7 +54,7 @@ body {
 	--extcolor: var(--darkgray);
 	--toolbg: var(--green);
 	--infobg: var(--midtone);
-	--navbg: #e2e8f0bf;
+	--navbg: #e2e8f0d0;
 }
 
 #dm:checked ~ #sapper svg#white { display: none; }
