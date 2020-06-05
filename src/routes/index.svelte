@@ -1,6 +1,6 @@
 <script context="module">
 	import IconDic from '../components/svg/dic-icon.svelte';
-	import Header_rate from '../components/headers/Header_rate.svelte';
+	import Header_landing from '../components/headers/Header_landing.svelte';
 </script>
 <script>
 	import { score } from './stores.js';
@@ -11,7 +11,7 @@
 	<title>Rate Your Dictator</title>
 </svelte:head>
 
-<Header_rate />
+<Header_landing />
 
 <div>
 	<section>
