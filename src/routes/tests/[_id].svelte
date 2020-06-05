@@ -61,14 +61,18 @@
 	</fieldset> -->
 </form>
 
-<header>
+<footer>
 	You got… {$score[post._id]} points.
 	{#if $score_sum >= $threshold}
 	<br><a href="/dics/{$bckid}">Now you've proven your authoriter values. You are allowed to <button>RATE</button> your favorite DiCs.</a>
 	{/if}
-</header>
+</footer>
 
 <style>
+
+h1 {
+	margin-bottom: 0;
+}
 
 form {
 	display: grid;
@@ -121,14 +125,12 @@ input:checked + label {
 	color: inherit;
 }
 
-header {
+footer {
 	position: sticky;
 	bottom: 0;
 	padding: var(--gutter);
 	background-color: var(--bgcolor);
 	margin-top: var(--spacer);
-	/* margin-left: var(--gutter2-);
-	margin-right: var(--gutter2-); */
 	border-top: 2px solid var(--maincolor);
 }
 

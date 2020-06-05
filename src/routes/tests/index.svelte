@@ -20,6 +20,9 @@ import ButtonTys from '../../components/button-tys.svelte'
 </ul>
 
 <style>
+h1 {
+	margin-bottom: 0;
+}
 ul {
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(49%, 1fr));

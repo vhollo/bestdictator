@@ -8,6 +8,7 @@
 	--orange: #ff3d00;
 	--green: #c0ff55;
 	--light: #e2e8f0;
+	--light25: #e2e8f03f;
 	--dark: #111;
 	--darkgray: #0f2537;
 	--midtone: #1f4667;
@@ -18,9 +19,10 @@
 	--headsize: 2rem;
 	--midsize: 1.5rem;
 	--smallsize: .75rem;
+	
 	--gutter: 1rem;
-	--gutter2: 2rem;
 	--gutter-: -1rem;
+	--gutter2: 2rem;
 	--gutter2-: -2rem;
 	--gutterx: calc(var(--gutter) / 2);
 	--gutterx-: calc(var(--gutter) / -2);
@@ -39,6 +41,7 @@ body {
 #dm:not(:checked) ~ #sapper {
 	--bgcolor: var(--darkgray);
 	--txtcolor: var(--light);
+	--txt25: var(--light25);
 	--maincolor: var(--orange);
 	--extcolor: var(--green);
 	--toolbg: var(--midtone);
@@ -77,6 +80,24 @@ body {
 	background-color: var(--bgcolor);
 	z-index: -1;
 }
+header {
+	background-color: var(--maincolor);
+	color: var(--txtcolor);
+	margin: 0 var(--gutter-);
+	padding: 0 var(--gutter);
+}
+main {
+	padding: 0 var(--gutter);
+	min-height: 100vh;
+}
+@media screen and (min-width: 640px) {
+	header {
+		margin: 0 var(--gutter2-);
+	}
+	main {
+		padding: 0 var(--gutter2);
+	}
+}
 
 svg {
 	fill: var(--txtcolor);
@@ -87,7 +108,7 @@ svg {
 	@apply text-5xl;
 	@apply mt-8 mb-4;
 	line-height: 1;
-	margin-bottom: 0;
+	/* margin-bottom: 0; */
 }
 h1 {
 	@apply h1;

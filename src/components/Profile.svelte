@@ -10,8 +10,8 @@ export let threshold
 {#each Object.entries(data) as [key, value]}
 <label>
 	{names[key]}
-	<div>
-		<input disabled={score < threshold} type=range min="1" max="5" bind:value={data[key]} on:change={score >= threshold && (data[key] = value)} style="--level:{(value-1)*25}%" tabindex="0">
+	<div style="--level:{(value-1)*25}%">
+		<input disabled={score < threshold} type=range min="1" max="5" bind:value={data[key]} on:change={score >= threshold && (data[key] = value)} tabindex="0">
 		<mark style="--mark:{(average[key] - 1) * 25}%"></mark>
 	</div>
 </label>
@@ -35,23 +35,23 @@ div{
 input{ 
 	position: relative;
 	visibility: hidden;
+	height: 1rem;
 }
 input:not(:disabled):hover, input:not(:disabled):focus {
 	visibility: visible;
 }
-input:before {
-	visibility: visible;
-	content: '';
+div {
+	/* visibility: visible; */
+	/* content: '';
 	position: absolute;
 	top:0;
 	bottom: 0;
 	left: 0;
-	width: 100%;
-	/* background: dimgrey; */
+	width: 100%; */
 	background: var(--toolbg);
 }
-input:after {
-	visibility: visible;
+div::before {
+	/* visibility: visible; */
 	content: '';
 	position: absolute;
 	top:0;
@@ -60,9 +60,9 @@ input:after {
 	width: var(--level);
 	background: var(--maincolor);
 }
-input:not(:disabled):hover:before, input:not(:disabled):hover:after, input:not(:disabled):focus:before, input:not(:disabled):focus:after {
+/* input:not(:disabled):hover::before, input:not(:disabled):hover::after, input:not(:disabled):focus::before, input:not(:disabled):focus::after {
 	visibility: hidden;
-}
+} */
 
 mark {
 	position: absolute;
@@ -70,6 +70,7 @@ mark {
 	top: -15%;
 	bottom: -15%;
 	width: 2px;
+	z-index: 1;
 }
 
 </style>

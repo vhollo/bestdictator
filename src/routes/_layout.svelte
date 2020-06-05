@@ -18,10 +18,6 @@
 </footer>
 
 <style>
-	main {
-		padding: 0 var(--gutter2);
-		min-height: 100vh;
-	}
 
 	footer {
 		min-height: 4em;

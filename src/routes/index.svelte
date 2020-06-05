@@ -21,7 +21,7 @@
 		<h1>DiC STRiP</h1>
 		<img src="uploads/DiCStrip-mockup.jpg" alt="dic strip" />
 		<figcaption>Design a new style for your most beloved one!</figcaption>
-		<p>Coming to your country soon</p>
+		<p>* COMING LATER *</p>
 	</figure>
 </div>
 

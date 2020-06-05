@@ -25,8 +25,6 @@
 <style>
 header {
 	margin-bottom: 50vh;
-	margin-left: var(--gutter-);
-	margin-right: var(--gutter-);
 }
 
 header :global(svg) {

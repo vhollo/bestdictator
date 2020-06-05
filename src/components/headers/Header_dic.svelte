@@ -35,10 +35,10 @@
 
 <style>
 header {
-	background-color: var(--maincolor);
+	/* background-color: var(--maincolor);
+	margin: 0 var(--gutter2-); */
 	border-bottom-width: var(--gutterz);
 	border-color: var(--bgcolor);
-	margin: 0 var(--gutter2-);
 	display: flex;
 	position: relative;
 	overflow-x: auto;

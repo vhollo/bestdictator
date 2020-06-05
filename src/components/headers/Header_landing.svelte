@@ -9,23 +9,16 @@
 		<figcaption>Rate your <b>Dictator</b></figcaption>
 	</figure>
 	<nav>
-		<a><IconDic icon="liar" />Who's the biggest liar?</a>
-		<a><IconDic icon="cash" />Who's the most corrupt?</a>
-		<a><IconDic icon="bomb" />Who's the cruelest?</a>
-		<a><IconDic icon="idiot" />Who's the largest idiot?</a>
-		<a><IconDic icon="vote" />Why people vote a DiC?</a>
+		<span><IconDic icon="liar" />Who's the biggest liar?</span>
+		<span><IconDic icon="cash" />Who's the most corrupt?</span>
+		<span><IconDic icon="bomb" />Who's the cruelest?</span>
+		<span><IconDic icon="idiot" />Who's the largest idiot?</span>
+		<span><IconDic icon="vote" />Why people vote a DiC?</span>
 	</nav>
 </header>
 
 
 <style>
-header {
-	background-color: var(--maincolor);
-	color: var(--txtcolor);
-	margin: 0 var(--gutter2-);
-	padding: 0 var(--gutter);
-}
-
 figure {
 	display: flex ;
 	flex-wrap: wrap;
@@ -54,10 +47,10 @@ nav {
 	padding: var(--gutter);
 	line-height: 1.5;
 }
-nav a {
+nav span {
 	padding: var(--gutter);
 }
-nav a :global(svg) {
+nav span :global(svg) {
 	margin-bottom: var(--gutter);
 	width: var(--toolsize);
 	height: auto;

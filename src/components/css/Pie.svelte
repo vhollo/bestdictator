@@ -12,7 +12,8 @@ div {
   width: var(--toolsize); height: var(--toolsize);
   border-radius: 50%;
 	margin: 0 auto;
-	background: transparent repeating-conic-gradient(transparent 0 10deg, var(--txtcolor) 0 20deg);
+	background-color: var(--txt25);
+	background-image: repeating-conic-gradient(var(--maskcolor) 0 10deg, var(--txtcolor) 0 20deg);
 }
 div:before {
 	content: '';
@@ -22,7 +23,7 @@ div:before {
 	bottom: 0;
 	right: 0;
   border-radius: 50%;
-	background: conic-gradient(var(--maskcolor) var(--mask), transparent 0);
+	background-image: conic-gradient(var(--maskcolor) var(--mask), transparent 0);
 	opacity: .75;
 }
 div:after {
