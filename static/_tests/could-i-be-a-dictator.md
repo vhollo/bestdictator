@@ -100,7 +100,7 @@ questions:
   - q: Did you lie when answering any of the previous questions?
     choices:
       - score: "0"
-        choice: false
+        choice: Nope
         bully: Better you should!
       - score: x2
         choice: Absolutely
