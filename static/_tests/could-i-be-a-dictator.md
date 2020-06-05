@@ -29,8 +29,8 @@ questions:
         choice: People are rude
         bully: This.
       - score: 3
-        choice: I only hate working class
-        bully: …and the middle class, right?
+        choice: I only hate the working class
+        bully: And the middle class, right?
   - q: Do you trust people?
     choices:
       - score: 0
