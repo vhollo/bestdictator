@@ -48,7 +48,7 @@
 
 	{#if post.profile}
 	<h2>Profile</h2>
-	<form name="profile" netlify netlify-honeypot="family">
+	<form name="profile" netlify netlify-honeypot="smile">
 		<Profile bind:data="{profile}" average="{average}" names="{profile_names}" score={$score_sum} threshold={$threshold}/>
 		<button type="submit">Revision</button>
 	</form>

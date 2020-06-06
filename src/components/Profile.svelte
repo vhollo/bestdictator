@@ -23,6 +23,13 @@ export let threshold
 		<mark style="--mark:50%"></mark>
 	</div>
 </label>
+<label>
+	Evil smile
+	<div style="--level:50%">
+		<input tabindex=0 ddisabled={score < threshold} type=range min="1" max="5" id="smile">
+		<mark style="--mark:50%"></mark>
+	</div>
+</label>
 
 
 <style>
@@ -67,7 +74,7 @@ mark {
 	bottom: -15%;
 	width: 2px;
 }
-label:last-of-type {
+label:last-of-type, label:nth-last-of-type(2) {
 	display: none;
 }
 </style>
