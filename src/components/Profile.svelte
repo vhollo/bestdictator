@@ -16,6 +16,13 @@ export let threshold
 	</div>
 </label>
 {/each}
+<label>
+	Family relations
+	<div style="--level:50%">
+		<input tabindex=0 ddisabled={score < threshold} type=range min="1" max="5" id="family">
+		<mark style="--mark:50%"></mark>
+	</div>
+</label>
 
 
 <style>
@@ -60,5 +67,7 @@ mark {
 	bottom: -15%;
 	width: 2px;
 }
-
+label:last-of-type {
+	display: none;
+}
 </style>
