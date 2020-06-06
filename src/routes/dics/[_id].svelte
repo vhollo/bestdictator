@@ -50,6 +50,7 @@
 	<h2>Profile</h2>
 	<form name="profile" netlify>
 		<Profile bind:data="{profile}" average="{average}" names="{profile_names}" score={$score_sum} threshold={$threshold}/>
+		<button type="submit">Revision</button>
 	</form>
 	{/if}
 
@@ -57,6 +58,7 @@
 	<h2>Power Indicators</h2>
 	<form name="power" netlify>
 		<Profile bind:data="{power}" average="{average}" names="{power_names}" score={$score_sum} threshold={$threshold}/>
+		<button type="submit">Revision</button>
 	</form>
 	{/if}
 
@@ -75,6 +77,10 @@ form {
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
 	grid-gap: 0 var(--gutterx);
+}
+button {
+	grid-column: 1/-1;
+	margin: var(--gutter) auto;
 }
 article :global(p) {
 	margin-bottom: var(--gutter);
