@@ -16,12 +16,12 @@
 
 <style>
 	nav {
-		margin-top: var(--spacer);
+		margin: var(--spacer) 0;
 		padding: var(--gutter) 0;
 	}
 	nav a {
 		display: block;
-		width: fit-content;
+		width: max-content;
 		margin-left: auto;
 		margin-right: auto;
 	}

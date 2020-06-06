@@ -90,7 +90,7 @@ main {
 	padding: 0 var(--gutter);
 	min-height: 100vh;
 }
-@media screen and (min-width: 640px) {
+@media screen and (min-width: 40rem) {
 	header {
 		margin: 0 var(--gutter2-);
 	}
@@ -135,9 +135,9 @@ h4 {
 	@apply h4;
 }
 
-p {
+/* p {
 	margin-bottom: var(--gutter2);
-}
+} */
 
 @tailwind components;
 /* 

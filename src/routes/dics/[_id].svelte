@@ -28,22 +28,22 @@
 <svelte:head>
 	<title>{post.title}</title>
 	{#if post.desc}<meta name='description' content='{post.desc}'>{/if}
-	
-
-</svelte:head>
+	</svelte:head>
 
 <Header_dic post="{post}" />
 <article id="post">
 	<h2>Bio</h2>
-	<p>Date of Birth: <time>{post.birthdate || '?'}</time></p>
-	{#if post.isdead || post.lost}
-	<p>Date of Death: <time>{post.deathdate || (post.lost ? 'Lost/hiding' : '?')}</time></p>
-	{/if}
-	{#if post.cause}
-	<p>Cause of Death: {post.cause}</p>
-	{/if}
+	<section>
+		<dl><dt>Date of Birth: </dt><dd><time>{post.birthdate || '?'}</time></dd></dl>
+		{#if post.isdead || post.lost}
+		<dl><dt>Date of Death: </dt><dd><time>{post.deathdate || (post.lost ? 'Lost/hiding' : '?')}</time></dd></dl>
+		{/if}
+		{#if post.cause}
+		<dl><dt>Cause of Death: </dt><dd>{post.cause}</dd></dl>
+		{/if}
+	</section>
 	{#if post.bio}
-	<p>{@html post.bio}</p>
+	{@html post.bio}
 	{/if}
 
 	{#if post.profile}
@@ -73,16 +73,26 @@ h2 {
 }
 aside {
 	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(18em, 1fr));
-	grid-gap: 0 var(--spacer);
+	grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+	grid-gap: 0 var(--gutterx);
 }
-nav {
-	margin-top: var(--spacer);
+article :global(p) {
+	margin-bottom: var(--gutter);
 }
-nav a {
+section {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+	grid-gap: var(--gutterx);
+}
+dl {
 	display: block;
-	width: fit-content;
-	margin-left: auto;
-	margin-right: auto;
+	position: relative;
+	padding: var(--gutter);
+	background-color: var(--toolbg);
+	height: max-content;
+}
+dl:hover { background-color: var(--maincolor); }
+dt, dd {
+	display: inline;
 }
 </style>

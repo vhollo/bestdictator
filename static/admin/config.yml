@@ -38,36 +38,36 @@ collections:
         widget: "object"
         collapsed: true
         fields: 
-          - {label: "Corruption", name: "corruption", widget: "number", valueType: "int", min: 1, max: 5, default: 1}
-          - {label: "Power hunger", name: "power_hunger", widget: "number", valueType: "int", min: 1, max: 5, default: 1}
-          - {label: "Agression", name: "agression", widget: "number", valueType: "int", min: 1, max: 5, default: 1}
-          - {label: "Autocracy", name: "autocracy", widget: "number", valueType: "int", min: 1, max: 5, default: 1}
-          - {label: "Telling lies", name: "telling_lies", widget: "number", valueType: "int", min: 1, max: 5, default: 1}
-          - {label: "Manipulation", name: "manipulation", widget: "number", valueType: "int", min: 1, max: 5, default: 1}
-          - {label: "Narcissism", name: "narcissism", widget: "number", valueType: "int", min: 1, max: 5, default: 1}
-          - {label: "Megalomania", name: "megalomania", widget: "number", valueType: "int", min: 1, max: 5, default: 1}
-          - {label: "Psychosis", name: "psychosis", widget: "number", valueType: "int", min: 1, max: 5, default: 1}
-          - {label: "Militancy", name: "militancy", widget: "number", valueType: "int", min: 1, max: 5, default: 1}
-          - {label: "Cynicism", name: "cynicism", widget: "number", valueType: "int", min: 1, max: 5, default: 1}
-          - {label: "Bullshit factor", name: "bullshit1", widget: "number", valueType: "int", min: 1, max: 5, default: 1}
+          - {label: "Corruption", name: "corruption", widget: "number", valueType: "int", min: 1, max: 5, default: 3}
+          - {label: "Power hunger", name: "power_hunger", widget: "number", valueType: "int", min: 1, max: 5, default: 3}
+          - {label: "Agression", name: "agression", widget: "number", valueType: "int", min: 1, max: 5, default: 3}
+          - {label: "Autocracy", name: "autocracy", widget: "number", valueType: "int", min: 1, max: 5, default: 3}
+          - {label: "Telling lies", name: "telling_lies", widget: "number", valueType: "int", min: 1, max: 5, default: 3}
+          - {label: "Manipulation", name: "manipulation", widget: "number", valueType: "int", min: 1, max: 5, default: 3}
+          - {label: "Narcissism", name: "narcissism", widget: "number", valueType: "int", min: 1, max: 5, default: 3}
+          - {label: "Megalomania", name: "megalomania", widget: "number", valueType: "int", min: 1, max: 5, default: 3}
+          - {label: "Psychosis", name: "psychosis", widget: "number", valueType: "int", min: 1, max: 5, default: 3}
+          - {label: "Militancy", name: "militancy", widget: "number", valueType: "int", min: 1, max: 5, default: 3}
+          - {label: "Cynicism", name: "cynicism", widget: "number", valueType: "int", min: 1, max: 5, default: 3}
+          - {label: "Bullshit factor", name: "bullshit1", widget: "number", valueType: "int", min: 1, max: 5, default: 3}
 
       - name: "power"
         label: "Power indicators"
         widget: "object"
         collapsed: true
         fields: 
-          - {label: "Parliament", name: "parliament", widget: "number", valueType: "int", min: 1, max: 5, default: 1}
-          - {label: "Print Media", name: "print", widget: "number", valueType: "int", min: 1, max: 5, default: 1}
-          - {label: "Online Media", name: "online", widget: "number", valueType: "int", min: 1, max: 5, default: 1}
-          - {label: "Television", name: "tv", widget: "number", valueType: "int", min: 1, max: 5, default: 1}
-          - {label: "Justice Depts", name: "justice", widget: "number", valueType: "int", min: 1, max: 5, default: 1}
-          - {label: "Economy", name: "economy", widget: "number", valueType: "int", min: 1, max: 5, default: 1}
-          - {label: "Education", name: "education", widget: "number", valueType: "int", min: 1, max: 5, default: 1}
-          - {label: "Culture", name: "culture", widget: "number", valueType: "int", min: 1, max: 5, default: 1}
-          - {label: "Religions", name: "religion", widget: "number", valueType: "int", min: 1, max: 5, default: 1}
-          - {label: "State control", name: "state", widget: "number", valueType: "int", min: 1, max: 5, default: 1}
-          - {label: "Constitution", name: "constitution", widget: "number", valueType: "int", min: 1, max: 5, default: 1}
-          - {label: "Bullshit factor", name: "bullshit2", widget: "number", valueType: "int", min: 1, max: 5, default: 1}
+          - {label: "Parliament", name: "parliament", widget: "number", valueType: "int", min: 1, max: 5, default: 3}
+          - {label: "Print Media", name: "print", widget: "number", valueType: "int", min: 1, max: 5, default: 3}
+          - {label: "Online Media", name: "online", widget: "number", valueType: "int", min: 1, max: 5, default: 3}
+          - {label: "Television", name: "tv", widget: "number", valueType: "int", min: 1, max: 5, default: 3}
+          - {label: "Justice Depts", name: "justice", widget: "number", valueType: "int", min: 1, max: 5, default: 3}
+          - {label: "Economy", name: "economy", widget: "number", valueType: "int", min: 1, max: 5, default: 3}
+          - {label: "Education", name: "education", widget: "number", valueType: "int", min: 1, max: 5, default: 3}
+          - {label: "Culture", name: "culture", widget: "number", valueType: "int", min: 1, max: 5, default: 3}
+          - {label: "Religions", name: "religion", widget: "number", valueType: "int", min: 1, max: 5, default: 3}
+          - {label: "State control", name: "state", widget: "number", valueType: "int", min: 1, max: 5, default: 3}
+          - {label: "Constitution", name: "constitution", widget: "number", valueType: "int", min: 1, max: 5, default: 3}
+          - {label: "Bullshit factor", name: "bullshit2", widget: "number", valueType: "int", min: 1, max: 5, default: 3}
 
       - {label: "Photo", name: "photo", widget: "file", default: "/DiC-Logo.svg", media_library: {config: {multiple: false}}}
       - {label: "Bio", name: "bio", widget: "markdown", minimal: true, required: false}
@@ -115,7 +115,7 @@ collections:
       value: true
     fields:
       - {label: "Name", name: title}
-      - {label: "Cause of death", name: "cause", widget: "markdown", minimal: true, required: false}
+      - {label: "Cause of death", name: "cause", widget: "markdown", minimal: true, required: false, default: 'Too much power'}
 
   - name: "tests" # Used in routes, e.g., /admin/collections/blog
     label: "Tests" # Used in the UI

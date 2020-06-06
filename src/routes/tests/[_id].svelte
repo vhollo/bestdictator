@@ -8,7 +8,7 @@
 <script>
 	import { score, score_sum, threshold, bckid } from '../stores.js';
 	export let post
-	//$score[post._id].set(0)
+	export let i
 	$score[post._id] = 0
 	function _score(s) {
 		if (String(s).startsWith('x') || String(s).startsWith('*')) {
@@ -38,7 +38,7 @@
 	<fieldset>
 		<legend id="q-{i}">{q.q}</legend>
 		{#each q.choices as ch, j}
-		<input type="radio" name="answer-{i}" id="answer-{i}-{j}" value="{ch.score}" required on:change={_score(ch.score),_scroll(`q-${i}`)}>
+		<input type="radio" name="answer-{i}" id="answer-{i}-{j}" required on:change={_score(ch.score),_scroll(`q-${i}`)}>
 		<label for="answer-{i}-{j}">
 			{ch.choice}
 			<aside>{ch.bully} <br><small>({ch.score} points)</small></aside>
@@ -46,19 +46,19 @@
 		{/each}
 	</fieldset>
 	{/each}
-	<!-- <fieldset>
+	<fieldset>
 		<legend id="q-{i+1}">Is Cartman your favorite South Park character?</legend>
-		<input type="radio" name="answer-{i+1}" id="answer-{i+1}-0" value="x0" required>
+		<input type="radio" name="answer-{i+1}" id="answer-{i+1}-0" required on:change={_score('x0'),_scroll(`q-${i+1}`)}>
 		<label for="answer-{i+1}-0">
-			Absoulutely
+			Absolutely not
 			<aside>gotcha boy <br><small>(x0 points)</small></aside>
 		</label>
-		<input type="radio" name="answer-{i+1}" id="answer-{i+1}-1" value="x0" required>
+		<input type="radio" name="answer-{i+1}" id="answer-{i+1}-1" required on:change={_score('x0'),_scroll(`q-${i+1}`)}>
 		<label for="answer-{i+1}-1">
-			Absoulutely not
+			Who else?
 			<aside>gotcha baby <br><small>(x0 points)</small></aside>
 		</label>
-	</fieldset> -->
+	</fieldset>
 </form>
 
 <footer>
@@ -82,9 +82,8 @@ form {
 fieldset {
 	display: contents;
 }
-label {
-	height: max-content;
-}
+fieldset:not(:valid) + fieldset, fieldset:last-of-type { display: none; }
+
 legend {
 	font-size: var(--midsize);
 	text-transform: uppercase;
@@ -94,7 +93,6 @@ legend {
 
 input[type="radio"] { display: none; }
 
-fieldset:not(:valid) + fieldset, fieldset(:last-of-type) { display: none; }
 input:valid ~ label {
 	pointer-events: none;
 	user-select: none;
@@ -108,21 +106,18 @@ label {
 	cursor: pointer;
 	padding: var(--gutter);
 	background-color: var(--toolbg);
+	height: max-content;
 }
-/* Hover/keyboard focus should change the background colour of the item, if not yet answered */
-input:not(:checked) ~ label:hover, input:not(:checked):focus ~ label { background-color: var(--maincolor); }
+input:checked + label, label:hover, label:focus { 
+	background-color: var(--maincolor);
+	color: inherit;
+}
 
-/* Show any extra explanatory text */
-aside { display: none }
+label aside { display: none }
 input:checked + label aside { 
 	display: block;
 	font-size: var(--midsize);
 	line-height: var(--headsize);
-}
-
-input:checked + label { 
-	background-color: var(--maincolor);
-	color: inherit;
 }
 
 footer {

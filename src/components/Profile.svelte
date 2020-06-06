@@ -24,34 +24,16 @@ label {
 	justify-content: flex-end;
 	align-items: center;
 	white-space: nowrap;
-	margin-right: 10%;
+	margin: 0 auto;
+	width: 18rem;
 }
 div{ 
 	position: relative;
 	display: flex;
 	margin-left: var(--gutter);
-}
-
-input{ 
-	position: relative;
-	visibility: hidden;
-	height: 1rem;
-}
-input:not(:disabled):hover, input:not(:disabled):focus {
-	visibility: visible;
-}
-div {
-	/* visibility: visible; */
-	/* content: '';
-	position: absolute;
-	top:0;
-	bottom: 0;
-	left: 0;
-	width: 100%; */
 	background: var(--toolbg);
 }
 div::before {
-	/* visibility: visible; */
 	content: '';
 	position: absolute;
 	top:0;
@@ -60,9 +42,16 @@ div::before {
 	width: var(--level);
 	background: var(--maincolor);
 }
-/* input:not(:disabled):hover::before, input:not(:disabled):hover::after, input:not(:disabled):focus::before, input:not(:disabled):focus::after {
+
+input{ 
+	position: relative;
 	visibility: hidden;
-} */
+	height: 1rem;
+	width: 8.5rem;
+}
+input:not(:disabled):hover, input:not(:disabled):focus {
+	visibility: visible;
+}
 
 mark {
 	position: absolute;
@@ -70,7 +59,6 @@ mark {
 	top: -15%;
 	bottom: -15%;
 	width: 2px;
-	z-index: 1;
 }
 
 </style>
