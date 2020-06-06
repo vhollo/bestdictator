@@ -11,7 +11,7 @@ export let threshold
 <label>
 	{names[key]}
 	<div style="--level:{(value-1)*25}%">
-		<input disabled={score < threshold} type=range min="1" max="5" bind:value={data[key]} on:change={score >= threshold && (data[key] = value)} tabindex="0">
+		<input tabindex=0 ddisabled={score < threshold} type=range min="1" max="5" bind:value={data[key]} on:change={score >= threshold && (data[key] = value)}>
 		<mark style="--mark:{(average[key] - 1) * 25}%"></mark>
 	</div>
 </label>

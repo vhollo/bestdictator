@@ -31,7 +31,7 @@
 	</svelte:head>
 
 <Header_dic post="{post}" />
-<article id="post">
+<article>
 	<h2>Bio</h2>
 	<section>
 		<dl><dt>Date of Birth: </dt><dd><time>{post.birthdate || '?'}</time></dd></dl>
@@ -48,16 +48,16 @@
 
 	{#if post.profile}
 	<h2>Profile</h2>
-	<aside>
+	<form name="profile" netlify>
 		<Profile bind:data="{profile}" average="{average}" names="{profile_names}" score={$score_sum} threshold={$threshold}/>
-	</aside>
+	</form>
 	{/if}
 
 	{#if post.power}
 	<h2>Power Indicators</h2>
-	<aside>
+	<form name="power" netlify>
 		<Profile bind:data="{power}" average="{average}" names="{power_names}" score={$score_sum} threshold={$threshold}/>
-	</aside>
+	</form>
 	{/if}
 
 	<h2>Knowledge</h2>
@@ -65,13 +65,13 @@
 
 </article>
 
-<ButtonTys backid="{post._id}#post"/>
+<ButtonTys backid="{post._id}"/>
 
 <style>
 h2 {
 	text-transform: uppercase;
 }
-aside {
+form {
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
 	grid-gap: 0 var(--gutterx);
