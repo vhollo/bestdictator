@@ -47,6 +47,7 @@
 	{/if}
 
 	<form name="rating" data-netlify="true" netlify-honeypot="family" method="POST">
+		<input type="hidden" name="form-name" value="rating" />
 		{#if post.profile}
 		<h2>Profile</h2>
 			<Profile bind:data="{profile}" group="profile" average="{average}" names="{profile_names}" score={$score_sum} threshold={$threshold}/>
