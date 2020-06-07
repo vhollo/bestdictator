@@ -81,7 +81,7 @@ mark {
 	bottom: -15%;
 	width: 2px;
 }
-label:last-of-type/* , label:nth-last-of-type(2) */ {
+/* label:last-of-type {
 	display: none;
-}
+} */
 </style>

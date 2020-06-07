@@ -55,7 +55,7 @@
 		<label>
 			Family relations
 			<div style="--level:50%">
-				<input name="profile[family]" type=range min="1" max="5">
+				<input name="profile[family]" type="range" min="1" max="5">
 				<mark style="--mark:50%"></mark>
 			</div>
 		</label>
