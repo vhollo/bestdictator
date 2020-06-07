@@ -46,25 +46,25 @@
 	{@html post.bio}
 	{/if}
 
-	<form name="rating" data-netlify="true" netlify-honeypot="family" method="POST">
+	<form name="rating" data-netlify="true" netlify-honeypot="profile[family]" method="POST">
 		<input type="hidden" name="form-name" value="rating" />
 		{#if post.profile}
 		<h2>Profile</h2>
 			<Profile bind:data="{profile}" group="profile" average="{average}" names="{profile_names}" score={$score_sum} threshold={$threshold}/>
 		{/if}
+		<label>
+			Family relations
+			<div style="--level:50%">
+				<input name="profile[family]" type=range min="1" max="5">
+				<mark style="--mark:50%"></mark>
+			</div>
+		</label>
 
 		{#if post.power}
 		<h2>Power Indicators</h2>
 			<Profile bind:data="{power}" group="power" average="{average}" names="{power_names}" score={$score_sum} threshold={$threshold}/>
 		{/if}
 
-		<label>
-			Family relations
-			<div style="--level:50%">
-				<input name="family" type=range min="1" max="5">
-				<mark style="--mark:50%"></mark>
-			</div>
-		</label>
 		<button type="submit">Revision</button>
 	</form>
 
