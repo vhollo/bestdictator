@@ -18,14 +18,26 @@
 </footer>
 
 <style>
-
-	footer {
-		min-height: 4em;
-		text-align: center;
-		border-top: 2px solid var(--extcolor);
-		display: flex;
-    align-items: center;
-    justify-content: center;
-		background-color: var(--toolbg);
+main {
+	padding: 0 var(--gutter);
+	min-height: 100vh;
+	background-color: var(--bgcolor);
+	border-bottom: 2px solid var(--extcolor);
+}
+@media screen and (min-width: 40rem) {
+	main {
+		padding: 0 var(--gutter2);
 	}
+}
+footer {
+	min-height: 4em;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: var(--toolbg);
+	position: sticky;
+	bottom: 0;
+	z-index: -1;
+}
 </style>

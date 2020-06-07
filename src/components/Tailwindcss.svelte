@@ -70,7 +70,7 @@ body {
 	color: var(--txtcolor);
 	--maskcolor: var(--bgcolor);
 }
-#sapper:before {
+/* #sapper:before {
 	content: '';
 	position: absolute;
 	top: 0;
@@ -79,23 +79,17 @@ body {
 	right: 0;
 	background-color: var(--bgcolor);
 	z-index: -1;
-}
-header {
+} */
+main > header {
 	background-color: var(--maincolor);
 	color: var(--txtcolor);
 	margin: 0 var(--gutter-);
-	padding: 0 var(--gutter);
-}
-main {
-	padding: 0 var(--gutter);
-	min-height: 100vh;
+	/* padding: 0 var(--gutter); */
+	border-top: 2px solid var(--extcolor);
 }
 @media screen and (min-width: 40rem) {
-	header {
+	main > header {
 		margin: 0 var(--gutter2-);
-	}
-	main {
-		padding: 0 var(--gutter2);
 	}
 }
 

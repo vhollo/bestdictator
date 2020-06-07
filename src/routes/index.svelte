@@ -20,8 +20,7 @@
 	<figure>
 		<h1>DiC STRiP</h1>
 		<img src="uploads/DiCStrip-mockup.jpg" alt="dic strip" />
-		<figcaption>Design a new style for your most beloved one!</figcaption>
-		<p>* COMING LATER *</p>
+		<figcaption>Design a new style for your most beloved one!<p>* COMING LATER *</p></figcaption>
 	</figure>
 </div>
 
@@ -40,21 +39,18 @@ div {
 	position: relative;
 	display: flex;
 	flex-wrap: wrap;
-	margin: 0 var(--gutter2-);
+	margin: 0 var(--gutter-);
 	padding-bottom: var(--gutter2);
 	background-color: var(--infobg);
 	--maskcolor: var(--infobg);
+	overflow-x: hidden;
 }
 div:before {
 	content: '';
-	/* position: absolute;
-	left: calc(50% - var(--guttery));
-	top: var(--gutter2);
-	bottom: var(--gutter); */
 	margin-top: var(--gutter2);
-	border-right: var(--gutterx) dotted var(--toolbg);
+	margin-left: var(--gutterx-);
 	margin-right: var(--gutterx-);
-	/* flex: 0 0 0; */
+	border-right: var(--gutterx) dotted var(--toolbg);
 	order: 1;
 }
 div section {
@@ -79,8 +75,8 @@ div figure p {
 }
 div + figure {
 	display: flex;
-	align-items: center;
-	background-color: var(--bgcolor);
+	align-items: flex-end;
+	padding: var(--gutter) 0;
 }
 div + figure :global(svg) {
 	width: var(--toolsize);
@@ -93,7 +89,13 @@ div + figure figcaption {
 	color: var(--maincolor);
 }
 div + figure figcaption h2 {
-	margin-bottom: 0;
+	margin: 0;
 	color: var(--txtcolor);
+}
+
+@media screen and (min-width: 40rem) {
+	div {
+		margin: 0 var(--gutter2-);
+	}
 }
 </style>

@@ -38,7 +38,7 @@ header {
 	/* background-color: var(--maincolor);
 	margin: 0 var(--gutter2-); */
 	border-bottom-width: var(--gutterz);
-	border-color: var(--bgcolor);
+	border-bottom-color: var(--bgcolor);
 	display: flex;
 	position: relative;
 	overflow-x: auto;

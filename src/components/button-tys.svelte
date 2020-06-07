@@ -16,8 +16,7 @@
 
 <style>
 	nav {
-		margin: var(--spacer) 0;
-		padding: var(--gutter) 0;
+		padding: var(--spacer) 0;
 	}
 	nav a {
 		display: block;

@@ -26,6 +26,7 @@ nav {
 	display: flex;
 	justify-content: space-between;
 	border-bottom: 2px solid var(--extcolor);
+	margin-bottom: -2px;
 	background: var(--navbg);
 	backdrop-filter: blur(3px);
 }

@@ -24,7 +24,7 @@
 
 <style>
 header {
-	margin-bottom: 50vh;
+	margin-bottom: 25vh;
 }
 
 header :global(svg) {

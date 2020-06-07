@@ -23,7 +23,7 @@ figure {
 	display: flex ;
 	flex-wrap: wrap;
 	align-items: flex-end;
-	padding: var(--gutter) 0;
+	padding: var(--gutter);
 }
 figure :global(svg) {
 	max-width: 30%;
@@ -44,8 +44,9 @@ nav {
 	display: flex;
 	text-align: center;
 	overflow-x: auto;
-	padding: var(--gutter);
+	/* padding: var(--gutter); */
 	line-height: 1.5;
+	/* margin: 0 var(--gutter-); */
 }
 nav span {
 	padding: var(--gutter);
@@ -55,5 +56,7 @@ nav span :global(svg) {
 	width: var(--toolsize);
 	height: auto;
 }
-
+/* @media screen and (min-width: 40rem) {
+}
+ */
 </style>
