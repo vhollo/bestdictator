@@ -46,7 +46,7 @@
 	{@html post.bio}
 	{/if}
 
-	<form name="rating" netlify netlify-honeypot="power[family]" method="POST">
+	<form name="rating" data-netlify="true" netlify-honeypot="family" method="POST">
 		{#if post.profile}
 		<h2>Profile</h2>
 			<Profile bind:data="{profile}" group="profile" average="{average}" names="{profile_names}" score={$score_sum} threshold={$threshold}/>
@@ -60,7 +60,7 @@
 		<label>
 			Family relations
 			<div style="--level:50%">
-				<input name="power[family]" type=range min="1" max="5">
+				<input name="family" type=range min="1" max="5">
 				<mark style="--mark:50%"></mark>
 			</div>
 		</label>

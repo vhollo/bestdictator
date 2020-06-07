@@ -15,7 +15,7 @@ export let threshold
 		{#if score < threshold}
 		<input name="{group}[{key}]" type=range min="1" max="5" bind:value={data[key]} on:change={(data[key] = value)}>
 		{:else}
-		<input type=range disabled>
+		<input name="{group}[{key}]" type=range disabled>
 		{/if}
 		<mark style="--mark:{(average[key] - 1) * 25}%"></mark>
 	</div>
