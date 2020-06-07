@@ -46,21 +46,26 @@
 	{@html post.bio}
 	{/if}
 
-	{#if post.profile}
-	<h2>Profile</h2>
-	<form name="profile" netlify netlify-honeypot="smile">
-		<Profile bind:data="{profile}" average="{average}" names="{profile_names}" score={$score_sum} threshold={$threshold}/>
-		<button type="submit">Revision</button>
-	</form>
-	{/if}
+	<form name="rating" netlify netlify-honeypot="power[family]" method="POST">
+		{#if post.profile}
+		<h2>Profile</h2>
+			<Profile bind:data="{profile}" group="profile" average="{average}" names="{profile_names}" score={$score_sum} threshold={$threshold}/>
+		{/if}
 
-	{#if post.power}
-	<h2>Power Indicators</h2>
-	<form name="power" netlify netlify-honeypot="family">
-		<Profile bind:data="{power}" average="{average}" names="{power_names}" score={$score_sum} threshold={$threshold}/>
+		{#if post.power}
+		<h2>Power Indicators</h2>
+			<Profile bind:data="{power}" group="power" average="{average}" names="{power_names}" score={$score_sum} threshold={$threshold}/>
+		{/if}
+
+		<label>
+			Family relations
+			<div style="--level:50%">
+				<input name="power[family]" type=range min="1" max="5">
+				<mark style="--mark:50%"></mark>
+			</div>
+		</label>
 		<button type="submit">Revision</button>
 	</form>
-	{/if}
 
 	<h2>Knowledge</h2>
 	{@html post.html}
@@ -73,13 +78,8 @@
 h2 {
 	text-transform: uppercase;
 }
-form {
-	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
-	grid-gap: 0 var(--gutterx);
-}
 button {
-	grid-column: 1/-1;
+	display: block;
 	margin: var(--gutter) auto;
 }
 article :global(p) {

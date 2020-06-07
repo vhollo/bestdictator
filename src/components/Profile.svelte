@@ -1,38 +1,42 @@
 <script>
 export let data
+export let group = 'family'
 export let names
 export let average
 export let score
 export let threshold
 </script>
 
-
+<aside>
 {#each Object.entries(data) as [key, value]}
 <label>
 	{names[key]}
 	<div style="--level:{(value-1)*25}%">
-		<input tabindex=0 ddisabled={score < threshold} type=range min="1" max="5" bind:value={data[key]} on:change={score >= threshold && (data[key] = value)}>
+		{#if score < threshold}
+		<input name="{group}[{key}]" type=range min="1" max="5" bind:value={data[key]} on:change={(data[key] = value)}>
+		{:else}
+		<input type=range disabled>
+		{/if}
 		<mark style="--mark:{(average[key] - 1) * 25}%"></mark>
 	</div>
 </label>
 {/each}
-<label>
-	Family relations
-	<div style="--level:50%">
-		<input tabindex=0 ddisabled={score < threshold} type=range min="1" max="5" id="family">
-		<mark style="--mark:50%"></mark>
-	</div>
-</label>
-<label>
+</aside>
+<!-- <label>
 	Evil smile
 	<div style="--level:50%">
 		<input tabindex=0 ddisabled={score < threshold} type=range min="1" max="5" id="smile">
 		<mark style="--mark:50%"></mark>
 	</div>
 </label>
-
+ -->
 
 <style>
+aside {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+	grid-gap: 0 var(--gutterx);
+}
 label {
 	display: flex;
 	justify-content: flex-end;
@@ -63,7 +67,10 @@ input{
 	height: 1rem;
 	width: 8.5rem;
 }
-input:not(:disabled):hover, input:not(:disabled):focus {
+/* input:not(:disabled):hover, input:not(:disabled):focus {
+	visibility: visible;
+} */
+label:hover input:not(:disabled), input:not(:disabled):focus {
 	visibility: visible;
 }
 
@@ -74,7 +81,7 @@ mark {
 	bottom: -15%;
 	width: 2px;
 }
-label:last-of-type, label:nth-last-of-type(2) {
+label:last-of-type/* , label:nth-last-of-type(2) */ {
 	display: none;
 }
 </style>
