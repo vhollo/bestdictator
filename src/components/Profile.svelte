@@ -1,6 +1,6 @@
 <script>
 export let data
-export let group = 'family'
+//export let group = 'family'
 export let names
 export let average
 export let score
@@ -13,9 +13,9 @@ export let threshold
 	{names[key]}
 	<div style="--level:{(value-1)*25}%">
 		{#if score < threshold}
-		<input name="{group}[{key}]" type=range min="1" max="5" bind:value={data[key]} on:change={(data[key] = value)}>
+		<input name="{key}" type="range" min="1" max="5" bind:value={data[key]} on:change={(data[key] = value)}>
 		{:else}
-		<input name="{group}[{key}]" type=range disabled>
+		<input type="range" min="1" max="5" disabled>
 		{/if}
 		<mark style="--mark:{(average[key] - 1) * 25}%"></mark>
 	</div>
