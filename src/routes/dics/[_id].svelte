@@ -48,6 +48,7 @@
 
 	<form name="rating" method="POST">
 		<input type='hidden' name='form-name' value='rating' />
+		<input type='hidden' name='score' value='{$score_sum}' />
 		{#if post.profile}
 		<h2>Profile</h2>
 			<Profile bind:data="{profile}" group="profile" average="{average}" names="{profile_names}" score={$score_sum} threshold={$threshold}/>
@@ -55,7 +56,7 @@
 		<label>
 			Family relations
 			<div style="--level:50%">
-				<input name="profile[family]" type="range" min="1" max="5">
+				<input name="profile.family" type="range" min="1" max="5">
 				<mark style="--mark:50%"></mark>
 			</div>
 		</label>
