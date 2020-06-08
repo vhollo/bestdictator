@@ -13,7 +13,7 @@ div {
   border-radius: 50%;
 	margin: 0 auto;
 	background-color: var(--txt25);
-	background-image: repeating-conic-gradient(var(--maskcolor) 0 10deg, var(--txtcolor) 0 20deg);
+	background-image: repeating-conic-gradient(var(--maskcolor, var(--bgcolor)) 0 6deg, var(--txtcolor) 0 18deg);
 }
 div:before {
 	content: '';
@@ -23,7 +23,7 @@ div:before {
 	bottom: 0;
 	right: 0;
   border-radius: 50%;
-	background-image: conic-gradient(var(--maskcolor) var(--mask), transparent 0);
+	background-image: conic-gradient(var(--maskcolor, var(--bgcolor)) var(--mask), transparent 0);
 	opacity: .75;
 }
 div:after {
@@ -33,7 +33,7 @@ div:after {
 	top: 15%;
 	left: 15%;
   border-radius: 50%;
-	background: var(--maskcolor);
+	background: var(--maskcolor, var(--bgcolor));
 	display: flex;
 	justify-content: center;
 	align-items: center;

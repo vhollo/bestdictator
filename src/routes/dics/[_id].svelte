@@ -34,13 +34,23 @@
 <article>
 	<h2>Bio</h2>
 	<section>
-		<dl><dt>Date of Birth: </dt><dd><time>{post.birthdate || '?'}</time></dd></dl>
+		<dl><dt>Date of Birth:&ensp;</dt><dd><time>{post.birthdate || '?'}</time></dd></dl>
 		{#if post.isdead || post.lost}
-		<dl><dt>Date of Death: </dt><dd><time>{post.deathdate || (post.lost ? 'Lost/hiding' : '?')}</time></dd></dl>
+		<dl>
+			<dt>Date of Death:&ensp;</dt>
+			<dd><time>{post.deathdate || (post.lost ? 'Lost/hiding' : '?')}</time></dd>
+		</dl>
 		{/if}
 		{#if post.cause}
-		<dl><dt>Cause of Death: </dt><dd>{post.cause}</dd></dl>
+		<dl>
+			<dt>Cause of Death:&ensp;</dt>
+			<dd>{post.cause}</dd>
+		</dl>
 		{/if}
+		<dl>
+			<dt>Country to rule:&ensp;</dt>
+			<dd>{post.country}</dd>
+		</dl>
 	</section>
 	{#if post.bio}
 	{@html post.bio}
@@ -92,12 +102,12 @@ article :global(p) {
 }
 section {
 	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+	grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
 	grid-gap: var(--gutterx);
 }
 dl {
-	display: block;
-	position: relative;
+	display: flex;
+	flex-wrap: wrap;
 	padding: var(--gutter);
 	background-color: var(--toolbg);
 	height: max-content;

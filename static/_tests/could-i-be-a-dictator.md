@@ -1,5 +1,4 @@
 ---
-layout: column
 title: Could I be a Dictator?
 date: 2020-05-19T20:26:27.343Z
 questions:
@@ -103,7 +102,7 @@ questions:
         choice: Nope
         bully: Better you should!
       - score: x2
-        choice: Absolutely
+        choice: Definitely
         bully: Come closer!
 ---
 This is an easy test to challange your authoriter values 

@@ -68,7 +68,6 @@ body {
 	max-width: 64em;
 	margin: 0 auto;
 	color: var(--txtcolor);
-	--maskcolor: var(--bgcolor);
 }
 /* #sapper:before {
 	content: '';

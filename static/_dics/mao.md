@@ -2,33 +2,32 @@
 lastname: Zedong
 deathdate: 1976-09-09T00:00:00.000Z
 power:
-  parliament: 1
-  tv: 1
-  education: 1
-  print: 1
-  culture: 1
-  state: 1
-  religion: 1
-  online: 1
-  constitution: 1
-  economy: 1
-  bullshit2: 5
-  justice: 1
+  parliament: 3
+  tv: 3
+  education: 3
+  print: 3
+  culture: 3
+  state: 3
+  religion: 3
+  online: 3
+  constitution: 3
+  economy: 3
+  bullshit2: 3
+  justice: 3
 cause: Too much power
 profile:
-  psychosis: 1
-  power_hunger: 1
-  agression: 1
-  cynicism: 1
-  autocracy: 1
-  telling_lies: 1
-  corruption: 1
-  megalomania: 1
-  manipulation: 1
-  bullshit1: 5
-  militancy: 1
-  narcissism: 1
-layout: column
+  psychosis: 3
+  power_hunger: 3
+  agression: 3
+  cynicism: 3
+  autocracy: 3
+  telling_lies: 3
+  corruption: 3
+  megalomania: 3
+  manipulation: 3
+  bullshit1: 3
+  militancy: 3
+  narcissism: 3
 birthdate: 1893-12-26T00:00:00.000Z
 isdead: true
 desc: Protomaoist

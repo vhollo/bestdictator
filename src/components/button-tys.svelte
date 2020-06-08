@@ -18,10 +18,13 @@
 	nav {
 		padding: var(--spacer) 0;
 		text-align: center;
+    display: flex;
+    align-items: center;
+		justify-content: center;
 	}
-	button {
+	/* button {
 		margin: 0 var(--guttery) var(--gutter);
-	}
+	} */
 	/* nav a {
 		display: block;
 		width: max-content;
