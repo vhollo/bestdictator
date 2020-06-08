@@ -16,13 +16,13 @@
 	import Profile from '../../components/Profile.svelte'
 	import ButtonTys from '../../components/button-tys.svelte'
 	export let post
-	export let profile = post.profile
-	export let power = post.power
-	$: post.profile = profile
-	$: post.power = power
+	export let changed = false
 
-	$: average = calcaverage(post._id, profile, power)
+	$: average = calcaverage(post._id, post.profile, post.power)
 
+	function _changed() {
+		changed = true
+	}
 </script>
 
 <svelte:head>
@@ -46,27 +46,30 @@
 	{@html post.bio}
 	{/if}
 
-	<form name="rating" method="POST">
+	<form name="rating" method="POST" on:change={_changed}>
 		<input type='hidden' name='form-name' value='rating' />
+		<input type='hidden' name='dic' value='{post._id}' />
 		<input type='hidden' name='score' value='{$score_sum}' />
 		{#if post.profile}
 		<h2>Profile</h2>
-			<Profile bind:data="{profile}" group="profile" average="{average}" names="{profile_names}" score={$score_sum} threshold={$threshold}/>
+			<Profile bind:data="{post.profile}" group="profile" average="{average}" names="{profile_names}" score={$score_sum} threshold={$threshold} />
 		{/if}
 		<label>
 			Family relations
 			<div style="--level:50%">
-				<input name="profile[family]" type="range" min="1" max="5" value>
+				<input name="profile[family]" type="number" min="1" max="5" value>
 				<mark style="--mark:50%"></mark>
 			</div>
 		</label>
 
 		{#if post.power}
 		<h2>Power Indicators</h2>
-			<Profile bind:data="{power}" group="power" average="{average}" names="{power_names}" score={$score_sum} threshold={$threshold}/>
+			<Profile bind:data="{post.power}" group="power" average="{average}" names="{power_names}" score={$score_sum} threshold={$threshold} />
 		{/if}
 
+		{#if changed}
 		<button type="submit">Revision</button>
+		{/if}
 	</form>
 
 	<h2>Knowledge</h2>
@@ -102,5 +105,8 @@ dl {
 dl:hover { background-color: var(--maincolor); }
 dt, dd {
 	display: inline;
+}
+label {
+	display: none;
 }
 </style>

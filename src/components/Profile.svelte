@@ -12,7 +12,7 @@ export let threshold
 <label>
 	{names[key]}
 	<div style="--level:{(value-1)*25}%">
-		{#if score < threshold}
+		{#if score >= threshold}
 		<input name="{group}[{key}]" type="range" min="1" max="5" bind:value={data[key]}><!--  on:change={(data[key] = value)} -->
 		{:else}
 		<input type="range" min="1" max="5" disabled>
