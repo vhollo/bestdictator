@@ -44,5 +44,6 @@ footer {
 	z-index: -1;
 	max-width: 64em;
 	margin: 0 auto;
+	overflow-y: visible;
 }
 </style>
