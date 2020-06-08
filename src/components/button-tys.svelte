@@ -8,11 +8,9 @@
 
 <nav>
 {#if $score_sum < $threshold}
-	To rate a DiC, 
-	<a href="/tests/could-i-be-a-dictator" on:click={_click}><button>TEST</button> your aptitude </a> first, or
-	<button>DONATE</button> this project
+	To rate a DiC, <a href="/tests/could-i-be-a-dictator" on:click={_click}><button>TEST</button></a> your aptitude first, or <button>DONATE</button> this project
 {:else}
-	<a href="/dics/{$bckid}">You may <button>RATE</button> your favorite DiC</a>
+	You may <a href="/dics/{$bckid}"><button>RATE</button></a> your favorite DiC
 {/if}
 </nav>
 
@@ -20,6 +18,9 @@
 	nav {
 		padding: var(--spacer) 0;
 		text-align: center;
+	}
+	button {
+		margin: 0 var(--guttery) var(--gutter);
 	}
 	/* nav a {
 		display: block;

@@ -64,7 +64,8 @@
 <footer>
 	You got… {$score[post._id]} points.
 	{#if $score_sum >= $threshold}
-	<br><a href="/dics/{$bckid}">Now you've proven your authoriter values. You are allowed to <button>RATE</button> your favorite DiCs.</a>
+	<br>
+	Now you've proven your authoriter values. You are allowed to <a href="/dics/{$bckid}"><button>RATE</button></a> your favorite DiCs.
 	{/if}
 </footer>
 

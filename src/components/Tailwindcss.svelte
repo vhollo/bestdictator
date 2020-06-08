@@ -149,6 +149,7 @@ button {
 	outline: 2px solid var(--maincolor);
 	padding: 0 var(--gutterx);
 	margin: 0 var(--guttery);
+	cursor: default;
 }
 
 
