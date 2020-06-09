@@ -1,7 +1,6 @@
-<script>
-	/* import { score, threshold } from '../stores.js'; */
-	import Dic_grid from '../../components/dic-grid.svelte'
-	import ButtonTys from '../../components/button-tys.svelte'
+<script context="module">
+	import Dic_top from '../../components/Dic-top.svelte'
+	import Could_I from '../../components/Could-I.svelte';
 </script>
 
 <svelte:head>
@@ -9,10 +8,10 @@
 </svelte:head>
 
 <section>
-<Dic_grid list="list"/>
+<Dic_top list="list"/>
 </section>
 
-<ButtonTys backid={''}/>
+<Could_I/>
 
 <style>
 section {

@@ -4,6 +4,10 @@
 	import { profile_names, power_names } from '../../components/txt'
 	import { score_sum, threshold } from '../stores.js';
 
+	import Header_dic from '../../components/headers/Header_dic.svelte'
+	import Profile from '../../components/Profile.svelte'
+	import Could_I from '../../components/Could-I.svelte';
+
 	export function preload(page) {
 		return { 
 			post: findPost(page.params._id)
@@ -12,9 +16,6 @@
 </script>
 
 <script>
-	import Header_dic from '../../components/headers/Header_dic.svelte'
-	import Profile from '../../components/Profile.svelte'
-	import ButtonTys from '../../components/button-tys.svelte'
 	export let post
 	export let changed = false
 
@@ -87,7 +88,7 @@
 
 </article>
 
-<ButtonTys backid="{post._id}"/>
+<Could_I backid={post._id} />
 
 <style>
 h2 {

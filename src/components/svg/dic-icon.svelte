@@ -1,5 +1,6 @@
 <script>
 	export let icon = ''
+	export let data = ''
 </script>
 {#if icon == 'dic' || icon == ''}
 <svg xmlns="http://www.w3.org/2000/svg" width="114.5" height="108.9" viewBox="0 0 114.5 108.9">
@@ -121,7 +122,17 @@
 	c0,7.24,4.324,13.475,10.519,16.301c5.411,27.473,12.31,65.098,14.238,82.127H272.243z M148.5,154.883
 	c9.881,0,17.918,8.037,17.918,17.918c0,9.881-8.037,17.918-17.918,17.918c-9.881,0-17.918-8.037-17.918-17.918
 	C130.582,162.92,138.619,154.883,148.5,154.883z" />
-	</svg>
+	{#if data}
+	<text text-anchor="middle" dominant-baseline="middle" transform="translate(148.5 252)">{data} pts</text>
+	{/if}
+</svg>
+<style>
+	svg text {
+	font-size: 3em;
+	font-weight: bold;
+	fill: var(--txtcolor);
+	}
+</style>
 {/if}
 {#if icon == 'vote'}
 <svg xmlns="http://www.w3.org/2000/svg" width="124.156" height="124.157px" viewBox="0 0 124.156 124.157">

@@ -16,11 +16,18 @@
 
 <style>
 	nav {
-		padding: var(--spacer) 0;
+		padding: var(--gutter2) 0;
 		text-align: center;
     display: flex;
     align-items: center;
 		justify-content: center;
+		margin: 0 var(--gutter-);
+		background-color: var(--infobg);
+	}
+	@media screen and (min-width: 40rem) {
+		nav {
+			margin: 0 var(--gutter2-);
+		}
 	}
 	/* button {
 		margin: 0 var(--guttery) var(--gutter);

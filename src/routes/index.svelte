@@ -1,10 +1,11 @@
 <script context="module">
 	import IconDic from '../components/svg/dic-icon.svelte';
 	import Header_landing from '../components/headers/Header_landing.svelte';
+	import Could_I from '../components/Could-I.svelte';
 </script>
 <script>
 	import { score } from './stores.js';
-	import Dic_grid from '../components/dic-grid.svelte'
+	import Dic_top from '../components/Dic-top.svelte'
 </script>
 
 <svelte:head>
@@ -15,7 +16,7 @@
 
 <div>
 	<section>
-		<Dic_grid list="3"/>
+		<Dic_top list="3"/>
 	</section>
 	<figure>
 		<h1>DiC STRiP</h1>
@@ -24,15 +25,7 @@
 	</figure>
 </div>
 
-<figure>
-	<IconDic icon="crown" />
-	<figcaption>
-		<a href="/tests/could-i-be-a-dictator">
-			<h2>Could I be a Dictator?</h2>
-			<p>Complete our test to challange your authoriter values</p>
-		</a>
-	</figcaption>
-</figure>
+<Could_I/>
 
 <style>
 div {
@@ -53,44 +46,25 @@ div:before {
 	border-right: var(--gutterx) dotted var(--toolbg);
 	order: 1;
 }
-div section {
+section {
 	flex: 1 0 20rem;
 	margin: 0 var(--gutter2);
 	order: 0;
 }
-div figure {
+figure {
 	flex: 1 0 10rem;
 	margin: 0 var(--gutter2);
 	text-align: center;
 	order: 2;
 }
-div figure h1 {
+h1 {
 	color: var(--maincolor);
 }
-div figure img {
+img {
 	margin: 0 auto;
 }
-div figure p {
+p {
 	color: var(--maincolor);
-}
-div + figure {
-	display: flex;
-	align-items: flex-end;
-	padding: var(--gutter) 0;
-}
-div + figure :global(svg) {
-	width: var(--toolsize);
-	height: auto;
-	fill: var(--midtone);
-}
-div + figure figcaption {
-	margin-left: var(--gutter2);
-	flex-grow: 1;
-	color: var(--maincolor);
-}
-div + figure figcaption h2 {
-	margin: 0;
-	color: var(--txtcolor);
 }
 
 @media screen and (min-width: 40rem) {
