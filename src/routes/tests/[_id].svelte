@@ -125,9 +125,10 @@ footer {
 	position: sticky;
 	bottom: 0;
 	padding: var(--gutter);
-	background-color: var(--bgcolor);
+	background-color: var(--navbg);
 	margin-top: var(--spacer);
 	border-top: 2px solid var(--maincolor);
+	backdrop-filter: blur(3px);
 }
 
 </style>
