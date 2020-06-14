@@ -1,5 +1,5 @@
 <script context="module">
-  import {findPost} from '../psyche'
+  import {findPost} from '../../psyche'
 
   export function preload(page) {
     return { post: findPost(page.params._id) }

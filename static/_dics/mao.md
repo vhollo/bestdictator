@@ -12,7 +12,7 @@ power:
   online: 3
   constitution: 3
   economy: 3
-  bullshit2: 3
+  bullshit: 3
   justice: 3
 cause: Too much power
 profile:
@@ -25,7 +25,7 @@ profile:
   corruption: 3
   megalomania: 3
   manipulation: 3
-  bullshit1: 3
+  sadism: 3
   militancy: 3
   narcissism: 3
 birthdate: 1893-12-26T00:00:00.000Z

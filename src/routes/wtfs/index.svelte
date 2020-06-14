@@ -1,5 +1,5 @@
 <script>
-import {posts} from '../wtfs'
+import {posts} from '../../wtfs'
 </script>
 
 <svelte:head>

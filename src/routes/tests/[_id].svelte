@@ -1,16 +1,19 @@
 <script context="module">
-	import { findPost } from '../tests'
+	import { score, score_sum, threshold, bckid } from '../../stores.js';
+	import { findPost } from '../../tests'
+	
 	export function preload(page) {
 		return { post: findPost(page.params._id) }
 	}
 </script>
 
 <script>
-	import { score, score_sum, threshold, bckid } from '../stores.js';
 	export let post
-	export let i
-	$score[post._id] = 0
-	function _score(s) {
+	export let c = post.questions.length
+	export let startnew = true
+	function _score(s,i) {
+		startnew = false
+		if (!Boolean(i)) $score[post._id] = 0 // if first
 		if (String(s).startsWith('x') || String(s).startsWith('*')) {
 			$score[post._id] = parseFloat($score[post._id]) * parseFloat(s.substr(1), 10)
 		} else {
@@ -34,11 +37,14 @@
 </article>
 
 <form>
+	{#if $score[post._id] && startnew}
+	<h3>(Your current test score will reset)</h3>
+	{/if}
 	{#each post.questions as q, i}
 	<fieldset>
 		<legend id="q-{i}">{q.q}</legend>
 		{#each q.choices as ch, j}
-		<input type="radio" name="answer-{i}" id="answer-{i}-{j}" required on:change={_score(ch.score),_scroll(`q-${i}`)}>
+		<input type="radio" name="answer-{i}" id="answer-{i}-{j}" required on:change={_score(ch.score,i),_scroll(`q-${i}`)}>
 		<label for="answer-{i}-{j}">
 			{ch.choice}
 			<aside>{ch.bully} <br><small>({ch.score} points)</small></aside>
@@ -47,14 +53,14 @@
 	</fieldset>
 	{/each}
 	<fieldset>
-		<legend id="q-{i+1}">Is Cartman your favorite South Park character?</legend>
-		<input type="radio" name="answer-{i+1}" id="answer-{i+1}-0" required on:change={_score('x0'),_scroll(`q-${i+1}`)}>
-		<label for="answer-{i+1}-0">
+		<legend id="q-{c}">Is Cartman your favorite South Park character? {c}</legend>
+		<input type="radio" name="answer-{c}" id="answer-{c}-0" required on:change={_score('x0',c),_scroll(`q-${c}`)}>
+		<label for="answer-{c}-0">
 			Absolutely not
 			<aside>gotcha boy <br><small>(x0 points)</small></aside>
 		</label>
-		<input type="radio" name="answer-{i+1}" id="answer-{i+1}-1" required on:change={_score('x0'),_scroll(`q-${i+1}`)}>
-		<label for="answer-{i+1}-1">
+		<input type="radio" name="answer-{c}" id="answer-{c}-1" required on:change={_score('x0',c),_scroll(`q-${c}`)}>
+		<label for="answer-{c}-1">
 			Who else?
 			<aside>gotcha baby <br><small>(x0 points)</small></aside>
 		</label>
@@ -62,7 +68,7 @@
 </form>
 
 <footer>
-	You got… {$score[post._id]} points.
+	You got… {$score[post._id] || 0} points.
 	{#if $score_sum >= $threshold}
 	<br>
 	Now you've proven your authoriter values. You are allowed to <a href="/dics/{$bckid}"><button>RATE</button></a> your favorite DiCs.

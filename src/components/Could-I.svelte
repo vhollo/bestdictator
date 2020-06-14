@@ -3,7 +3,7 @@
 	import ButtonTys from './button-tys.svelte'
 </script>
 <script>
-	import { score_sum } from '../routes/stores.js';
+	import { score_sum } from '../stores.js';
 	export let backid = ''
 </script>
 

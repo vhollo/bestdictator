@@ -4,7 +4,7 @@
 	import Could_I from '../components/Could-I.svelte';
 </script>
 <script>
-	import { score } from './stores.js';
+	import { score } from '../stores.js';
 	import Dic_top from '../components/Dic-top.svelte'
 </script>
 

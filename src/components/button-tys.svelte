@@ -1,5 +1,5 @@
 <script>
-	import { score_sum, threshold, bckid } from '../routes/stores.js';
+	import { score_sum, threshold, bckid } from '../stores.js';
 	export let backid = $bckid
 	function _click() {
 		$bckid = backid

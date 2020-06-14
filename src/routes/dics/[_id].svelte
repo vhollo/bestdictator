@@ -1,8 +1,8 @@
 <script context="module">
 	import _ from 'lodash'
-	import {posts, findPost, calcaverage} from '../dics'
+	import {posts, findPost, calcaverage} from '../../dics'
 	import { profile_names, power_names } from '../../components/txt'
-	import { score_sum, threshold } from '../stores.js';
+	import { score_sum, threshold } from '../../stores.js';
 
 	import Header_dic from '../../components/headers/Header_dic.svelte'
 	import Profile from '../../components/Profile.svelte'

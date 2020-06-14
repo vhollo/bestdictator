@@ -1,5 +1,5 @@
 <script>
-	import { calcrank } from '../../routes/dics'
+	import { calcrank } from '../../dics'
 	import Pie from '../css/Pie.svelte';
 	export let post
 	$: level_overall = ((Object.values(post.profile).reduce((t, n) => t + (n - 1), 0) + Object.values(post.power).reduce((t, n) => t + (n - 1), 0)) / 9.6)

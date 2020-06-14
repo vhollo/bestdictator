@@ -1,5 +1,5 @@
 import _ from 'lodash'
-import all from '../../static/_psyche/*.md'
+import all from '../static/_tests/*.md'
 
 export const posts = _.chain(all)
   .map(transform)

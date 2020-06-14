@@ -1,5 +1,5 @@
 <script>
-import {posts} from '../tests'
+import {posts} from '../../tests'
 import ButtonTys from '../../components/button-tys.svelte'
 </script>
 

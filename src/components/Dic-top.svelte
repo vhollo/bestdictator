@@ -1,6 +1,6 @@
 <script>
 import Linking_dic from './headers/Linking_dic.svelte'
-import { posts } from '../routes/dics'
+import { posts } from '../dics'
 export let list = 'list'
 </script>
 

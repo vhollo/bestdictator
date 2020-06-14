@@ -1,7 +1,7 @@
 <script>
 	import { tweened } from 'svelte/motion';
 	import { circInOut } from 'svelte/easing';
-	import { calcrank } from '../../routes/dics'
+	import { calcrank } from '../../dics'
 	import RankDic from '../svg/dic-rank.svelte';
 	import Pie from '../css/Pie.svelte';
 	export let post

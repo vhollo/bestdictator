@@ -1,6 +1,6 @@
 <script context="module">
 	import LogoDic from '../../components/svg/dic-logo.svelte';
-  import {findPost} from '../wtfs'
+  import {findPost} from '../../wtfs'
 
   export function preload(page) {
     return { post: findPost(page.params._id) }
