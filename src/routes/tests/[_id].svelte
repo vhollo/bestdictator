@@ -37,9 +37,6 @@
 </article>
 
 <form>
-	{#if $score[post._id] && startnew}
-	<h3>(Your current test score will reset)</h3>
-	{/if}
 	{#each post.questions as q, i}
 	<fieldset>
 		<legend id="q-{i}">{q.q}</legend>
@@ -68,7 +65,11 @@
 </form>
 
 <footer>
-	You got… {$score[post._id] || 0} points.
+	You got… <mark>{$score[post._id] || 0}</mark> points 
+	{#if $score[post._id] && startnew}
+	(but your current test score will reset)
+	{/if}
+
 	{#if $score_sum >= $threshold}
 	<br>
 	Now you've proven your authoriter values. You are allowed to <a href="/dics/{$bckid}"><button>RATE</button></a> your favorite DiCs.
@@ -125,6 +126,10 @@ input:checked + label aside {
 	display: block;
 	font-size: var(--midsize);
 	line-height: var(--headsize);
+}
+mark {
+	padding: 0 var(--guttery);
+	border-radius: 50%;
 }
 
 footer {

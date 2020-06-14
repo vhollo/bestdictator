@@ -79,7 +79,7 @@
 		{/if}
 
 		{#if changed}
-		<button type="submit">Revision</button>
+		<button type="submit">Committing</button>
 		{/if}
 	</form>
 

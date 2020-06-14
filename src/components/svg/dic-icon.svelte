@@ -123,16 +123,9 @@
 	c9.881,0,17.918,8.037,17.918,17.918c0,9.881-8.037,17.918-17.918,17.918c-9.881,0-17.918-8.037-17.918-17.918
 	C130.582,162.92,138.619,154.883,148.5,154.883z" />
 	{#if data}
-	<text text-anchor="middle" dominant-baseline="middle" transform="translate(148.5 252)">{data} pts</text>
+	<text style="font-size: 3em;font-weight: bold;fill: var(--extcolor);" text-anchor="middle" dominant-baseline="middle" transform="translate(148.5 252)">{data} pts</text>
 	{/if}
 </svg>
-<style>
-	svg text {
-	font-size: 3em;
-	font-weight: bold;
-	fill: var(--txtcolor);
-	}
-</style>
 {/if}
 {#if icon == 'vote'}
 <svg xmlns="http://www.w3.org/2000/svg" width="124.156" height="124.157px" viewBox="0 0 124.156 124.157">
