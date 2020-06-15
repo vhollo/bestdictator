@@ -34,8 +34,8 @@
 body {
 	position: relative;
 	background-color: var(--darkgray);
-	min-height: 100vh;
-	min-height: -webkit-fill-available;
+	/* min-height: 100vh;
+	min-height: -webkit-fill-available; */
 }
 html {
   height: -webkit-fill-available;
