@@ -1,6 +1,7 @@
 <script>
-import {posts} from '../../tests'
-import ButtonTys from '../../components/button-tys.svelte'
+	import {posts} from '../../tests'
+	import ButtonTys from '../../components/button-tys.svelte'
+	import { score } from '../../stores.js';
 </script>
 
 <svelte:head>
@@ -15,6 +16,7 @@ import ButtonTys from '../../components/button-tys.svelte'
 		<a href={`/tests/${post._id}`}>
 			{post.title}
 		</a>
+		<mark hidden={!$score[post._id]}>{$score[post._id]} pts</mark>
 	</li>
 	{/each}
 </ul>
@@ -32,6 +34,7 @@ ul {
 li {
 	margin: 0 0 var(--gutter) 0;
 	background-color: var(--toolbg);
+	position: relative;
 }
 li:hover {
 	background-color: var(--maincolor);
@@ -40,5 +43,16 @@ li:hover {
 a {
 	display: block;
 	padding: var(--gutter);
+}
+mark {
+	font-size: .8rem;
+	position: absolute;
+	top: -.2rem;
+	right: -.2rem;
+	padding: .2rem;
+	line-height: 1.4;
+	border-radius: .8rem;
+	min-width: 1.4rem;
+	text-align: center;
 }
 </style>

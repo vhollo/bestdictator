@@ -15,7 +15,7 @@ div {
 	background-color: var(--txt25);
 	background-image: repeating-conic-gradient(var(--maskcolor, var(--bgcolor)) 0 6deg, var(--txtcolor) 0 18deg);
 }
-div:before {
+div::before {
 	content: '';
 	position: absolute;
 	top: 0;
@@ -26,7 +26,7 @@ div:before {
 	background-image: conic-gradient(var(--maskcolor, var(--bgcolor)) var(--mask), transparent 0);
 	opacity: .75;
 }
-div:after {
+div::after {
 	content: attr(data-level);
   width: 70%; height: 70%;
 	position: absolute;

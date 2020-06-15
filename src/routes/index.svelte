@@ -38,7 +38,7 @@ div {
 	--maskcolor: var(--infobg);
 	overflow-x: hidden;
 }
-div:before {
+div::before {
 	content: '';
 	margin-top: var(--gutter2);
 	margin-left: var(--gutterx-);

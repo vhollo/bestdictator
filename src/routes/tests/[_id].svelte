@@ -129,7 +129,7 @@ input:checked + label aside {
 }
 mark {
 	padding: 0 var(--guttery);
-	border-radius: 50%;
+	border-radius: var(--gutter);
 }
 
 footer {
