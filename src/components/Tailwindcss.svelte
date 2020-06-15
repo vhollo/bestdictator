@@ -73,6 +73,7 @@ body {
 	margin: 0 auto;
 	color: var(--txtcolor);
 	background-color: var(--bgcolor);
+	height: calc(100vh - 7rem);
 }
 main > header {
 	background-color: var(--maincolor);

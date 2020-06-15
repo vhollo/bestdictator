@@ -20,7 +20,7 @@
 <style>
 main {
 	padding: 0 var(--gutter);
-	min-height: calc(100vh - 9rem);
+	min-height: calc(100% - 2rem);
 	background-color: var(--bgcolor);
 	border-bottom: 2px solid var(--extcolor);
 	margin-bottom: 4rem;
