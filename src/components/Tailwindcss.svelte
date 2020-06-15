@@ -33,8 +33,12 @@
 
 body {
 	position: relative;
-	min-height: 100vh;
 	background-color: var(--darkgray);
+	min-height: 100vh;
+	min-height: -webkit-fill-available;
+}
+html {
+  height: -webkit-fill-available;
 }
 
 /* dark theme */
@@ -73,7 +77,8 @@ body {
 	margin: 0 auto;
 	color: var(--txtcolor);
 	background-color: var(--bgcolor);
-	height: calc(100vh - 7rem);
+	/* height: calc(100vh - 7rem);
+	height: -webkit-fill-available; */
 }
 main > header {
 	background-color: var(--maincolor);
