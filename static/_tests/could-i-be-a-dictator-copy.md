@@ -1,5 +1,5 @@
 ---
-title: Could I be a Dictator 2?
+title: Could I be a Dictator too?
 date: 2020-05-19T20:26:27.343Z
 questions:
   - choices:

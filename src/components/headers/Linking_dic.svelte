@@ -52,6 +52,7 @@ figcaption {
 }
 figcaption b {
 	font-size: var(--headsize);
+	color: var(--maincolor);
 	display: block;
 }
 

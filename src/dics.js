@@ -18,7 +18,7 @@ function transform({filename, metadata, html}) {
 	metadata.birthdate = metadata.birthdate ? new Date(metadata.birthdate).toLocaleDateString(undefined, { year: "numeric", month: "short", day: "numeric" }) : ''
 	metadata.deathdate = metadata.deathdate ? new Date(metadata.deathdate).toLocaleDateString(undefined, { year: "numeric", month: "short", day: "numeric" }) : ''
 	metadata.profile = metadata.profile || {}
-	/* metadata.power = metadata.power || {} */
+	metadata.power = metadata.power || {}
 	
   return {...metadata, filename, _id, html, date}
 }

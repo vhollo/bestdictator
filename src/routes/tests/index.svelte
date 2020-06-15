@@ -49,7 +49,7 @@ mark {
 	position: absolute;
 	top: -.2rem;
 	right: -.2rem;
-	padding: .2rem;
+	padding: .2rem var(--gutterx);
 	line-height: 1.4;
 	border-radius: .8rem;
 	min-width: 1.4rem;
