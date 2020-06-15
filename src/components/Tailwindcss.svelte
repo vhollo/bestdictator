@@ -45,7 +45,9 @@ body {
 	--maincolor: var(--orange);
 	--extcolor: var(--green);
 	--toolbg: var(--midtone);
+	--tooltxt: var(--txtcolor);
 	--infobg: var(--dark);
+	--infotxt: var(--txtcolor);
 	--navbg: #0f2537f0;
 }
 
@@ -56,7 +58,9 @@ body {
 	--maincolor: var(--orange);
 	--extcolor: var(--darkgray);
 	--toolbg: var(--green);
+	--tooltxt: var(--bgcolor);
 	--infobg: var(--midtone);
+	--infotxt: var(--bgcolor);
 	--navbg: #e2e8f0f0;
 }
 
@@ -68,6 +72,7 @@ body {
 	max-width: 64em;
 	margin: 0 auto;
 	color: var(--txtcolor);
+	background-color: var(--bgcolor);
 }
 /* #sapper:before {
 	content: '';
@@ -94,6 +99,10 @@ main > header {
 
 svg {
 	fill: var(--txtcolor);
+	margin: 0 auto;
+}
+svg text {
+	fill: var(--bgcolor);
 	margin: 0 auto;
 }
 

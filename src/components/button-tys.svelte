@@ -23,6 +23,7 @@
 		justify-content: center;
 		margin: 0 var(--gutter-);
 		background-color: var(--infobg);
+		color: var(--infotxt);
 	}
 	@media screen and (min-width: 40rem) {
 		nav {
