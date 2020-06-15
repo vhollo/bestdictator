@@ -1,9 +1,24 @@
 <script context="module">
 	import Tailwindcss from '../components/Tailwindcss.svelte';
 	import Nav from '../components/Nav.svelte';
+	import { onMount } from 'svelte';
 </script>
 <script>
 	export let segment;
+	onMount(() => {
+		// First we get the viewport height and we multiple it by 1% to get a value for a vh unit
+		let vh = window.innerHeight;
+		// Then we set the value in the --vh custom property to the root of the document
+		document.documentElement.style.setProperty('--vh', `${vh}px`);
+
+		// We listen to the resize event
+		window.addEventListener('resize', () => {
+			// We execute the same script as before
+			let vh = window.innerHeight;
+			document.documentElement.style.setProperty('--vh', `${vh}px`);
+			console.log(vh);
+		});
+	});
 </script>
 <Tailwindcss />
 
@@ -20,10 +35,11 @@
 <style>
 main {
 	padding: 0 var(--gutter);
-	min-height: calc(100vh - 9rem);
 	background-color: var(--bgcolor);
 	border-bottom: 2px solid var(--extcolor);
 	margin-bottom: 4rem;
+	min-height: calc(100vh - 9rem);
+	min-height: calc(var(--vh, 100vh) - 9rem);
 }
 @media screen and (min-width: 40rem) {
 	main {
