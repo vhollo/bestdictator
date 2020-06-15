@@ -28,7 +28,7 @@ nav {
 	border-bottom: 2px solid var(--extcolor);
 	margin-bottom: -2px;
 	background: var(--navbg);
-	backdrop-filter: blur(3px);
+	backdrop-filter: blur(4px);
 }
 @media screen and (min-height: 480px) {
 	nav {

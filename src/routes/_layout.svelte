@@ -20,7 +20,7 @@
 <style>
 main {
 	padding: 0 var(--gutter);
-	min-height: 100vh;
+	min-height: calc(100vh - 9rem);
 	background-color: var(--bgcolor);
 	border-bottom: 2px solid var(--extcolor);
 	margin-bottom: 4rem;
@@ -31,7 +31,7 @@ main {
 	}
 }
 footer {
-	min-height: 4em;
+	min-height: 4rem;
 	text-align: center;
 	display: flex;
 	align-items: center;

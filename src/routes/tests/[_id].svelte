@@ -135,11 +135,11 @@ mark {
 footer {
 	position: sticky;
 	bottom: 0;
-	padding: var(--gutter);
+	padding: var(--gutter) var(--gutter) var(--gutter2);
 	background-color: var(--navbg);
 	margin-top: var(--spacer);
 	border-top: 2px solid var(--maincolor);
-	backdrop-filter: blur(3px);
+	backdrop-filter: blur(4px);
 }
 
 </style>
