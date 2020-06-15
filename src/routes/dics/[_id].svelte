@@ -104,7 +104,7 @@ article :global(p) {
 section {
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
-	grid-gap: var(--gutterx);
+	grid-gap: var(--gutter);
 }
 dl {
 	display: flex;

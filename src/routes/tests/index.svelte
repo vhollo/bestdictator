@@ -28,7 +28,7 @@ h1 {
 ul {
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(49%, 1fr));
-	grid-gap: var(--gutterx);
+	grid-gap: var(--gutter);
 	margin: 2rem 0;
 }
 li {

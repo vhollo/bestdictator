@@ -11,10 +11,10 @@
 <figure>
 	<IconDic icon="crown" data="{$score_sum}" />
 	<figcaption>
-		<a href="/tests/could-i-be-a-dictator">
+		<a href="/tests">
 			<h2>Could I be a Dictator?</h2>
 			{#if $score_sum < $threshold}
-			<p>Complete our test to challange your authoriter values</p>
+			<p>Complete our TEST to challange your authoriter values</p>
 			{:else}
 			<p>You've proven your authoriter values to RATE a Dic.</p>
 			{/if}
