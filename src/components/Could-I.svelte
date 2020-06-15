@@ -3,7 +3,7 @@
 	import ButtonTys from './button-tys.svelte'
 </script>
 <script>
-	import { score_sum } from '../stores.js';
+	import { score_sum, threshold } from '../stores.js';
 	export let backid = ''
 </script>
 
@@ -13,7 +13,11 @@
 	<figcaption>
 		<a href="/tests/could-i-be-a-dictator">
 			<h2>Could I be a Dictator?</h2>
+			{#if $score_sum < $threshold}
 			<p>Complete our test to challange your authoriter values</p>
+			{:else}
+			<p>You've proven your authoriter values to RATE a Dic.</p>
+			{/if}
 		</a>
 	</figcaption>
 </figure>

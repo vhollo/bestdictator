@@ -10,7 +10,7 @@
 {#if $score_sum < $threshold}
 	To rate a DiC, <a href="/tests/could-i-be-a-dictator" on:click={_click}><button>TEST</button></a> your aptitude first, or <button>DONATE</button> this project
 {:else}
-	You may <a href="/dics/{$bckid}"><button>RATE</button></a> your favorite DiC
+	You may <a href="/dics/{$bckid}"><button>RATE</button></a> your favorite DiC, or <button>DONATE</button> this project
 {/if}
 </nav>
 
