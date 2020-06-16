@@ -30,7 +30,7 @@ nav {
 	background: var(--navbg);
 	backdrop-filter: blur(4px);
 }
-@media screen and (min-height: 480px) {
+@media screen and (min-height: 30rem) {/* 480px */
 	nav {
 		position: sticky;
 		top: 0;

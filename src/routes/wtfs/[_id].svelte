@@ -26,14 +26,12 @@
 header {
 	margin-bottom: 25vh;
 }
-
 header :global(svg) {
 	width: 40vh;
-	height: 100vh;
+	height: calc(100vh - 3rem);
 	fill: var(--txtcolor);
 }
 article {
-	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
 	margin: 0 auto;

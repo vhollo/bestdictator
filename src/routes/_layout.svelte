@@ -39,33 +39,36 @@
 
 <style>
 main {
-	display: flow-root;
-	padding: 0 var(--gutter);
+	position: relative;
 	background-color: var(--bgcolor);
+	padding: 0 var(--gutter);
 	border-bottom: 2px solid var(--extcolor);
+	min-height: calc(var(--vh, 100vh) - 7rem);
+	display: flow-root;
+	margin-top: 4rem;
 	margin-bottom: 4rem;
-	/* min-height: calc(100vh - 7rem); */
-	min-height: calc(var(--vh, 100vh) - 3rem);
-}
-@media screen and (min-width: 40rem) {
-	main {
-		padding: 0 var(--gutter2);
-	}
+	bottom: 4rem;
 }
 footer {
+	/* position: static; */
 	min-height: 4rem;
 	text-align: center;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	background-color: var(--toolbg);
-	position: fixed;
 	bottom: 0;
 	left: 0;
 	right: 0;
-	z-index: -1;
 	max-width: 64em;
 	margin: 0 auto;
 	overflow-y: visible;
+	position: fixed;
+	z-index: -1;
+}
+@media screen and (min-width: 40rem) {
+	main {
+		padding: 0 var(--gutter2);
+	}
 }
 </style>

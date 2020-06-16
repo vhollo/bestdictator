@@ -76,9 +76,8 @@ html {
 	max-width: 64em;
 	margin: 0 auto;
 	color: var(--txtcolor);
-	background-color: var(--bgcolor);
-	/* height: calc(100vh - 7rem);
-	height: -webkit-fill-available; */
+	/* background-color: var(--bgcolor); */
+	position: relative;
 }
 main > header {
 	background-color: var(--maincolor);
