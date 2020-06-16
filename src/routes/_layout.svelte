@@ -44,8 +44,8 @@ main {
 	background-color: var(--bgcolor);
 	border-bottom: 2px solid var(--extcolor);
 	margin-bottom: 4rem;
-	min-height: calc(100vh - 7rem);
-	min-height: calc(var(--vh) - 7rem);
+	/* min-height: calc(100vh - 7rem); */
+	min-height: calc(var(--vh, 100vh) - 3rem);
 }
 @media screen and (min-width: 40rem) {
 	main {
