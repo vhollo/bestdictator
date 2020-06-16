@@ -21,7 +21,7 @@
 				let vh = window.innerHeight
 				document.documentElement.style.setProperty('--vh', `${vh}px`)
 				console.log(vh)
-			}, 750);
+			}, 250);
 		})
 	})
 </script>
