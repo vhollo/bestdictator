@@ -2,11 +2,10 @@
 	import Tailwindcss from '../components/Tailwindcss.svelte'
 	import Nav from '../components/Nav.svelte'
 	import { onMount } from 'svelte'
-	import debounce from 'lodash/debounce'
+	import { tick } from 'svelte';
 </script>
 <script>
 	export let segment
-	let timer
 	onMount(() => {
 		// First we get the viewport height and we multiple it by 1% to get a value for a vh unit
 		let vh = window.innerHeight
@@ -14,14 +13,11 @@
 		document.documentElement.style.setProperty('--vh', `${vh}px`)
 
 		// We listen to the resize event
-		window.addEventListener('resize', () => {
-			clearTimeout(timer);
-			timer = setTimeout(() => {
-				// We execute the same script as before
-				let vh = window.innerHeight
-				document.documentElement.style.setProperty('--vh', `${vh}px`)
-				console.log(vh)
-			}, 250);
+		window.addEventListener('resize', async () => {
+			// We execute the same script as before
+			await tick();
+			let vh = window.innerHeight
+			document.documentElement.style.setProperty('--vh', `${vh}px`)
 		})
 	})
 </script>
@@ -48,6 +44,7 @@ main {
 	margin-top: 4rem;
 	margin-bottom: 4rem;
 	bottom: 4rem;
+	z-index: 1;
 }
 footer {
 	/* position: static; */
@@ -64,7 +61,7 @@ footer {
 	margin: 0 auto;
 	overflow-y: visible;
 	position: fixed;
-	z-index: -1;
+	z-index: 0;
 }
 @media screen and (min-width: 40rem) {
 	main {

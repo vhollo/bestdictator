@@ -1,9 +1,35 @@
 import _ from 'lodash'
 import all from '../static/_dics/*.md'
 
+/* export const ratings = (async () => {
+	const response = await fetch('/.netlify/functions/ratings')
+	return await response.json()
+})() */
+
+/* 
+export async function ratings() {
+	try {
+		const response = await fetch('/.netlify/functions/hello');
+		const data = await response.json();
+		console.log('data', data)
+		return {
+			statusCode: 200,
+			body: JSON.stringify(data)
+			//body: JSON.stringify({})
+		};
+	} catch (err) {
+		return {
+			statusCode: 500,
+			body: err.toString()
+		};
+	}
+};
+ */
+
+
 export const posts = _.chain(all)
   .map(transform)
-  .orderBy('date', 'asc')
+  .orderBy('sort', 'asc')
   .value()
 
 export function findPost(_id) {
@@ -12,7 +38,7 @@ export function findPost(_id) {
 
 function transform({filename, metadata, html}) {
   const _id = filename.replace(/.md$/, '')
-	const date = new Date(metadata.birthdate)
+	const sort = new Date(metadata.birthdate)
 	/* metadata.birthdate = metadata.birthdate ? new Date(metadata.birthdate).toDateString().substring(4) : ''
 	metadata.deathdate = metadata.deathdate ? new Date(metadata.deathdate).toDateString().substring(4) : '' */
 	metadata.birthdate = metadata.birthdate ? new Date(metadata.birthdate).toLocaleDateString(undefined, { year: "numeric", month: "short", day: "numeric" }) : ''
@@ -20,7 +46,7 @@ function transform({filename, metadata, html}) {
 	metadata.profile = metadata.profile || {}
 	metadata.power = metadata.power || {}
 	
-  return {...metadata, filename, _id, html, date}
+  return {...metadata, filename, _id, html, sort}
 }
 
 export function calcaverage(_id, profile, power) {

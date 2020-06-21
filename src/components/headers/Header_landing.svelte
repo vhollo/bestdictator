@@ -34,6 +34,7 @@ figure :global(svg) {
 figcaption {
 	font-size: var(--spacer);
 	line-height: 0.8;
+	padding-top: var(--gutter);
 }
 figcaption b {
 	display: block;

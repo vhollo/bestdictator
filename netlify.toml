@@ -1,0 +1,12 @@
+[build]
+  command = "#"
+  functions = "./functions"
+	publish = "__sapper__/export"
+
+[[redirects]]
+from="/api"
+to="/.netlify/functions"
+status=200
+
+[dev]
+	publish = "__sapper__/export"

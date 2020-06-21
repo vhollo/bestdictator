@@ -5,5 +5,7 @@ yarn-error.log
 /cypress/screenshots/
 /__sapper__/
 *.code-workspace
+*.codekit3
 # Local Netlify folder
 .netlify
+.env
