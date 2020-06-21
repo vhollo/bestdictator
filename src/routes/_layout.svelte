@@ -30,7 +30,7 @@
 </main>
 
 <footer>
-	<a href="mailto:dev@bestdictator.com"><small>graphics&nbsp;by&nbsp;KA &nbsp;&&nbsp; developed&nbsp;by&nbsp;VL</small></a>
+	<a href="mailto:dev@bestdictator.com"><small>by&nbsp;KA&nbsp;&&nbsp;VL</small></a>
 </footer>
 
 <style>
