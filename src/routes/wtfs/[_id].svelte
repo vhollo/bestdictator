@@ -19,8 +19,12 @@
 <header><LogoDic/></header>
 <article>
 	{@html post.html}
-	<small>Coming to your country soon</small>
 </article>
+<aside>
+	<p>Coming to your country soon</p>
+	<p><a href="https://liberapay.com/TheDictatorists/donate" target="_blank"
+			rel="roopener noreferrer"><button>DONATE</button></a></p>
+</aside>
 
 <style>
 header {
@@ -44,7 +48,11 @@ article {
 	font-size: var(--midsize);
 	font-weight: normal;
 }
-small {
-	padding: var(--spacer) 0;
+article :global(p) {
+	padding: var(--gutter) 0;
+}
+p {
+	margin: var(--gutter) auto;
+	text-align: center;
 }
 </style>
