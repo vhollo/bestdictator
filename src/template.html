@@ -4,6 +4,7 @@
 	<meta charset='utf-8'>
 	<meta name='viewport' content='width=device-width,initial-scale=1.0'>
 	<meta name='theme-color' content='#333333'>
+	<meta name='keywords' content='dictators, politics, democracy, freedom, humanity, autocracy, tyranny, despotism, dictatorship, totalitarianism, monocracy, absolutism'>
 
 	%sapper.base%
 
@@ -25,7 +26,7 @@
 	<!-- <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script> -->
 </head>
 <body>
-	<input type="checkbox" id="dm" hidden />
+	<input type="checkbox" id="dm" hidden aria-hidden="true"/>
 	<!-- Add a menu:
 			Log in / Sign up - when the user is not logged in
 			Username / Log out - when the user is logged in
@@ -40,7 +41,7 @@
 	<!-- The application will be rendered inside this element,
 	     because `src/client.js` references it -->
 	<div id='sapper'>%sapper.html%
-		<form name="rating" method="POST" hidden netlify netlify-honeypot="profile[family]">
+		<form name="rating" method="POST" hidden aria-hidden="true" netlify netlify-honeypot="profile[family]">
 			<input name="dic" type="text" />
 			<input name="score" type="number" />
 			<select name="profile[]" multiple></select>
@@ -49,7 +50,13 @@
 	</div>
 
 	<style>
-</style>
+		#dm {
+			position:absolute;
+			width:0;
+			height:0;
+			display: none;
+		}
+	</style>
 	<!-- Sapper creates a <script> tag containing `src/client.js`
 	     and anything else it needs to hydrate the app and
 	     initialise the router -->

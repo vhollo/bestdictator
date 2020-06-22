@@ -8,6 +8,7 @@
 </svelte:head>
 
 <header></header>
+
 <section>
 <Dic_top list="list"/>
 </section>

@@ -30,7 +30,7 @@
 </main>
 
 <footer>
-	<a href="mailto:dev@bestdictator.com"><small>by KA&nbsp;&&nbsp;VL</small></a>
+	<a href="mailto:dev@bestdictator.com"><small>The&nbsp;Dictatorists</small></a>
 </footer>
 
 <style>

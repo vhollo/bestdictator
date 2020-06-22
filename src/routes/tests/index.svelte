@@ -9,6 +9,7 @@
 </svelte:head>
 
 <header></header>
+
 <h1>Self tests</h1>
 <p>TEST your aptitude to rate a DiC</p>
 <ul>
