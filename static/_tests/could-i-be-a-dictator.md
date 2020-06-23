@@ -40,11 +40,11 @@ questions:
         bully: Who can we really know?
       - score: 2
         choice: I'm suspicious enough
-        bully: …and tell who to trust
+        bully: …and tell you who to trust
       - score: 3
         choice: They better trust ME
         bully: Or else!
-  - q: " Is environmental protection important to you?"
+  - q: Is environmental protection important to you?
     choices:
       - score: 0
         choice: I only drink tap water, instead of bottled
