@@ -1,6 +1,6 @@
 <script context="module">
 	import _ from 'lodash'
-	import {posts, findPost, calcaverage} from '../../dics'
+	import { posts, findPost, calcaverage } from '../../dics'
 	import { profile_names, power_names } from '../../components/txt'
 	import { score_sum, threshold } from '../../stores.js';
 
@@ -9,7 +9,7 @@
 	import Could_I from '../../components/Could-I.svelte';
 
 	export function preload(page) {
-		return { 
+		return {
 			post: findPost(page.params._id)
 		}
 	}
@@ -79,7 +79,7 @@
 		{/if}
 
 		{#if changed}
-		<button type="submit">Committing</button>
+		<button type="submit">Commit</button>
 		{/if}
 	</form>
 
