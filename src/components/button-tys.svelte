@@ -10,7 +10,7 @@
 {#if $score_sum < $threshold}
 	To rate a DiC, <a href="/tests" on:click={_click}><button>TEST</button></a> your aptitude first, or <a href="https://liberapay.com/TheDictatorists/donate" target="_blank" rel="noopener"><button>DONATE</button></a> this project
 {:else}
-	You may <a href="/dics/{$bckid}"><button>RATE</button></a> your favorite DiC, or <a href="https://liberapay.com/TheDictatorists/donate" target="_blank" rel="noopener"><button>DONATE</button></a> this project
+	You must <a href="/dics/{$bckid}"><button>RATE</button></a> your favorite DiC, and <a href="https://liberapay.com/TheDictatorists/donate" target="_blank" rel="noopener"><button>DONATE</button></a> this project
 {/if}
 </nav>
 
