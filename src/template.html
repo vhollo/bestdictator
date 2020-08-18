@@ -39,15 +39,15 @@
 	<!-- <div data-netlify-identity-button>Login with Netlify Identity</div> -->
 
 	<!-- The application will be rendered inside this element,
-	     because `src/client.js` references it -->
-	<div id='sapper'>%sapper.html%
-		<form name="rating" method="POST" hidden aria-hidden="true" netlify netlify-honeypot="profile[family]">
-			<input name="dic" type="text" />
-			<input name="score" type="number" />
-			<select name="profile[]" multiple></select>
-			<select name="power[]" multiple></select>
-		</form>
-	</div>
+			 because `src/client.js` references it -->
+	<div id='sapper'>%sapper.html%</div>
+
+	<form name="rating" method="POST" hidden aria-hidden="true" netlify netlify-honeypot="profile[family]">
+		<input name="dic" type="text" />
+		<input name="score" type="number" />
+		<select name="profile[]" multiple></select>
+		<select name="power[]" multiple></select>
+	</form>
 
 	<style>
 		#dm {
