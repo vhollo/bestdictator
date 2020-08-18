@@ -2,10 +2,10 @@
 	import IconDic from '../components/svg/dic-icon.svelte';
 	import Header_landing from '../components/headers/Header_landing.svelte';
 	import Could_I from '../components/Could-I.svelte';
+	import Dic_top from '../components/Dic-top.svelte'
+	import { score } from '../stores.js';
 </script>
 <script>
-	import { score } from '../stores.js';
-	import Dic_top from '../components/Dic-top.svelte'
 </script>
 
 <svelte:head>

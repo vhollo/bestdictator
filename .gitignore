@@ -1,9 +1,12 @@
 .DS_Store
 /node_modules/
+/_node_modules/
+dist
 /src/node_modules/@sapper/
 yarn-error.log
 /cypress/screenshots/
 /__sapper__/
+package-lock.json
 *.code-workspace
 *.codekit3
 # Local Netlify folder

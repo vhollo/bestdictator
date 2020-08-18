@@ -3,7 +3,7 @@ import all from '../static/_psyche/*.md'
 
 export const posts = _.chain(all)
   .map(transform)
-  .orderBy('date', 'desc')
+  .orderBy('sort', 'desc')
   .value()
 
 export function findPost(_id) {
@@ -12,7 +12,7 @@ export function findPost(_id) {
 
 function transform({filename, metadata, html}) {
   const _id = filename.replace(/.md$/, '')
-  const date = new Date(metadata.date)
+  const sort = new Date(metadata.date)
 
-  return {...metadata, filename, _id, html, date}
+  return {...metadata, filename, _id, html, sort}
 }

@@ -1,7 +1,9 @@
+<script context="module">
+	import { posts } from '../dics'
+	import Linking_dic from './headers/Linking_dic.svelte'
+</script>
 <script>
-import Linking_dic from './headers/Linking_dic.svelte'
-import { posts } from '../dics'
-export let list = 'list'
+	export let	list = 'list'
 </script>
 
 <h1>Dictator Top {list}</h1>
