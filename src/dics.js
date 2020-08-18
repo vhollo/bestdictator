@@ -1,32 +1,40 @@
 import _ from 'lodash'
 import all from '../static/_dics/*.md'
+//import { db } from './db.js';
 
-/* export const ratings = (async () => {
-	const response = await fetch('/.netlify/functions/ratings')
-	return await response.json()
-})() */
-
-/* 
-export async function ratings() {
-	try {
-		const response = await fetch('/.netlify/functions/hello');
-		const data = await response.json();
-		console.log('data', data)
-		return {
-			statusCode: 200,
-			body: JSON.stringify(data)
-			//body: JSON.stringify({})
-		};
-	} catch (err) {
-		return {
-			statusCode: 500,
-			body: err.toString()
-		};
+export function getrates(e) {
+	let pr = {}, po = {}, data = e.detail.data
+	console.log(e)
+	let post = findPost(e.detail.path)
+	for (let i in data) {
+		for (let k in data[i].profile) {
+			pr[k] = (pr[k] || 0) + data[i].profile[k]
+		}
+		for (let k in data[i].power) {
+			po[k] = (po[k] || 0) + data[i].power[k]
+		}
 	}
+	// let prsort = Object.keys(pr).sort()
+	//let posort = Object.keys(po).sort()
+	for (let k in pr) post.profile[k] = pr[k] / data.length
+	for (let k in po) post.power[k] = po[k] / data.length
+	return post
+}
+
+ /* 
+let client
+export async function ratings(id) {
+	client = await import("firebase");
+	client.collection(id)
+		.onSnapshot(function (querySnapshot) {
+			var data = [];
+			querySnapshot.forEach(function (doc) {
+				data.push(doc.data());
+			});
+			console.log("collection: ", data);
+		});
 };
  */
-
-
 export const posts = _.chain(all)
   .map(transform)
   .orderBy('sort', 'asc')
@@ -45,7 +53,12 @@ function transform({filename, metadata, html}) {
 	metadata.deathdate = metadata.deathdate ? new Date(metadata.deathdate).toLocaleDateString(undefined, { year: "numeric", month: "short", day: "numeric" }) : ''
 	metadata.profile = metadata.profile || {}
 	metadata.power = metadata.power || {}
-	
+	//if (process.browser) {
+		/* async () => {
+			ratings(_id)
+		} */
+	//}
+
   return {...metadata, filename, _id, html, sort}
 }
 
@@ -91,4 +104,28 @@ export function calcrank(_id, level) {
 		i++
 	}
 	return '?'
+}
+
+export async function firestore() {
+	if (process.browser) {
+		return window.db
+	} else {
+		const firebase = await import('firebase')
+		const firebaseConfig = {
+			apiKey: "AIzaSyD3s7aGtMrrXDSnXi-_F1VSmUspINoOC0A",
+			authDomain: "best-dictator.firebaseapp.com",
+			databaseURL: "https://best-dictator.firebaseio.com",
+			projectId: "best-dictator",
+			storageBucket: "best-dictator.appspot.com",
+			messagingSenderId: "711065175489",
+			appId: "1:711065175489:web:bd836a261972ef82015b40"
+		}
+		if (firebase.apps.length == 0) {
+			let app = firebase.initializeApp(firebaseConfig)
+			return app.firestore()
+		}
+		else {
+			return firebase.apps[0].firestore()
+		}
+	}
 }

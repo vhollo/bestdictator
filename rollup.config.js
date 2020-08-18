@@ -56,9 +56,18 @@ export default {
       }),
       resolve({
         browser: true,
-        dedupe
-      }),
-      commonjs(),
+        dedupe,
+				mainFields: ['main', 'module'] /// <-- sveltefire
+			}),
+			commonjs({
+				namedExports: {
+					// left-hand side can be an absolute path, a path
+					// relative to the current directory, or the name
+					// of a module in node_modules
+					'node_modules/idb/build/idb.js': ['openDb'],
+					'node_modules/firebase/dist/index.cjs.js': ['initializeApp', 'firestore']
+				},
+			}),
 
       legacy && babel({
         extensions: ['.js', '.mjs', '.html', '.svelte'],
@@ -105,7 +114,7 @@ export default {
       resolve({
         dedupe
       }),
-      commonjs()
+			commonjs()
     ],
     external: Object.keys(pkg.dependencies).concat(
       require('module').builtinModules || Object.keys(process.binding('natives'))

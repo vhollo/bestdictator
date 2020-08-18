@@ -3,30 +3,54 @@
 	import Nav from '../components/Nav.svelte'
 	import { onMount } from 'svelte'
 	import { tick } from 'svelte';
+	/* const firebaseConfig = {
+		apiKey: "AIzaSyD3s7aGtMrrXDSnXi-_F1VSmUspINoOC0A",
+		authDomain: "best-dictator.firebaseapp.com",
+		databaseURL: "https://best-dictator.firebaseio.com",
+		projectId: "best-dictator",
+		storageBucket: "best-dictator.appspot.com",
+		messagingSenderId: "711065175489",
+		appId: "1:711065175489:web:bd836a261972ef82015b40"
+	}; */
+	/* import { FirebaseApp, User, Doc, Collection } from "sveltefire"; */
+	/* import { app, db } from "../db"; */
 </script>
 <script>
-	export let segment
-	onMount(() => {
-		// First we get the viewport height and we multiple it by 1% to get a value for a vh unit
-		let vh = window.innerHeight
-		// Then we set the value in the --vh custom property to the root of the document
-		document.documentElement.style.setProperty('--vh', `${vh}px`)
+	/* let globalFirebase; */
+	onMount(async () => {
 
-		// We listen to the resize event
+/* 		globalFirebase = firebase;
+		if (!firebase.apps.length) {
+			firebase.initializeApp(firebaseConfig);
+		}
+ */
+	/* if (process.browser) {
+		client = await import("../firebase/firebase.js");
+		// loading firebase stuff here with client.db or client.auth 
+		// which are exported in the firebase.js
+	} */
+
+		/* MOBILE VH HACK */
+		let vh = window.innerHeight
+		document.documentElement.style.setProperty('--vh', `${vh}px`)
 		window.addEventListener('resize', async () => {
-			// We execute the same script as before
 			await tick();
 			let vh = window.innerHeight
 			document.documentElement.style.setProperty('--vh', `${vh}px`)
 		})
 	})
+	export let segment
 </script>
 <Tailwindcss />
 
 <Nav {segment} />
 
 <main>
+	<!-- {#if globalFirebase}
+	<FirebaseApp firebase={globalFirebase}> -->
 	<slot></slot>
+	<!-- </FirebaseApp>
+	{/if} -->
 </main>
 
 <footer>
