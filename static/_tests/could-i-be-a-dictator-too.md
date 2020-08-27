@@ -95,7 +95,7 @@ questions:
         choice: Our country desperately needs a mighty leader who will do what has to be
           done to destroy the radical new ways and sinfulness that are ruining
           us
-        bully: We'll keep in touch!
+        bully: We'll keep touch
   - q: Did you lie when answering any of the previous questions?
     choices:
       - score: "0"
