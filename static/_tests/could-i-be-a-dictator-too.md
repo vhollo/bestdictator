@@ -90,7 +90,7 @@ questions:
     choices:
       - score: "-3"
         choice: Democracy still needs some improvement
-        bully: Phew…
+        bully: Phew
       - score: "3"
         choice: Our country desperately needs a mighty leader who will do what has to be
           done to destroy the radical new ways and sinfulness that are ruining
