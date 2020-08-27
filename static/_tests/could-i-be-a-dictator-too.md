@@ -85,7 +85,7 @@ questions:
         bully: Follow him, why not?
       - score: "3"
         choice: Topics made up to talk about
-        bully: Kinda belief.
+        bully: It's kinda belief.
   - q: Is everything fine in Your country?
     choices:
       - score: "-3"
