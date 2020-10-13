@@ -68,34 +68,34 @@ questions:
         bully: Your self-esteem flaws more or less.
       - score: 2
         choice: I look like James Bond’s China-made pocket version, with less hair
-        bully: Pocket version meaning handsome.
+        bully: Pocket version meaning handsome, right?
       - score: 3
         choice: Hell, yeah!
-        bully: Like hell, yeah.
+        bully: Like the hell, yeah.
   - q: What science means to you?
     choices:
       - score: "0"
         choice: Generates progression
         bully: Where has simplicity gone?
       - score: "1"
-        choice: Books. More and more books
+        choice: More books
         bully: Glad you can read at all.
       - score: "2"
         choice: It's what Albert Einstein did on LSD
-        bully: Why not follow him?
+        bully: Follow him, why not?
       - score: "3"
-        choice: Talking about topics made up to talk about
-        bully: Kinda belief.
+        choice: Topics made up to talk about
+        bully: It's kinda belief.
   - q: Is everything fine in Your country?
     choices:
       - score: "-3"
         choice: Democracy still needs some improvement
-        bully: Phew…
+        bully: Phew
       - score: "3"
         choice: Our country desperately needs a mighty leader who will do what has to be
           done to destroy the radical new ways and sinfulness that are ruining
           us
-        bully: We'll keep in touch!
+        bully: We'll keep in touch
   - q: Did you lie when answering any of the previous questions?
     choices:
       - score: "0"
