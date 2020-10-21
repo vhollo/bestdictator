@@ -40,7 +40,7 @@ questions:
         bully: Who can we really know?
       - score: 2
         choice: I'm suspicious enough
-        bully: …and tell you who to trust
+        bully: …and tell who you should trust
       - score: 3
         choice: They better trust ME
         bully: Or else!
