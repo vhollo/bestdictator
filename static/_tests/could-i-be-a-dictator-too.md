@@ -29,7 +29,7 @@ questions:
         bully: This.
       - score: 3
         choice: I only hate the working class
-        bully: And the middle class, right?
+        bully: And the other classes, right?
   - q: Do you trust people?
     choices:
       - score: 0
