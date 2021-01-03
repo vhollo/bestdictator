@@ -54,9 +54,9 @@
 		</dl>
 	</section>
 	{#if post.bio}
-	<aside>
+	<p>
 	{@html post.bio}
-	</aside>
+	</p>
 	{/if}
 
 	<form name="rating" method="POST" on:change={_changed}>
