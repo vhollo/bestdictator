@@ -44,20 +44,6 @@ questions:
       - score: 3
         choice: They better trust ME
         bully: Or else!
-  - q: Is environmental protection important to you?
-    choices:
-      - score: 0
-        choice: I only drink tap water, instead of bottled
-        bully: Plastic bottles are evil.
-      - score: "1"
-        choice: Important to keep some Pandas for hunting
-        bully: Pandas fart too much.
-      - score: "2"
-        choice: The Earth is better protect itself
-        bully: …from the activists?
-      - score: 3
-        choice: I'd protect my people from the environment
-        bully: Because you can.
   - q: Are you looking good?
     choices:
       - score: 0
@@ -72,30 +58,6 @@ questions:
       - score: 3
         choice: Hell, yeah!
         bully: Like the hell, yeah.
-  - q: What science means to you?
-    choices:
-      - score: "0"
-        choice: Generates progression
-        bully: Where has simplicity gone?
-      - score: "1"
-        choice: More books
-        bully: Glad you can read at all.
-      - score: "2"
-        choice: It's what Albert Einstein did on LSD
-        bully: Follow him, why not?
-      - score: "3"
-        choice: Topics made up to talk about
-        bully: It's kinda belief.
-  - q: Is everything fine in Your country?
-    choices:
-      - score: "-3"
-        choice: Democracy still needs some improvement
-        bully: Phew
-      - score: "3"
-        choice: Our country desperately needs a mighty leader who will do what has to be
-          done to destroy the radical new ways and sinfulness that are ruining
-          us
-        bully: We'll keep in touch
   - q: Did you lie when answering any of the previous questions?
     choices:
       - score: "0"
