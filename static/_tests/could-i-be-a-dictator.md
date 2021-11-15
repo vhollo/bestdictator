@@ -23,7 +23,7 @@ questions:
         bully: Where has simplicity gone?
       - score: "1"
         choice: Books. More and more books
-        bully: If you can read at all.
+        bully: Glad if you can read at all.
       - score: "2"
         choice: It's what Albert Einstein did on LSD
         bully: Why not follow him?
@@ -33,8 +33,8 @@ questions:
   - q: Have you ever work yet?
     choices:
       - score: "0"
-        choice: Also for my community.
-        bully: Where has simplicity gone?
+        choice: I'm doing things made up only to do them. The same goes to my community.
+        bully: Where has existentialism gone?
       - score: "1"
         choice: Oh noes!
         bully: Glad you have nose at all.
@@ -42,7 +42,7 @@ questions:
         choice: My father's business hit upon me. Lot of work!
         bully: Why not follow him?
       - score: "3"
-        choice: Doing topics only made up to do them. The same lot community work too.
+        choice: My daytime job is to dream for you.
         bully: Your choice.
   - q: Is everything fine in Your country?
     choices:
