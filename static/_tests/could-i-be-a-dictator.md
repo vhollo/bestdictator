@@ -5,16 +5,16 @@ questions:
   - q: Is environmental protection important to you?
     choices:
       - score: 0
-        choice: I only drink tap water, instead of bottled
+        choice: I only drink tap water
         bully: Plastic bottles are evil.
       - score: "2"
-        choice: The Earth should protect itself
-        bully: …from the activists?
+        choice: The Earth will protect itself
+        bully: From the activists?
       - score: "1"
         choice: Important to keep some Pandas for hunting
         bully: Pandas fart too much.
       - score: 3
-        choice: I'd protect my people from the environment
+        choice: I'll protect my environment from the people
         bully: Because you can.
   - q: What science means to you?
     choices:
