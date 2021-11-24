@@ -67,4 +67,4 @@ questions:
         choice: Definitely
         bully: Come closer!
 ---
-This is an easy test to challange your authoriter values 
+This is an easy test to challange your authoriter personality
