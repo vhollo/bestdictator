@@ -51,8 +51,7 @@ questions:
         bully: Phew…
       - score: "3"
         choice: Our country desperately needs a mighty leader who will do what has to be
-          done to destroy the radical new ways and sinfulness that are ruining
-          us
+          done due to the radical new ways and sinfulness of our enemies.
         bully: We'll keep in touch!
   - q: Did you lie when answering any of the previous questions?
     choices:
