@@ -30,7 +30,7 @@ questions:
       - score: "3"
         choice: Talking about topics made up to talk about
         bully: Kinda belief?
-  - q: Have you ever work yet?
+  - q: Have you ever work?
     choices:
       - score: "0"
         choice: I'm doing things made up only to do them. The same goes to my community.
