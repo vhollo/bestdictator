@@ -33,7 +33,7 @@ questions:
   - q: Have you ever work?
     choices:
       - score: "0"
-        choice: I'm doing things made up only to do them. The same goes to my community.
+        choice: My daytime job is to dream for you.
         bully: Where has existentialism gone?
       - score: "1"
         choice: Oh noes!
@@ -42,7 +42,7 @@ questions:
         choice: My father's business hit upon me. Lot of work!
         bully: Why not follow him?
       - score: "3"
-        choice: My daytime job is to dream for you.
+        choice: I AM the working class. The same goes to my community.
         bully: Your choice.
   - q: Is everything fine in Your country?
     choices:
