@@ -1,20 +1,20 @@
 ---
-title: Could I be a Dictator too?
+title: Could I be a Dictator?
 date: 2020-05-19T20:26:27.343Z
 questions:
   - choices:
       - choice: I'm okay
         score: 0
-        bully: Watch out, liars around you!
+        bully: You've liars around you!
       - choice: Somewhat…
         score: 1
         bully: Check yourself again.
       - choice: I'm better than you
         score: 2
-        bully: No, I'm better than you!
+        bully: I'm better than you!
       - choice: My mother told me I'll go to Hell
         score: 3
-        bully: Relax, you will.
+        bully: You will.
     q: Do you love Yourself?
   - q: Do you hate the other people?
     choices:
@@ -67,4 +67,4 @@ questions:
         choice: Definitely
         bully: Come closer!
 ---
-This is an easy test to challange your authoriter personality
+This is an advanced test to challange your authoriter personality

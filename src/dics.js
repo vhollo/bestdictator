@@ -106,7 +106,7 @@ export function calcrank(_id, level) {
 	return '?'
 }
 
-export async function firestore() {
+/*export async function firestore() {
 	if (process.browser) {
 		return window.db
 	} else {
@@ -128,4 +128,4 @@ export async function firestore() {
 			return firebase.apps[0].firestore()
 		}
 	}
-}
+}*/

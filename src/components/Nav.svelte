@@ -44,6 +44,8 @@ nav > a {
 nav > a :global(svg) {
 	width: auto;
 	height: var(--headsize);
+}
+nav > a:not([aria-current]) :global(svg) {
 	fill: var(--maincolor);
 }
 

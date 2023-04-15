@@ -30,7 +30,7 @@ profile:
   narcissism: 3
 birthdate: 1893-12-26T00:00:00.000Z
 isdead: true
-desc: Protomaoist
+desc: Socio-burocrat
 photo: /uploads/mao.jpg
 country: China
 title: Mao

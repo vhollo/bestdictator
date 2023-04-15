@@ -1,20 +1,20 @@
 ---
-title: Could I be a Dictator?
+title: Will I be a Dictator?
 date: 2020-05-19T20:26:27.343Z
 questions:
   - q: Is environmental protection important to you?
     choices:
       - score: 0
         choice: I only drink tap water
-        bully: Plastic bottles are evil.
+        bully: Plastic bottles are the evil.
       - score: "2"
         choice: The Earth will protect itself
         bully: From the activists?
       - score: "1"
         choice: Important to keep some Pandas for hunting
-        bully: Pandas fart too much.
+        bully: Pandas fart metane.
       - score: 3
-        choice: I'll protect my environment from the people
+        choice: I'll protect my environment for myself
         bully: Because you can.
   - q: What science means to you?
     choices:
@@ -25,7 +25,7 @@ questions:
         choice: Books. More and more books
         bully: Glad if you can read at all.
       - score: "2"
-        choice: It's what Albert Einstein did on LSD
+        choice: It's what Albert Einstein did on acid
         bully: Why not follow him?
       - score: "3"
         choice: Talking about topics made up to talk about
@@ -52,7 +52,7 @@ questions:
       - score: "3"
         choice: Our country desperately needs a mighty leader who will do what has to be
           done due to the radical new ways and sinfulness of our enemies.
-        bully: We'll keep in touch!
+        bully: We'll keep touch!
   - q: Did you lie when answering any of the previous questions?
     choices:
       - score: "0"

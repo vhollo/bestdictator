@@ -4,7 +4,7 @@ export let level = 0
 </script>
 
 
-<div style="--mask:{(10-level) * 10}%;" data-level="{level.toFixed(1)}"></div>
+<div style="--mask:{(10-level) * 10}%;" data-level="{(level * 10).toFixed(0)}"></div>
 
 <style>
 div {

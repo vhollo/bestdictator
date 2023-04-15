@@ -1,3 +1,4 @@
+# npx netlify-cms-proxy-server
 backend:
   name: git-gateway
   branch: master # Branch to update (optional; defaults to master)
@@ -14,11 +15,11 @@ slug:
   sanitize_replacement: "-"
 
 collections:
-  - name: "dics" # Used in routes, e.g., /admin/collections/blog
+  - name: "dics" # Used in routes, e.g., /dics
     label: "Dictators" # Used in the UI
     label_singular: "Dictator"
     folder: "static/_dics" # The path to the folder where the documents are stored
-    create: true # Allow users to create new documents in this collection
+    create: true # Allow admin users to create new documents in this collection
     slug: "{{slug}}" # Filename template, e.g., title.md
     fields: # The fields for each document, usually in front matter
       - {label: "Short name", name: "title", widget: "string"}
@@ -72,11 +73,11 @@ collections:
       - {label: "Bio", name: "bio", widget: "markdown", minimal: true, required: false}
       - {label: "Description", name: "body", widget: "markdown"}
 
-  - name: "wtfs" # Used in routes, e.g., /admin/collections/blog
+  - name: "wtfs" # Used in routes, e.g., /wtfs
     label: "WTFs" # Used in the UI
     label_singular: "WTF"
     folder: "static/_wtfs" # The path to the folder where the documents are stored
-    create: true # Allow users to create new documents in this collection
+    create: true # Allow admin users to create new documents in this collection
     slug: "{{slug}}" # Filename template, e.g., title.md
     fields: # The fields for each document, usually in front matter
       - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
@@ -84,11 +85,11 @@ collections:
       - {label: "Publish Date", name: "date", widget: "datetime", required: false}
       - {label: "Content", name: "body", widget: "markdown"}
 
-  - name: "psyche" # Used in routes, e.g., /admin/collections/blog
+  - name: "psyche"
     label: "Psyche Articles" # Used in the UI
     label_singular: "Psyche Article"
     folder: "static/_psyche" # The path to the folder where the documents are stored
-    create: true # Allow users to create new documents in this collection
+    create: true # Allow admin users to create new documents in this collection
     slug: "{{slug}}" # Filename template, e.g., title.md
     fields: # The fields for each document, usually in front matter
       - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
@@ -96,8 +97,8 @@ collections:
       - {label: "Publish Date", name: "date", widget: "datetime", required: false}
       - {label: "Content", name: "body", widget: "markdown"}
 
-  - name: "living_dics" # Used in routes, e.g., /admin/collections/blog
-    label: "Living Dictators" # Used in the UI
+  - name: "living_dics" # filter for listing
+    label: "Living Dictators"
     folder: "static/_dics" # The path to the folder where the documents are stored
     filter:
       field: deathdate
@@ -106,8 +107,8 @@ collections:
       - {label: "Name", name: title}
       - {label: "Lost/hiding", name: "lost", widget: "boolean", default: false}
 
-  - name: "dead_dics" # Used in routes, e.g., /admin/collections/blog
-    label: "Mausoleum" # Used in the UI
+  - name: "dead_dics" # filter for listing
+    label: "Mausoleum"
     folder: "static/_dics" # The path to the folder where the documents are stored
     filter:
       field: isdead
@@ -116,11 +117,11 @@ collections:
       - {label: "Name", name: title}
       - {label: "Cause of death", name: "cause", widget: "markdown", minimal: true, required: false, default: 'Too much power'}
 
-  - name: "tests" # Used in routes, e.g., /admin/collections/blog
-    label: "Tests" # Used in the UI
+  - name: "tests"
+    label: "Tests"
     label_singular: "Test"
     folder: "static/_tests" # The path to the folder where the documents are stored
-    create: true # Allow users to create new documents in this collection
+    create: true # Allow admin users to create new documents in this collection
     slug: "{{slug}}" # Filename template, e.g., title.md
     fields: # The fields for each document, usually in front matter
       - {label: "Title", name: "title", widget: "string"}

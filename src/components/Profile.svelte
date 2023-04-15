@@ -77,8 +77,8 @@ label:hover input:not(:disabled), input:not(:disabled):focus {
 mark {
 	position: absolute;
 	left: var(--mark);
-	top: -15%;
-	bottom: -15%;
+	top: 25%;
+	bottom: 25%;
 	width: 2px;
 }
 /* label:last-of-type {

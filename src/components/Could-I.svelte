@@ -5,16 +5,17 @@
 <script>
 	import { score_sum, threshold } from '../stores.js';
 	export let backid = ''
+$: console.log({$score_sum});
 </script>
 
 <ButtonTys backid={backid} />
 <figure>
-	<IconDic icon="crown" data="{$score_sum}" />
+	<IconDic icon="crown" data={$score_sum} />
 	<figcaption>
 		<a href="/tests">
 			<h2>Could i be a Dictator?</h2>
 			{#if $score_sum < $threshold}
-			<p>Complete our TESTs to challange your authoriter values</p>
+			<p>Complete some tests to know if you are autocratic enough</p>
 			{:else}
 			<p>You've proven your authoriter values to RATE a DiC.</p> 
 			{/if}

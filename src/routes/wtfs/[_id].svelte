@@ -21,7 +21,7 @@
 	{@html post.html}
 </article>
 <aside>
-	<p>Coming to your country soon</p>
+	<p>Coming to your country soon!</p>
 	<p><a href="https://liberapay.com/TheDictatorists/donate" target="_blank"
 			rel="roopener noreferrer"><button>DONATE</button></a></p>
 </aside>
