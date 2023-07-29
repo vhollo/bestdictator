@@ -41,7 +41,7 @@ questions:
       - score: "2"
         choice: Oh noes!
         bully: Yep, you have nose.
-       - score: "3"
+      - score: "3"
         choice: I AM the working class. The same goes to my community.
         bully: Your choice.
   - q: Is everything fine in Your country?
