@@ -2,57 +2,62 @@
 title: Could I be a Dictator?
 date: 2020-05-19T20:26:27.343Z
 questions:
-  - q: Is environmental protection important to you?
+  - q: Do you love Yourself?
+    choices:
+      - choice: I'm okay
+        score: 0
+        bully: You've got liars around!
+      - choice: Somewhat…
+        score: 1
+        bully: Check yourself again.
+      - choice: I'm better than you
+        score: 2
+        bully: No! I'm better than you!
+      - choice: My mother told me I'll go to Hell
+        score: 3
+        bully: Yes, you will.
+  - q: Do you hate the other people?
     choices:
       - score: 0
-        choice: I only drink tap water
-        bully: Plastic bottles are evil.
-      - score: "2"
-        choice: The Earth will protect itself
-        bully: From the activists?
-      - score: "1"
-        choice: Important to keep some Pandas for hunting
-        bully: Pandas fart too much.
+        choice: No, we are all one
+        bully: Go binge Orange is the new Black with your mom.
+      - score: 1
+        choice: I only hate some
+        bully: They are the lucky ones.
+      - score: 2
+        choice: People are rude
+        bully: This.
       - score: 3
-        choice: I'll protect my environment from the people
-        bully: Because you can.
-  - q: What science means to you?
+        choice: I only hate the working class
+        bully: And all the others, right?
+  - q: Do you trust people?
     choices:
-      - score: "0"
-        choice: Generates progression
-        bully: Where has simplicity gone?
-      - score: "1"
-        choice: Books. More and more books
-        bully: Glad if you can read at all.
-      - score: "2"
-        choice: It's what Albert Einstein did on LSD
-        bully: Why not follow him?
-      - score: "3"
-        choice: Talking about topics made up to talk about
-        bully: Kinda belief?
-  - q: Have you ever work?
+      - score: 0
+        choice: Everyone deserves trust first
+        bully: As you deserve to get scammed first.
+      - score: 1
+        choice: I only trust the ones I know
+        bully: Who do we really know?
+      - score: 2
+        choice: I'll tell who you can trust
+        bully: You're suspicious enough
+      - score: 3
+        choice: People should better trust ME
+        bully: Or else!
+  - q: Are you looking good?
     choices:
-      - score: "0"
-        choice: My daytime job is to dream for you.
-        bully: Where has existentialism gone?
-      - score: "1"
-        choice: Oh noes!
-        bully: Glad you have nose at all.
-      - score: "2"
-        choice: My father's business hit upon me. Lot of work!
-        bully: Why not follow him?
-      - score: "3"
-        choice: I AM the working class. The same goes to my community.
-        bully: Your choice.
-  - q: Is everything fine in Your country?
-    choices:
-      - score: "-3"
-        choice: Democracy still needs some improvement
-        bully: Phew…
-      - score: "3"
-        choice: Our country desperately needs a mighty leader who will do what has to be
-          done due to the radical new ways and sinfulness of our enemies.
-        bully: We'll keep in touch!
+      - score: 0
+        choice: It's not important for me
+        bully: You go for the ugliest, right?
+      - score: 1
+        choice: I'm more or less OK
+        bully: Your self-assessment flaws more or less.
+      - score: 2
+        choice: I look like James Bond’s China-made pocket version, with less hair
+        bully: Pocket version meaning handsome, right?
+      - score: 3
+        choice: Hell, yeah!
+        bully: Like the hell, yeah.
   - q: Did you lie when answering any of the previous questions?
     choices:
       - score: "0"
@@ -62,4 +67,4 @@ questions:
         choice: Definitely
         bully: Come closer!
 ---
-This is an easy test to challange your authoriter values 
+This is an easy test to challange your authoriter values
