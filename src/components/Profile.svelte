@@ -49,7 +49,7 @@ div{
 	position: relative;
 	display: flex;
 	margin-left: var(--gutter);
-	background: var(--toolbg);
+	/*background: var(--toolbg);*/
 }
 div::before {
 	content: '';
