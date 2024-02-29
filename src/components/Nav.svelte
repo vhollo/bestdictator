@@ -10,9 +10,9 @@ export let segment;
 		<!-- for the blog link, we're using rel=prefetch so that Sapper prefetches
 		     the blog data when we hover over the link or tap it on a touchscreen -->
 		<li><a rel=prefetch aria-current='{segment === "dics" ? "page" : undefined}' href='dics' aria-label="Dictators">DiCs</a></li>
-		<li><a rel=prefetch aria-current='{segment === "wtfs" ? "page" : undefined}' href='wtfs/why-how' aria-label="Why and how we do it?">WTFs</a></li>
 		<li><a rel=prefetch aria-current='{segment === "tests" ? "page" : undefined}' href='tests' aria-label="Test your authoriter values">TESTs</a></li>
 		<li><a rel=prefetch aria-current='{segment === "psyche" ? "page" : undefined}' href='psyche' aria-label="Psyche is not found">PSYCHEs</a></li>
+		<li><a rel=prefetch aria-current='{segment === "wtfs" ? "page" : undefined}' href='wtfs/why-how' aria-label="Why and how we do it?">WTFs</a></li>
 		<li><label for="dm">{@html bx_brightness_half}</label></li>
 	</ul>
 </nav>

@@ -19,40 +19,40 @@ questions:
   - q: What science means to you?
     choices:
       - score: "0"
-        choice: Generates progression
+        choice: It generates progression
         bully: Where has simplicity gone?
       - score: "1"
-        choice: Books. More and more books
+        choice: Books. More and more books!
         bully: Glad if you can read at all.
       - score: "2"
-        choice: It's what Albert Einstein did on LSD
-        bully: Why don't you do that too?
+        choice: It's what Albert Einstein did on LSD?
+        bully: Why don't you try that too?
       - score: "3"
         choice: Talking about topics made up to talk about
         bully: Kinda belief?
   - q: Have you ever worked?
     choices:
       - score: "0"
-        choice: My daytime job is to dream for you.
+        choice: My daytime job is to work for justice
         bully: Where has existentialism gone?
       - score: "1"
         choice: My father's business hit upon me. A lot of work!
-        bully: Why not following him?
+        bully: Why not follow him in rest?
       - score: "2"
-        choice: Oh noes!
-        bully: Yep, you have nose.
+        choice: Oh noes, ever!
+        bully: Yep, you have a nose.
       - score: "3"
-        choice: I AM the working class. The same goes to my community.
-        bully: Your choice.
-  - q: Is everything fine in Your country?
+        choice: I *AM* the working class
+        bully: The same goes for your community
+  - q: Is everything fine in Your Country?
     choices:
       - score: "-3"
-        choice: Democracy still needs some improvement
+        choice: Democracy turns against itself!
         bully: Phew…
       - score: "3"
         choice: Our country desperately needs a mighty leader who will do what has to be done.
-        bully: We'll keep touch!
-  - q: Did you lie when answering any of the previous questions?
+        bully: We'll keep in touch!
+  - q: Did you lie when you answered any of the previous questions?
     choices:
       - score: "0"
         choice: Nope

@@ -41,7 +41,7 @@
 	<fieldset>
 		<legend id="q-{i}">{q.q}</legend>
 		{#each q.choices as ch, j}
-		<input type="radio" name="answer-{i}" id="answer-{i}-{j}" required on:change={_score(ch.score,i),_scroll(`q-${i}`)}>
+		<input type="radio" name="answer-{i}" id="answer-{i}-{j}" required on:change={_score(ch.score,i) || _scroll(`q-${i}`)}>
 		<label for="answer-{i}-{j}">
 			{ch.choice}
 			<aside>{ch.bully} <br><small>({ch.score} points)</small></aside>
@@ -51,12 +51,12 @@
 	{/each}
 	<fieldset>
 		<legend id="q-{c}">Is Cartman your favorite South Park character? {c}</legend>
-		<input type="radio" name="answer-{c}" id="answer-{c}-0" required on:change={_score('x0',c),_scroll(`q-${c}`)}>
+		<input type="radio" name="answer-{c}" id="answer-{c}-0" required on:change={_score('x0',c) && _scroll(`q-${c}`)}>
 		<label for="answer-{c}-0">
 			Absolutely not
 			<aside>gotcha boy <br><small>(x0 points)</small></aside>
 		</label>
-		<input type="radio" name="answer-{c}" id="answer-{c}-1" required on:change={_score('x0',c),_scroll(`q-${c}`)}>
+		<input type="radio" name="answer-{c}" id="answer-{c}-1" required on:change={_score('x0',c) && _scroll(`q-${c}`)}>
 		<label for="answer-{c}-1">
 			Who else?
 			<aside>gotcha baby <br><small>(x0 points)</small></aside>
@@ -104,7 +104,7 @@ input[type="radio"] { display: none; }
 input:valid ~ label {
 	pointer-events: none;
 	user-select: none;
-	background-color: var(--infobg);
+	/*background-color: var(--infobg);*/
 	color: var(--toolbg);
 }
 
