@@ -105,7 +105,7 @@ input:valid ~ label {
 	pointer-events: none;
 	user-select: none;
 	/*background-color: var(--infobg);*/
-	color: var(--toolbg);
+	color: var(--txt25);
 }
 
 label {

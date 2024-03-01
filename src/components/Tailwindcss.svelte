@@ -52,7 +52,7 @@ html {
 	--tooltxt: var(--txtcolor);
 	--infobg: var(--dark);
 	--infotxt: var(--txtcolor);
-	--navbg: #0f2537f0;
+	--navbg: var(--midtone);
 }
 
 /* light theme */
@@ -73,8 +73,8 @@ html {
 
 
 #sapper {
-	max-width: 64em;
-	margin: 0 auto;
+	/*max-width: 64em;*/
+	/*margin: 0 auto;*/
 	color: var(--txtcolor);
 	/* background-color: var(--bgcolor); */
 	position: relative;

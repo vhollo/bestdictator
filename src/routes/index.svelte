@@ -34,7 +34,7 @@ div {
 	flex-wrap: wrap;
 	margin: 0 var(--gutter-);
 	padding-bottom: var(--gutter2);
-	background-color: var(--infobg);
+	/*background-color: var(--infobg);*/
 	--maskcolor: var(--infobg);
 	overflow-x: hidden;
 }
