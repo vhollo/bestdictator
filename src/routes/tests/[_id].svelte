@@ -44,7 +44,7 @@
 		<input type="radio" name="answer-{i}" id="answer-{i}-{j}" required on:change={_score(ch.score,i) || _scroll(`q-${i}`)}>
 		<label for="answer-{i}-{j}">
 			{ch.choice}
-			<aside>{ch.bully} <br><small>({ch.score} points)</small></aside>
+			<aside>{ch.bully} <br><small>({ch.score > 1 ? 'points':'point'})</small></aside>
 		</label>
 		{/each}
 	</fieldset>
@@ -65,7 +65,7 @@
 </form>
 
 <footer>
-	You got… <mark>{$score[post._id] || 0}</mark> points 
+	You got… <mark>{$score[post._id] || 0}</mark> {$score[post._id] > 1 ? 'points':'point'}
 	{#if $score[post._id] && startnew}
 	(but your current test score will reset)
 	{/if}
