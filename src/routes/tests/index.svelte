@@ -11,7 +11,7 @@
 <header></header>
 
 <h1>Self tests</h1>
-<p>TEST your aptitude to rate a DiC</p>
+<p>TEST your aptitude for earning to rate a DiC</p>
 <ul>
 	{#each posts as post}
 	<li>
