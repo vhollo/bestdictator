@@ -8,7 +8,7 @@
 
 <nav>
 {#if $score_sum < $threshold}
-	To rate a DiC, <a href="/tests" on:click={_click}><button>TEST</button></a> your aptitude for earning to rate a DiC, or <a href="https://liberapay.com/TheDictatorists/donate" target="_blank" rel="noopener"><button>DONATE</button></a> this project.
+	To rate a DiC, <a href="/tests" on:click={_click}><button>TEST</button></a> your aptitude for earning to rate a DiC, or <a href="https://liberapay.com/TheDictatorists/donate" target="_blank" rel="noopener"><button>DONATE</button></a> this project AND <a href="/tests" on:click={_click}><button>TEST</button></a> your aptitude for earning to rate a DiC.
 {:else}
 	You are free to <a href="/dics/{$bckid}"><button>RATE</button></a> your favorite DiC, and <a href="https://liberapay.com/TheDictatorists/donate" target="_blank" rel="noopener"><button>DONATE</button></a> this project.
 {/if}
