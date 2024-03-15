@@ -14,7 +14,7 @@ questions:
         choice: Important to keep some Pandas for hunting
         bully: Pandas fart too much metane.
       - score: 3
-        choice: I'll protect my environment
+        choice: I'll protect my own environment
         bully: Because you can.
   - q: What science means to you?
     choices:
