@@ -9,7 +9,7 @@
 </script>
 
 <svelte:head>
-	<title>Rate Your Dictator</title>
+	<title>Dictator Catalog</title>
 </svelte:head>
 
 <Header_landing />

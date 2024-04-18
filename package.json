@@ -1,6 +1,6 @@
 {
   "name": "bestdictator.com",
-  "description": "Rate Your Dictator",
+  "description": "Dictator Catalog",
   "version": "0.0.1",
   "scripts": {
     "dev": "sapper dev",

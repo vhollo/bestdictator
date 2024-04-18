@@ -6,7 +6,7 @@
 <header>
 	<figure>
 		<LogoDic />
-		<figcaption>Rate your <b>Dictator</b></figcaption>
+		<figcaption><b>Dictator</b> catalog</figcaption>
 	</figure>
 	<nav>
 		<span><IconDic icon="liar" />Who's the biggest liar?</span>
