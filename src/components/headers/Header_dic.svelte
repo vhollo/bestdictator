@@ -28,7 +28,7 @@
 		</figcaption>
 	</figure>
 	<aside>
-		<label>Dictator LEVEL</label>
+		<label>Dictator rating</label>
 		<Pie level="{$level_overall}" />
 	</aside>
 </header>

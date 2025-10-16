@@ -9,7 +9,7 @@
 </script>
 
 <svelte:head>
-	<title>Rate Your Dictator</title>
+	<title>Dictator Catalog</title>
 </svelte:head>
 
 <Header_landing />
@@ -34,7 +34,7 @@ div {
 	flex-wrap: wrap;
 	margin: 0 var(--gutter-);
 	padding-bottom: var(--gutter2);
-	background-color: var(--infobg);
+	/*background-color: var(--infobg);*/
 	--maskcolor: var(--infobg);
 	overflow-x: hidden;
 }

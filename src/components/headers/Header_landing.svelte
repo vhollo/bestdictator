@@ -6,13 +6,13 @@
 <header>
 	<figure>
 		<LogoDic />
-		<figcaption>Rate your <b>Dictator</b></figcaption>
+		<figcaption><b>Dictator</b> Catalog</figcaption>
 	</figure>
 	<nav>
 		<span><IconDic icon="liar" />Who's the biggest liar?</span>
 		<span><IconDic icon="cash" />Who's the most corrupt?</span>
 		<span><IconDic icon="bomb" />Who's the cruelest?</span>
-		<span><IconDic icon="idiot" />Who's the largest idiot?</span>
+		<span><IconDic icon="idiot" />Who's the biggest idiot?</span>
 		<span><IconDic icon="vote" />Why people vote a DiC?</span>
 	</nav>
 </header>

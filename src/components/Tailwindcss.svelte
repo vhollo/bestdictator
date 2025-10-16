@@ -52,7 +52,7 @@ html {
 	--tooltxt: var(--txtcolor);
 	--infobg: var(--dark);
 	--infotxt: var(--txtcolor);
-	--navbg: #0f2537f0;
+	--navbg: var(--midtone);
 }
 
 /* light theme */
@@ -60,12 +60,12 @@ html {
 	--bgcolor: var(--light);
 	--txtcolor: var(--dark);
 	--maincolor: var(--orange);
-	--extcolor: var(--darkgray);
+	/*--extcolor: var(--darkgray);*/
 	--toolbg: var(--green);
 	--tooltxt: var(--bgcolor);
 	--infobg: var(--midtone);
 	--infotxt: var(--bgcolor);
-	--navbg: #e2e8f0f0;
+	--navbg: var(--midtone);
 }
 
 #dm:checked ~ #sapper svg#white { display: none; }
@@ -73,8 +73,8 @@ html {
 
 
 #sapper {
-	max-width: 64em;
-	margin: 0 auto;
+	/*max-width: 64em;*/
+	/*margin: 0 auto;*/
 	color: var(--txtcolor);
 	/* background-color: var(--bgcolor); */
 	position: relative;
