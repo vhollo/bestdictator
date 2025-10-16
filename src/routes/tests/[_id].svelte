@@ -86,6 +86,9 @@ form {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	grid-gap: var(--gutter);
+    grid-auto-rows: auto;
+    grid-auto-flow: dense;
+    grid-template-rows: masonry; /* future spec */
 }
 fieldset {
 	display: contents;
